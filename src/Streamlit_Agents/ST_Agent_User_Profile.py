@@ -8,8 +8,6 @@ from dotenv import load_dotenv
 import streamlit as st
 
 load_dotenv()
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-
 # ——————————————————————————————————————————————————————————————————————————————
 # 1. Pydantic schemas
 # ——————————————————————————————————————————————————————————————————————————————
@@ -78,76 +76,163 @@ class UserProfile(BaseModel):
 # ——————————————————————————————————————————————————————————————————————————————
 # 2. “Function tool” helpers that read from st.session_state instead of input()
 # ——————————————————————————————————————————————————————————————————————————————
+# --- 2. “Function tool” helpers that show a prompt right in the UI -----------
+# Each helper renders the widget the FIRST time it is called.
+# On the next rerun, the stored value is returned to the agent.
+# ——————————————————————————————————————————————————————————————————————————————
+# 2. “Function tool” helpers – conversational (no widgets)
+# ——————————————————————————————————————————————————————————————————————————————
+import streamlit as st
+from datetime import datetime
+
+def _prompt_once(key: str, assistant_msg: str, placeholder: str = "Type your answer…") -> str | None:
+    """
+    Helper: ask a question exactly once, store the reply, and return it on
+    every subsequent rerun so the agent can keep going.
+    """
+    if key in st.session_state:               # Already answered
+        return st.session_state[key]
+
+    # Show the assistant question only the first time
+    if f"{key}_prompted" not in st.session_state:
+        st.chat_message("assistant").write(assistant_msg)
+        st.session_state[f"{key}_prompted"] = True
+
+    # Chat input appears only at the very bottom of the page
+    user_reply = st.chat_input(placeholder=placeholder)
+    if user_reply:
+        st.session_state[key] = user_reply.strip()
+        return st.session_state[key]
+
+    # Wait for the user to reply (this stops the script until next rerun)
+    st.stop()
+
+
 @function_tool
 def ask_social_security_number() -> Dict[str, str]:
-    ssn_value = st.session_state.get("tool_ask_ssn", "").strip()
-    return {"Social_Security_Number": ssn_value}
+    """Conversation: collect SSN."""
+    ssn = _prompt_once(
+        key="ssn_value",
+        assistant_msg="🔑 Could you share your **Social Security Number**?",
+    )
+    return {"Social_Security_Number": ssn}
 
 
 @function_tool
 def ask_name() -> Dict[str, str]:
-    name_value = st.session_state.get("tool_ask_name", "").strip()
-    return {"Name": name_value}
+    """Conversation: collect full name."""
+    name = _prompt_once(
+        key="name_value",
+        assistant_msg="🪪 Great! What’s your **full legal name**?",
+    )
+    return {"Name": name}
 
 
 @function_tool
 def ask_email() -> Dict[str, str]:
-    email_value = st.session_state.get("tool_ask_email", "").strip()
-    return {"Email": email_value}
+    """Conversation: collect e-mail."""
+    email = _prompt_once(
+        key="email_value",
+        assistant_msg="📧 What e-mail address should we use for correspondence?",
+    )
+    return {"Email": email}
 
 
 @function_tool
 def ask_filing_status() -> Dict[str, str]:
-    filing_value = st.session_state.get("tool_ask_filing_status", "").strip()
-    return {"filingStatus": filing_value}
+    """Conversation: collect filing status (show allowed options)."""
+    filing = _prompt_once(
+        key="filing_status_value",
+        assistant_msg=(
+            "💍 Which **filing status** applies?\n"
+            "• Single\n• Married Filing Jointly\n• Married Filing Separately\n"
+            "• Head of Household\n• Qualifying Widow(er)"
+        ),
+        placeholder="Type one of the options above…",
+    )
+    return {"filingStatus": filing}
 
 
 @function_tool
 def ask_dependents() -> Dict[str, int]:
-    deps_value = st.session_state.get("tool_ask_dependents", 0)
+    """Conversation: collect number of dependents (integer)."""
+    deps = _prompt_once(
+        key="dependents_value",
+        assistant_msg="👶 How many **dependents** do you claim?",
+    )
+    # Basic validation – keep asking until an int
     try:
-        return {"dependents": int(deps_value)}
-    except Exception:
-        return {"dependents": 0}
+        return {"dependents": int(deps)}
+    except ValueError:
+        del st.session_state["dependents_value"]  # reset and ask again
+        st.chat_message("assistant").write("Please enter a whole-number (0, 1, 2 …).")
+        st.stop()
 
 
 @function_tool
 def ask_address() -> Dict[str, str]:
-    addr_value = st.session_state.get("tool_ask_address", "").strip()
-    return {"address": addr_value}
+    addr = _prompt_once(
+        key="address_value",
+        assistant_msg="📬 What’s your **mailing address** (street, city, ZIP)?",
+    )
+    return {"address": addr}
 
 
 @function_tool
 def ask_state() -> Dict[str, str]:
-    state_value = st.session_state.get("tool_ask_state", "").strip()
-    return {"state": state_value}
+    state = _prompt_once(
+        key="state_value",
+        assistant_msg="🏛️ In which **state** do you reside?",
+    )
+    return {"state": state}
 
 
 @function_tool
 def ask_occupation() -> Dict[str, str]:
-    occ_value = st.session_state.get("tool_ask_occupation", "").strip()
-    return {"Occupation": occ_value}
+    job = _prompt_once(
+        key="occupation_value",
+        assistant_msg="💼 What’s your current **occupation**?",
+    )
+    return {"Occupation": job}
 
 
+# ---------------- Spouse questions (only when required) ----------------------
 @function_tool
 def ask_spouse_name() -> Dict[str, Dict[str, Any]]:
-    spouse_name = st.session_state.get("tool_ask_spouse_name", "").strip()
-    return {"spouse": {"name": spouse_name}}
+    s_name = _prompt_once(
+        key="spouse_name_value",
+        assistant_msg="👥 What is your spouse’s **name**?",
+    )
+    return {"spouse": {"name": s_name}}
 
 
 @function_tool
 def ask_spouse_occupation() -> Dict[str, Dict[str, Any]]:
-    spouse_occ = st.session_state.get("tool_ask_spouse_occupation", "").strip()
-    return {"spouse": {"occupation": spouse_occ}}
+    s_job = _prompt_once(
+        key="spouse_job_value",
+        assistant_msg="👥 What is your spouse’s **occupation**?",
+    )
+    return {"spouse": {"occupation": s_job}}
 
 
 @function_tool
 def ask_spouse_birthyear() -> Dict[str, Dict[str, Any]]:
-    byear = st.session_state.get("tool_ask_spouse_birthyear", None)
+    s_year = _prompt_once(
+        key="spouse_year_value",
+        assistant_msg="👥 What is your spouse’s **birth year**?",
+        placeholder="e.g. 1988",
+    )
     try:
-        return {"spouse": {"birthYear": int(byear)}}
-    except Exception:
-        return {"spouse": {"birthYear": 0}}
+        y = int(s_year)
+        this_year = datetime.now().year
+        if 1900 <= y <= this_year:
+            return {"spouse": {"birthYear": y}}
+        raise ValueError
+    except ValueError:
+        del st.session_state["spouse_year_value"]
+        st.chat_message("assistant").write(f"Please enter a year between 1900 and {this_year}.")
+        st.stop()
+
 
 
 # ——————————————————————————————————————————————————————————————————————————————
@@ -190,7 +275,7 @@ You are a helpful tax agent. Your task is to collect all required fields for the
 4. Once all fields satisfy UserProfile (including correct data types),
    return a JSON object matching the UserProfile schema exactly.
 """,
-    model="gpt-4.1-mini",
+    model="gpt-4.1",
     tools=[
         ask_social_security_number,
         ask_name,
