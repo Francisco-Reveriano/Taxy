@@ -1,0 +1,15 @@
+openai
+langchain
+langchain_core
+langchain_openai
+python-dotenv
+tqdm
+ipywidgets
+tiktoken
+pypandoc
+openai-agents
+streamlit
+markdown
+pandarallel
+openpyxl
+mistralai
