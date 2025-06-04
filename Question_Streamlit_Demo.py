@@ -3,7 +3,17 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
-
+# -----------------------------------------------------------------------------
+# 0. Sidebar: Clear Conversation Button
+# -----------------------------------------------------------------------------
+with st.sidebar:
+    if st.button("Clear Conversation"):
+        # Reset all chat‐related session state variables
+        st.session_state.messages = []
+        st.session_state.responses = []
+        st.session_state.question_index = 0
+        # Force a rerun so that everything is cleared immediately
+        st.rerun()
 # -----------------------------------------------------------------------------
 # 1. Initialize/Reset Session State
 # -----------------------------------------------------------------------------
@@ -45,12 +55,15 @@ idx = st.session_state.question_index
 # -----------------------------------------------------------------------------
 if idx >= len(QUESTIONS):
     st.write("## Thank you! Here are your responses:")
+    final_responses = {}
     for i, ans in enumerate(st.session_state.responses):
+        final_responses[f"**Q{i+1}:** {QUESTIONS[i]}"] = f"**A{i+1}:** {ans}"
         st.write(
             f"**Q{i+1}:** {QUESTIONS[i]}  \n"
             f"**A{i+1}:** {ans}"
         )
     st.stop()  # Prevent any further input :contentReference[oaicite:7]{index=7}
+    print(final_responses)
 
 # -----------------------------------------------------------------------------
 # 4.2. Only Rewrite & Render the Question Once
@@ -63,7 +76,7 @@ if len(st.session_state.messages) <= 2 * idx:
     current_question = QUESTIONS[idx]
     # Call the OpenAI rewriter exactly once for this question
     rewrite_question = client.chat.completions.create(
-        model="gpt-4.1-mini",
+        model="gpt-3.5-turbo",
         stream=True,
         messages=[
             {
