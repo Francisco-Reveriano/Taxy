@@ -8,7 +8,7 @@ def run_question_flow(
     questions: list[str],
     *,
     state: dict,                    # << NEW parameter
-    model: str = "gpt-3.5-turbo"
+    model: str = "gpt-4.1-nano"
 ):
     """
     Presents a linear, chat-style Q&A flow in Streamlit.

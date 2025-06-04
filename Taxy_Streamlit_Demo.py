@@ -68,7 +68,7 @@ with st.sidebar:
         st.rerun()
 
     st.selectbox("OpenAI model",
-                 options=["gpt-4.1", "o3", "o3-mini"],
+                 options=["gpt-4.1","gpt-4.1-mini", "o4-mini", "o3", "o3-mini"],
                  key="model_name")
 
     uploaded_file = st.file_uploader(
@@ -109,6 +109,8 @@ if uploaded_file is not None and "profile_result" not in st.session_state:
 
     # Cache the result so subsequent reruns don’t redo heavy work
     st.session_state.profile_result  = first_pass
+    st.session_state.context.append({"role": "assistant", "content": "# First User Profile\n" + str(dict(first_pass.final_output))})
+    logger.info("First User Profile: %s", str(dict(first_pass.final_output)))
     st.session_state.followup_state  = {}   # initialise the Q&A cursor
 
     # Keep doc text in context so later completions can see it
@@ -125,6 +127,7 @@ if "profile_result" in st.session_state:
         answers = run_question_flow(
             questions=result.final_output.missing_questions,
             state=qa_state,
+            model=st.session_state.model_name,
         )  # → returns dict *only* after last answer
 
         if answers is not None:
@@ -142,7 +145,10 @@ if "profile_result" in st.session_state:
                 st.session_state.profile_result = asyncio.run(
                     Runner.run(UserProfileAgent, adjusted_msg)
                 )
-
+            # Update Context
+            st.session_state.context.append(
+                {"role": "assistant", "content": "# Full User Profile\n" + str(dict(st.session_state.profile_result.final_output))})
+            logger.info("Full User Profile: %s", str(dict(st.session_state.profile_result.final_output)))
             # reset follow-up state for any future rounds
             st.session_state.followup_state = {}
             st.rerun()   # show the updated state immediately
