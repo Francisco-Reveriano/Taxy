@@ -87,7 +87,7 @@ def run_question_flow(
         st.session_state.question_index += 1
 
         # 6.4 Force a rerun so the next question appears immediately
-        st.experimental_rerun()
+        st.rerun()
 
     return None
 
