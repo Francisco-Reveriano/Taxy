@@ -18,6 +18,7 @@ import pandas as pd
 from typing import Literal
 from pydantic import BaseModel, Field
 from src.Agent_OCR import load_from_json
+load_dotenv()
 
 class SpouseProfile(BaseModel):
     """

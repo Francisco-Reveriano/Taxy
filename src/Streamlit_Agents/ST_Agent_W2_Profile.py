@@ -18,6 +18,7 @@ import pandas as pd
 from typing import Literal
 from pydantic import BaseModel, Field
 from src.Agent_OCR import load_from_json
+load_dotenv()
 
 class W2Profile(BaseModel):
     """
@@ -95,7 +96,7 @@ W2_Profile_Agent = Agent(
         )
 W2_Profile_Table_Agent = Agent(
     name="W2ProfileTableAgent",
-        instructions="Create well constructed Markdown table from the provided user profile. Skip 'Questions' and 'Score'. Double-check the response and make sure you return nothing but the table.",
+        instructions="Create well constructed Markdown table from the provided user profile. Add icons to each field. Skip 'Questions' and 'Score'. Double-check the response and make sure you return nothing but the table.",
         model="gpt-4.1",
         output_type=str,
 )

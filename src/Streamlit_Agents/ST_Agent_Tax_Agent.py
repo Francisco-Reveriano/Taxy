@@ -76,3 +76,10 @@ TaxAgent = Agent(
             )
         ],
     )
+
+TaxAgentResponse = Agent(
+    name="TaxAgentResponse",
+        instructions="Create a succinct and well structure message explaining the tax results and reasoning over major components.",
+        model="gpt-4.1",
+        output_type=str,
+)

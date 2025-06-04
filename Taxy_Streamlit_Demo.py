@@ -17,14 +17,14 @@ from openai import OpenAI
 
 from src.Agent_OCR import DocumentOCR
 from src.Streamlit_Agents.ST_Agent_User_Profile import UserProfileAgent
-from src.Streamlit_Agents.ST_Question_Function import run_question_flow  # takes a `state` dict! :contentReference[oaicite:0]{index=0}
+from src.Streamlit_Agents.ST_Question_Function import run_question_flow
+from src.Streamlit_Agents.ST_Agent_W2_Profile import W2_Profile_Agent, W2_Profile_Table_Agent
+from src.Streamlit_Agents.ST_Agent_Tax_Agent import *
 from agents import Runner
-
 load_dotenv()
 
 # ─── Config & constants ────────────────────────────────────────────────────
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
-os.environ["OPENAI_BASE_URL"] = st.secrets["OPENAI_BASE_URL"]
 
 APP_TITLE:   Final[str] = "🧮 Taxy.ai – GenAI Tax Preparation"
 LOG_DIR:     Final[Path] = Path("logs")
@@ -105,6 +105,7 @@ if uploaded_file is not None and "profile_result" not in st.session_state:
     # OCR + first agent pass
     with st.spinner("Running OCR and extracting your profile…"):
         doc_text = DocumentOCR(uploaded_file.name)
+        st.session_state["W2_Form"] = doc_text
         first_pass = asyncio.run(Runner.run(UserProfileAgent, doc_text))
 
     # Cache the result so subsequent reruns don’t redo heavy work
@@ -148,14 +149,55 @@ if "profile_result" in st.session_state:
             # Update Context
             st.session_state.context.append(
                 {"role": "assistant", "content": "# Full User Profile\n" + str(dict(st.session_state.profile_result.final_output))})
+            st.session_state["Full_User_Profile"] = dict(st.session_state.profile_result.final_output)
             logger.info("Full User Profile: %s", str(dict(st.session_state.profile_result.final_output)))
             # reset follow-up state for any future rounds
             st.session_state.followup_state = {}
+            st.empty()
             st.rerun()   # show the updated state immediately
 
     else:
         # Profile complete – show summary once
+        updated_message = "# Full User Profile\n" + str(st.session_state["Full_User_Profile"]) + "\n\n" + "# Employee W-2\n" + st.session_state["W2_Form"]
+        result = asyncio.run(Runner.run(
+            W2_Profile_Agent, updated_message
+        ))
+        logger.info("W2 Profile: %s", str(result.final_output))
+        st.session_state["W2_Profile"] = str(result.final_output)
+        result = asyncio.run(Runner.run(
+            W2_Profile_Table_Agent, str(result.final_output)
+        ))
+        logger.info("W2 Profile Table: %s", str(result.final_output))
         with st.chat_message("assistant"):
             st.markdown("✅ I now have all the information I need! "
                         "Here is your completed profile:")
+            st.markdown(result.final_output)
+        st.session_state.messages.append({"role": "assistant", "content": result.final_output})
+        # Calculate Tax Profile
+        updated_message ='''
+                            # Complete Employee Profile \n
+                            {}
+                            
+                            # Complete W-2 Profile \n
+                            {}
+                            
+                            # Employee W-2 \n
+                            {}
+                            '''.format(str(st.session_state["Full_User_Profile"]), str(st.session_state["W2_Profile"]), st.session_state["W2_Form"])
+        result = asyncio.run(Runner.run(TaxAgent, updated_message))
+        print(result.final_output.Income)
+        client = OpenAI()
+        rewrite_stream = client.chat.completions.create(
+            model=st.session_state.model_name,
+            stream=True,
+            messages=[
+                {"role": "system",
+                 "content": "Create a well-structured, clear, and succinct message that explains the tax results. Your response should reason through the major components contributing to the outcome (e.g., income, deductions, credits, filing status), using straightforward and professional language Do not include any additional commentary or disclaimers outside the message itself."},
+                {"role": "user", "content": str(result.final_output)},
+            ],
+        )
+        with st.chat_message("assistant"):
+            rewritten = st.write_stream(rewrite_stream)
+        st.session_state.messages.append({"role": "assistant", "content": rewritten})
+        st.rerun()
 
