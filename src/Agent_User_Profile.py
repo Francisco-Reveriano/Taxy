@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 # 1. Load environment variables
 load_dotenv()
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+
 
 # 2. Define Pydantic schemas
 class FollowUpSpouseProfile(BaseModel):
