@@ -1,0 +1,239 @@
+# Who must file? 
+
+Taxpayers who claimed an Enterprise Zone Investment Credit or River Edge Redevelopment Zone Investment Credit, High Impact Business Investment Credit, Reimagining Energy and Vehicles (REV) Illinois Investment Credit, Replacement Tax Investment Credit, or Manufacturing Illinois Chips for Real Opportunity (MICRO) Investment Credit -
+You must file Schedule 4255, Recapture of Investment Tax Credits, if you claimed an investment tax credit against your Illinois income or replacement tax liability in a previous year and any of the property considered in the computation of that investment credit becomes disqualified.
+You must recapture any such investment tax credit in the year in which the property becomes disqualified (to the extent the credit was actually used in any previous year). Use this form to figure the amount of recaptured credit that you must add to this year's tax liability. You must complete and file a separate Schedule 4255 for each tax year in which the now disqualified property was placed in service, beginning with the earliest year. Each Schedule 4255 should report only items placed in service during the same tax year you entered at the top of the form. You cannot amend a previous year's return in order to exclude the disqualified property. Attach all completed Schedules 4255 to your return.
+
+## Taxpayers who claimed an additional income tax credit -
+
+You must file Schedule 4255 if you claimed an additional income tax credit (i.e., Angel Investment Credit, Economic Development for a Growing Economy (EDGE) Credit, New Construction EDGE Credit, New Markets Development Credit, Historic Preservation Credit, REV Illinois Credit, REV Construction Jobs Credit, MICRO Illinois Credit, or MICRO Construction Jobs Credit) against your Illinois income tax liability in a previous year and are required to recapture the credit. See "When am I required to recapture an additional income tax credit?" for more information.
+You must recapture any such additional income tax credit (to the extent the credit was actually used in any previous year) in the year in which the recapture event took place (see "When am I required to recapture an additional income tax credit?"). Use this form to figure the amount of recaptured credit that you must add to this year's tax liability. If you attach multiple Schedules 4255 because you are required to recapture other investment credit amounts from multiple years, you must complete Step 7 only on the last succeeding Schedule 4255 completed. If you have recapture amounts to report for multiple additional income tax credits (including credits claimed in multiple years), include them all in the amounts reported in Step 7 on the last succeeding Schedule 4255 you complete. You cannot amend a previous year's return in order to exclude the credit you are required to recapture. Attach all completed Schedules 4255 to your return.
+Note: For tax years ending on or after December 31, 2000, investment tax credits earned by you and allocable to your partners and shareholders subject to replacement tax automatically flow through to those partners and shareholders. The amount allocable to other partners and shareholders remains with you.
+Partners and shareholders are required to report any recapture on their respective returns. You must attach Schedule 4255 to your return and provide a copy to your partners or shareholders.
+
+## When does an investment property cease to qualify?
+
+Enterprise Zone or River Edge Redevelopment Zone Investment Credit - Property ceases to qualify if, within 48 months of placing it into service, you dispose of the property, convert it to personal use, or move it outside an Illinois enterprise zone or river edge redevelopment zone.
+High Impact Business Investment Credit - For tax years ending on or before December 31, 1996, property ceases to qualify if, within 48 months of placing it into service, you dispose of the property, convert it to personal use, or move it outside of Illinois. For tax years ending on or after January 1, 1997, if you entered into an agreement with a taxing district and were granted a tax abatement and you relocate your entire facility in violation of the terms and length of the contract under Section 18-183 of the Property Tax Code, you must recapture the amount of credit previously received under the agreement.
+REV Illinois Investment Credit - Property ceases to qualify if, within 48 months of placing it into service, you dispose of the property, convert it to personal use, or move it outside a REV Illinois project site location.
+Replacement Tax Investment Credit - Property ceases to qualify if, within 48 months of placing it into service, you dispose of the property or move it outside of Illinois. In addition, property placed in service prior to January 1, 1994, becomes disqualified if it is used for purposes other than manufacturing, retailing, coal mining, or fluorite mining within 48 months after being placed in service. Property placed in service on or after January 1, 1994, also becomes disqualified if it is converted to personal use, or if you are no longer primarily engaged in manufacturing, retailing, coal mining, or fluorite mining.
+MICRO Investment Credit - Property ceases to qualify if, within 48 months of placing it into service, you dispose of the property, convert it to personal use, or move it outside the MICRO Illinois project site location.
+Note: Property is "disposed of" if it is sold, exchanged, traded-in, abandoned, retired from use, destroyed by casualty, stolen, or transferred as a gift. Property is not "disposed of" if it is mortgaged or used as security for a loan, unless it is converted to a non-qualifying use.
+
+## When am I required to recapture an additional income tax credit?
+
+You are required to recapture
+
+- Angel Investment Credits you claimed in a prior tax year if, during this tax year, you disposed of your investment in the qualified new business venture for which you claimed the credit, other than a permitted sale of the investment to a person who is not a related member, and the disposition occurred within three years after you made your qualifying investment in that business, or you failed to maintain a minimum employment threshold in Illinois through the date which is three (3) years from the issue date of the last tax credit certificate.
+- EDGE and New Construction EDGE Credits you claimed in a prior tax year if, during this tax year, you cease operations at a project location that is the subject of an agreement with the intent to terminate operations in Illinois.
+- Historic Preservation Credits you claimed in a prior tax year if, during this tax year, you
+
+1. fail to place in service the rehabilitated portions of the qualified historic structure, or fail to maintain the rehabilitated portions of the qualified historic structure in service after they are placed in service;
+2. demolish or otherwise alter the qualified historic structure in a manner that is inconsistent with the qualified rehabilitation plan;
+3. dispose of the rehabilitated qualified historic structure in whole or in part; or
+4. use the qualified historic structure in a manner that is inconsistent with the qualified rehabilitation plan or that is otherwise inconsistent with the provisions and intent of the Historic Preservation Tax Credit Program.
+
+- New Markets Development Credits you claimed in a prior tax year if, during this tax year, you received a final recapture order.
+- REV Illinois Credits and REV Construction Jobs Credits you claimed in a prior tax year if, during this tax year, you cease operations at a project location that is the subject of an agreement with the intent to terminate operations in Illinois.
+- MICRO Illinois Credits and MICRO Construction Jobs Credits you claimed in a prior tax year if, during this tax year, you cease operations at a project location that is the subject of an agreement with the intent to terminate operations in Illinois.
+
+
+# Should I round? 
+
+You must round the dollar amounts on Schedule 4255 to whole-dollar amounts. To do this, you should drop any amount less than 50 cents and increase any amount of 50 cents or more to the next higher dollar.
+
+## What if I need additional assistance or forms?
+
+- For assistance, forms, or schedules, visit our website at tax.illinois.gov or scan the QR code provided.
+- Write us at:
+
+
+## ILLINOIS DEPARTMENT OF REVENUE
+
+PO BOX 19001
+SPRINGFIELD IL 62794-9001
+
+- Call 1800 732-8866 or 217 782-3336 (TTY at 1800 544-5304).
+- Visit a taxpayer assistance office - 8:00 a.m. to 5:00 p.m. (Springfield office) and 8:30 a.m. to 5:00 p.m. (all other offices), Monday through Friday.
+
+
+## Specific Instructions
+
+Step 1 - Complete Step 1 if your now disqualified property was considered in computing the Enterprise Zone or River Edge Redevelopment Zone Investment Credit on
+
+- Schedule 1299-A, Tax Subtractions and Credits (for partnerships and S corporations),
+- Schedule 1299-C, Income Tax Subtractions and Credits (for individuals), or
+- Schedule 1299-D, Income Tax Credits (for corporations and fiduciaries).
+
+Step 2 - Complete Step 2 if your now disqualified property was considered in computing the High Impact Business Investment Credit on
+
+- Schedule 1299-C or
+- Schedule 1299-D.
+
+Step 3 - Complete Step 3, if your now disqualified property was considered in computing the REV Illinois Investment Credit on
+
+- Schedule 1299-A,
+- Schedule 1299-C, or
+- Schedule 1299-D.
+
+Step 4 - Complete Step 4 if your now disqualified property was considered in computing the Replacement Tax Investment Credit on Form IL-477, Replacement Tax Investment Credits.
+Step 5 - Complete Step 5, if your now disqualified property was considered in computing the MICRO Investment Credit on
+
+- Schedule 1299-A,
+- Schedule 1299-C, or
+- Schedule 1299-D.
+
+
+## Use the following instructions to complete Columns A through E in Steps 1 through 5.
+
+Column A - Enter the date the now disqualified property was placed in service. All entries must be within the same tax year.
+Column B - Enter the date the property became disqualified. All entries must be within the tax year of the return to which you are attaching this form.
+Column C - Describe the property exactly as it was described when you computed the investment credit.
+Column D - Briefly describe the reason for the disqualification (e.g., removed from service, involuntarily converted, etc.).
+Column E - Enter the basis that was shown when the investment credit was computed.
+
+## Use the following instructions to complete Columns F through H in Steps 1 through 5.
+
+Step 1 - Enterprise Zone or River Edge Redevelopment Zone Investment Credit recapture
+Column F - Enter the name of the enterprise zone or river edge redevelopment zone in which your property was used when the investment credit was computed.
+# Column G - 
+
+## For property placed in service in an enterprise zone
+
+- enter .005 .
+
+For property placed in service in a river edge redevelopment zone,
+
+- enter the percentage used on your Schedule 1299-A, Schedule 1299-C, or Schedule 1299-D, River Edge Redevelopment Zone Investment Credit, Column G, for the year you claimed the credit for that property.
+Column H - For each item of property that is now disqualified, multiply Column E by Column G, and enter the result here.
+
+
+## Step 2 - High Impact Business Investment Credit recapture
+
+Column F - Enter the name of the foreign trade zone or sub-zone in which the property was used when the investment credit was computed. If your high impact business was designated after January 1, 1989, enter "N/A."
+Column G - The correct rate is printed on the form.
+Column H - For each item of property that is now disqualified, multiply Column E by Column G, and enter the result here.
+
+## Step 3 - REV Illinois Investment Credit recapture
+
+Column F - Enter the location of the REV Illinois Project in which your property was used when the investment credit was computed. Column G - The correct rate is printed on the form.
+Column H - For each item of property that is now disqualified, multiply Column E by Column G, and enter the result here.
+
+## Step 4 - Replacement Tax Investment Credit recapture
+
+Column F - Enter the sum of .005 and the rate you used on your Form IL-477 to claim an additional credit based on an increase of employment in Illinois.
+
+- If you did not claim an additional credit for an increase in employment on your Form IL-477, enter .005.
+- If you reported an increase in employment of one percent or more on Form IL-477, or if you claimed the credit as a new business in Illinois, enter .01 .
+- If you reported an increase in employment of less than one percent, add .005 to the decimal shown on Form IL-477, Line 21*.
+* For tax years ending on or after December 31, 2003, and before December 31, 2015, refer to Form IL-477, Line 18.
+For tax years ending before December 31, 2003, refer to Form IL-477, Part II, Line 6.
+Column G - For each item of property that is now disqualified, multiply Column E by Column F, and enter the result here.
+
+
+## Step 5 - MICRO Investment Credit recapture
+
+Column F - Enter the location of the MICRO Illinois Project in which your property was used when the investment credit was computed. Column G - The correct rate is printed on the form.
+Column H - For each item of property that is now disqualified, multiply Column E by Column G, and enter the result here.
+Step 6 - Enterprise Zone Investment Credit, River Edge Redevelopment Zone Investment Credit, High Impact Business Investment Credit, REV Illinois Investment Credit, Replacement Tax Investment Credit, and MICRO Investment Credit recapture amount
+Column A - Complete this column if you are reporting the disqualification of property for which you previously claimed an Enterprise Zone or River Edge Redevelopment Zone Investment Credit.
+Column B - Complete this column if you are reporting the disqualification of property for which you previously claimed a High Impact Business Investment Credit.
+Column C - Complete this column if you are reporting the disqualification of property for which you previously claimed a REV Illinois Investment Credit.
+Column D - Complete this column if you are reporting the disqualification of property for which you previously claimed a Replacement Tax Investment Credit.
+Column E - Complete this column if you are reporting the disqualification of property for which you previously claimed a MICRO Investment Credit.
+Line 11 - Enter the total basis of all property from your Schedule 1299-A, 1299-C, or 1299-D or Form IL-477 for which you computed a credit in the tax year that the now disqualified property was originally placed in service.
+Line 12 - Enter the total amount of the applicable credit(s) as shown on your Schedule 1299-A, 1299-C, or 1299-D or Form IL-477.
+Line 13 - Enter the following amounts:
+Column A - Enter the amount from Line 2.
+Column B - Enter the amount from Line 4.
+Column C - Enter the amount from Line 6.
+Column D - Enter the amount from Line 8.
+Column E - Enter the amount from Line 10.
+# Line 15 
+
+Columns A through C - Enter the income tax shown on the return for the tax year in which the credit was originally computed.
+Column D - Enter the replacement tax shown on the return for the tax year in which the credit was originally computed.
+Note: If an eligible credit was carried forward to the succeeding tax year, you must also include the tax shown on the return for the tax year to which the credit was carried.
+Column E - Enter the income tax shown on the return for the tax year in which the credit was originally computed.
+Line 18 - Enter the recapture from any other Schedule 4255 you completed to recapture any Enterprise Zone Investment Credit or River Edge Redevelopment Zone Investment Credit, High Impact Business Investment Credit, REV Illinois Investment Credit, Replacement Tax Investment Credit, or MICRO Investment Credit originating in a tax year prior to the tax year that corresponds to the date shown in Column A of Steps 1, 2, 3, 4, or 5.
+Line 19 - Columns A, C, D, and E - Enter your distributive share of recapture from partnerships and S corporations from Schedule K-1-P. Attach Schedule(s) K-1-P.
+Line 21 - Columns A, C, D, and E - (Partnerships and S corporations only) Enter the amount from Line 20 that you passed through to your partners or shareholders. Report each partner's or shareholder's share of the amount -
+
+- from Column A on each partner's or shareholder's Schedule K-1-P, Line 54a.
+- from Column C on each partner's or shareholder's Schedule K-1-P, Line 54b.
+- from Column D on each partner's or shareholder's Schedule K-1-P, Line 54c.
+- from Column E on each partner's or shareholder's Schedule K-1-P, Line 54d.
+
+If you attach multiple Schedules 4255, report each of your partner's or shareholder's share of the total amount reported on each column of Line 21 of each attached Schedule 4255 on the corresponding lines of the Schedule K-1-P you issue to that partner or shareholder.
+Note: If you have additional income tax credit recapture amounts, you must include those amounts in the amounts you report on Schedule K-1-P. See the Step 7 instructions for more information.
+Line 22 - Subtract Line 21 from Line 20. Carry this amount to any succeeding Schedule 4255, Step 6, Line 18, to be completed for this tax year.
+If you do not need to complete a succeeding Schedule 4255, include this amount -
+from Column A in the amount reported on
+
+- IL-1040, Line 13,
+- IL-1120, Line 46,
+- IL-1041, Line 43, or
+- IL-990-T, Line 20.
+from Column B in the amount reported on
+- IL-1040, Line 13,
+- IL-1120, Line 46,
+- IL-1041, Line 43, or
+- IL-990-T, Line 20.
+from Column C in the amount reported on
+- IL-1040, Line 13
+- IL-1120, Line 46,
+- IL-1041, Line 43, or
+- IL-990-T, Line 20.
+from Column D in the amount reported on
+- IL-1120, Line 41,
+- IL-1041, Line 35,
+- IL-1065, Line 55,
+- IL-1120-ST, Line 53, or
+- IL-990-T, Line 14.
+from Column E in the amount reported on
+- IL-1040, Line 13
+- IL-1120, Line 46,
+- IL-1041, Line 43, or
+- IL-990-T, Line 20.
+
+Note: If you complete Column A, B, C, or E and you have additional income tax credit recapture amounts, you must include those amounts in the amounts you report on your return. See the Step 7 instructions for more information.
+# Step 7 - Additional income tax credit recapture amount 
+
+## If you attach multiple Schedules 4255, complete Step 7 only on the last succeeding Schedule 4255 you complete.
+
+Line 23 - Enter the total amount of Angel Investment Credit you claimed in prior tax years if, during this tax year, you
+
+- disposed of your investment in the qualified new business venture for which you claimed the credit, other than a permitted sale of the investment to a person who is not a related member, and the disposition occurred within three (3) years after you made your qualifying investment in that business, or
+- failed to maintain a minimum employment threshold in Illinois through the date which is three (3) years from the issue date of the last tax credit certificate.
+If you have recapture amounts to report for multiple Angel Investment Credits (including credits claimed in multiple years), include them all on this line.
+Line 24 - Enter the total amount of EDGE Credit you claimed in a prior tax year if, during this tax year, you disposed of your investment in the qualified new business venture for which you claimed the credit or the business venture moved from the state of Illinois, and the disposition or move occurred within three years after you made your qualifying investment in that business.
+If you have recapture amounts to report for multiple EDGE Credits (including credits claimed in multiple years), include them all on this line.
+Line 25 - Enter the total amount of New Construction EDGE Credit you claimed in a prior tax year if, during this tax year, you disposed of your investment in the qualified new business venture for which you claimed the credit or the business venture moved from the state of Illinois, and the disposition or move occurred within three years after you made your qualifying investment in that business.
+If you have recapture amounts to report for multiple New Construction EDGE Credits (including credits claimed in multiple years), include them all on this line.
+Line 26 - Enter the total amount of Historic Preservation Credit you claimed in a prior tax year if, during this tax year, you
+
+1. fail to place in service the rehabilitated portions of the qualified historic structure, or fail to maintain the rehabilitated portions of the qualified historic structure in service after they are placed in service;
+2. demolish or otherwise alter the qualified historic structure in a manner that is inconsistent with the qualified rehabilitation plan;
+3. dispose of the rehabilitated qualified historic structure in whole or in part; or
+4. use the qualified historic structure in a manner that is inconsistent with the qualified rehabilitation plan or that is otherwise inconsistent with the provisions and intent of the Historic Preservation Tax Credit Program.
+If you have recapture amounts to report for multiple Historic Preservation Credits (including credits claimed in multiple years), include them all on this line.
+Line 27 - Enter the amount of New Markets Development Credit you claimed in a prior tax year, if during this tax year, you received a final recapture order from the Illinois Department of Revenue.
+If you have recapture amounts to report for multiple New Markets Development Credits (including credits claimed in multiple years), include them all on this line.
+Line 28 - Enter the total amount of REV Illinois Credit you claimed in a prior tax year if, during this tax year, you ceased operations at a project location that is the subject of an agreement with the intent to terminate operations in Illinois.
+If you have recapture amounts to report for multiple REV Illinois Credits (including credits claimed in multiple years), include them all on this line.
+Line 29 - Enter the total amount of REV Construction Jobs Credit you claimed in a prior tax year if, during this tax year, you ceased operations at a project location that is the subject of an agreement with the intent to terminate operations in Illinois.
+If you have recapture amounts to report for multiple REV Construction Jobs Credits (including credits claimed in multiple years), include them all on this line.
+Line 30 - Enter the total amount of MICRO Illinois Credit you claimed in a prior tax year if, during this tax year, you ceased operations at a project location that is the subject of an agreement with the intent to terminate operations in Illinois.
+If you have recapture amounts to report for multiple MICRO Illinois Credits (including credits claimed in multiple years), include them all on this line.
+Line 31 - Enter the total amount of MICRO Construction Jobs Credit you claimed in a prior tax year if, during this tax year, you ceased operations at a project location that is the subject of an agreement with the intent to terminate operations in Illinois.
+If you have recapture amounts to report for multiple MICRO Construction Jobs Credits (including credits claimed in multiple years), include them all on this line.
+Line 32 - Enter the total of all Schedule(s) K-1-P, Line 54e, you received.
+Line 33 - Add Lines 23 through 32. Include this amount in the amount reported on -
+
+- IL-1040, Line 13,
+- IL-1120, Line 46,
+- IL-1041, Line 43,
+- IL-990-T, Line 20, or
+- Schedule K-1-P, Line 54e, that you distribute.
+
+Note: If you are reporting recapture in both Step 6 and Step 7, total the amount of recapture you are required to report and enter the amount of recapture (or share of recapture) on the corresponding line of the corresponding form or schedule.

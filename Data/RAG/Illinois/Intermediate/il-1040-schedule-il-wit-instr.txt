@@ -1,0 +1,197 @@
+# Illinois Department of Revenue 2024 Schedule IL-WIT IL-1040 Instructions 
+
+## General Information
+
+## What is the purpose of Schedule IL-WIT?
+
+Schedule IL-WIT, Illinois Income Tax Withheld, allows you to enter your withholding information in one place and calculate total Illinois withholding.
+
+## What must I attach to Form IL-1040?
+
+If you enter an amount on Form IL-1040, Line 25, attach a copy of your Schedule IL-WIT and all your Forms W-2 and 1099 showing Illinois income and withholding.
+
+## How do I report multiple W-2G forms from the same payer?
+
+If you received more than five W-2Gs from the same payer, add the amounts for Columns C, D, and E from all W-2Gs issued by the same payer FEIN reported in Column B and report only the total in each column. See the form reference tables to determine which boxes should be reported in Columns C, D, and E.
+
+## What if I received withholding forms without Illinois withholding?
+
+If your withholding form does not show Illinois income or withholding, do not include it on this schedule. However, if the withholding form provides verification of amounts reported on lines other than Line 25 on your Form IL-1040, attach a copy of the withholding form to your return. Examples include:
+
+- A military W-2 received for combat pay that does not include Illinois withholding but supports the subtraction reported on Schedule M, Line 21.
+- A W-2 from an out-of-state employer that does not include Illinois withholding but supports the foreign tax credit claimed on your Schedule CR.
+- A 1099-MISC form that does not include Illinois withholding but supports the non-employee compensation reported as business income (or loss) on your federal 1040, Schedule 1, and Schedule IL-E/EITC, Step 3, Line 2.
+
+
+## What if I need additional assistance or forms?
+
+- Visit our website at tax.illinois.gov for assistance, forms or schedules.
+- Write us at:
+
+
+## ILLINOIS DEPARTMENT OF REVENUE
+
+PO BOX 19001
+SPRINGFIELD IL 62794-9001
+
+- Call 18007328866 or 217 782-3336 (TYY at 1800 544-5304).
+- Visit a taxpayer assistance office - 8:00 a.m. to 5:00 p.m. (Springfield office) and 8:30 a.m. to 5:00 p.m. (all other offices), Monday through Friday.
+
+
+## Step-by-Step Instructions
+
+Note: If this Schedule is being attached to Form IL-1040-X, Amended Illinois Income Tax return, check the box at the top of the Schedule.
+Step 1: Provide your withholding records (include all W-2 and 1099 forms that show Illinois withholding)
+Enter your name and Social Security number as shown on your Form IL-1040.
+Lines 1 through 5 - See the Column instructions below.
+Step 2: Provide spouse's withholding records (include all W-2 and 1099 forms that show Illinois withholding)
+Enter your spouse's name and Social Security number as shown on your Form IL-1040. Note: If your filing status is "married filing separately," do not include your spouse's withholding records.
+Lines 6 through 10 - See the Column instructions below.
+
+## Column A: Form type
+
+Enter the form type letter code found in the reference chart at the top of the form.
+
+## Columns B through E: Form Reference Tables
+
+Use the tables on the back of the instructions to determine what information from each withholding form to enter in each column.
+
+## Column B: Employer/Payer Identification number
+
+Enter the identification number referenced by form type on the tables.
+
+## Column C: Federal Wages, Winnings, Gross, Distributions, Compensation, etc.
+
+Enter the amount referenced by form type on the tables.
+
+## Column D: Illinois Wages, Winnings, Gross; Distributions, Compensation, etc.
+
+Enter the amount referenced by form type on the tables.
+
+## Column E: Illinois Income Tax Withheld
+
+Enter the amount of Illinois income tax withheld referenced by form type on the tables.
+
+## Step 3: Total Illinois withholding
+
+Line 11 - Follow the instructions on the form.
+Note: If you have more than 5 withholding forms for you and your spouse, complete multiple copies of this schedule.
+Attach: Copies of all W-2 and 1099 forms.
+# 2024 Schedule IL-WIT IL-1040 Instructions, continued.
+
+Columns B through E Form Reference Tables W-2
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Box b (EIN) | B  |
+|  Box 1 | C  |
+|  Box 16 | D  |
+|  Box 17 | E  |
+
+W-2G
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Payer's TIN | B  |
+|  Box 1 | C  |
+|  Box 14 | D  |
+|  Box 15 | E  |
+
+1099-R
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Box 15 | B  |
+|  Box 1 | C  |
+|  Box 16 | D  |
+|  Box 14 | E  |
+
+1099-G (Issued by the Illinois Department of Employment Security)
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Payer's TIN | B  |
+|  Box 1 | C  |
+|  Box 1 | D  |
+|  Box 11 | E  |
+
+1099-G (Issued by a payer other than the Illinois Department of Employment Security)
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Box 10b | B  |
+|  Total of boxes 1 and 2 | C  |
+|  Total of boxes 1 and 2 | D  |
+|  Box 11 | E  |
+
+1099-MISC
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Box 17 | B  |
+|  Total of boxes 1, 2 and 3 | C  |
+|  Box 18 | D  |
+|  Box 16 | E  |
+
+1099-OID
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Box 13 | B  |
+|  Box 1 | C  |
+|  Box 1 | D  |
+|  Box 14 | E  |
+
+1099-DIV
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Box 15 | B  |
+|  Box 1a | C  |
+|  Box 1b | D  |
+|  Box 16 | E  |
+
+1099-INT
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Box 16 | B  |
+|  Box 1 | C  |
+|  Box 1 | D  |
+|  Box 17 | E  |
+
+1099-B
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Box 15 | B  |
+|  Box 1d | C  |
+|  Box 1d | D  |
+|  Box 16 | E  |
+
+1099-K
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Box 7 | B  |
+|  Box 1a | C  |
+|  Box 1a | D  |
+|  Box 8 | E  |
+
+1042-S
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Box 17b | B  |
+|  Box 6 | C  |
+|  Box 6 | D  |
+|  Box 17a | E  |
+
+1099-NEC
+
+|  Enter... | on Column...  |
+| --- | --- |
+|  Box 6 | B  |
+|  Box 1 | C  |
+|  Box 7 | D  |
+|  Box 5 | E  |

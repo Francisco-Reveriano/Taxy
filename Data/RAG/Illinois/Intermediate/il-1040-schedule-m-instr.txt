@@ -1,0 +1,338 @@
+# 2024 Schedule M IL-1040 Instructions 
+
+## General Information
+
+## What is the purpose of Schedule M?
+
+Schedule M, Other Additions and Subtractions for Individuals, allows you to figure the total amount of additions you must include on Form IL-1040, Individual Income Tax Return, Line 3 and subtractions you may claim on Form IL-1040, Line 7.
+
+## May I subtract my out-of-state income?
+
+No, you may not subtract your out-of-state income. However, if you are filing as a resident or a part-year resident, you may be allowed to take a credit against Illinois Income Tax for income tax you paid to another state. See the instructions for Form IL-1040, Line 15, and Schedule CR, Credit for Tax Paid to Other States.
+
+## What other income is not allowed as a subtraction?
+
+You may not subtract anything that is not listed on Schedule M. For example, you may not subtract
+
+- unemployment compensation. Unemployment compensation included in your federal adjusted gross income, except railroad unemployment, is fully taxable to Illinois.
+- gambling losses. Illinois does not allow a deduction for gambling losses.
+- your federal itemized deductions from federal Form 1040 or 1040-SR, Schedule A, Itemized Deductions.
+- any wages reported on your federal return. If you believe the wages reported on the Form W-2, Wage and Tax Statement, you received from your employer are incorrect, you must obtain a corrected Form W-2 or a statement from your employer, on company letterhead, stating that your Form W-2 was incorrect. We will not accept a letter from you or your tax preparer.
+- income received from Social Security benefits and retirement plans (including Illinois Teacher's Retirement). Eligible retirement income should be subtracted on Form IL-1040, Line 5.
+
+
+## What must I attach to Form IL-1040?
+
+If you enter an amount on Form IL-1040, Line 3 or Line 7, you must attach Schedule M and any other required documentation listed in the "Step-by-Step Instructions" of this schedule to your Form IL-1040.
+Note: If you must attach Schedule K-1-P or K-1-T, be sure to attach the Illinois schedule not the federal Schedule K-1 or any worksheets.
+
+## What if I need additional assistance or forms?
+
+- Visit our website at tax.illinois.gov for assistance, forms or schedules.
+
+Write us at Illinois Department of Revenue, P.O. Box 19001, Springfield, Illinois 62794-9001.
+
+- Call 1800 732-8866 or 217 782-3336 (TTY at 1800 544-5304).
+- Visit a taxpayer assistance office - 8:00 a.m. to 5:00 p.m. (Springfield office) and 8:30 a.m. to 5:00 p.m. (all other offices), Monday through Friday.
+
+
+## Step-by-Step Instructions
+
+Note: If this Schedule is being attached to Form IL-1040-X, Amended Illinois Income Tax return, check the box at the top of the Schedule.
+
+## Step 1: Provide the following information
+
+Enter your name and Social Security number as shown on your Form IL-1040.
+
+## Step 2: Figure your additions for Form IL-1040, Line 3
+
+Note: Enter your additions as positive amounts only.
+
+## Line 1 - Your child's federally tax-exempt interest and dividend income
+
+Enter the amount of any federally tax-exempt interest and dividends earned by your child if you elected to report your child's interest and dividend income on federal Form 8814, Parents' Election To Report Child's Interest and Dividends.
+
+## Line 2 - Distributive share of additions from a partnership, S corporation, trust, or estate
+
+Include your distributive share of additions received from a partnership, S corporation, trust, or estate shown in Column A on your Schedule K-1-P or K-1-T. The partnership, S corporation, trust, or estate is required to notify you of your share of this type of income. An Illinois entity will send you a Schedule K-1-P, Partner's or Shareholder's Share of Income, Deductions, Credits, and Recapture, or Schedule K-1-T, Beneficiary's Share of Income and Deductions, specifically identifying your income.
+Attach: a copy of Illinois Schedule K-1-P or K-1-T or a copy of the notification furnished to you that specifically details the amount of your distributive share of additions.
+
+## Line 3 - Lloyd's plan of operation loss
+
+Add back any loss that you included in your adjusted gross income from a Lloyd's plan of operation if that loss was reported on your behalf on Form IL-1065, Partnership Replacement Tax Return.
+
+## Line 4 - IRC Section 529 college savings, tuition, and ABLE programs earnings
+
+Include earnings distributed from Internal Revenue Code (IRC) Section 529 college savings and tuition programs and ABLE accounts, if these earnings are not included in your adjusted gross income on Form IL-1040, Line 1.
+Note: Do not include earnings if they were rolled over tax-free into another program.
+Also, do not include earnings received from the following, which are exempt from tax:
+
+- "Bright Start" College Savings Pool
+- "Bright Directions" College Savings Pool
+- "College Illinois" Prepaid Tuition Program
+- Qualified IRC Section 529 tuition programs that
+- comply with the College Savings Plans Network's disclosure principles, and
+- annually inform Illinois residents and those distributing the program that in-state programs exist.
+- Qualified Illinois ABLE program earnings
+
+Note: Do not include rollovers or transfers between 529 accounts.
+## Line 5 - Illinois special depreciation addition
+
+Enter the addition amount from Form IL-4562, Special Depreciation, Step 2, Line 4. See Form IL-4562 instructions for more information.
+Note: Do not include your distributive share of any special depreciation addition from a partnership, S corporation, trust, or estate on this line. Your distributive share of additions should be included on Schedule M, Line 2.
+Attach: Form IL-4562.
+
+## Line 6 - Business expense recapture (nonresidents only)
+
+If you reported income from an asset or activity as business income in prior years and reported any income from that asset or activity as nonbusiness income on this Schedule M or on your Schedule NR, Nonresident and Part-Year Resident Computation of Illinois Tax, for this year, include on this line all deductions you claimed for expenses connected with that income in this year and in your two most recent tax years.
+
+## Line 7 - Recapture of deductions for contributions to Illinois college savings and ABLE plans transferred to an out-of-state plan
+
+If you made a rollover from an Illinois plan to another state's plan, enter the smaller of
+
+- the amount of deductions you claimed for amounts contributed to an Illinois college savings or ABLE plan, minus any deductions recaptured in prior years, or
+- the amount you transferred during the tax year from the Illinois plan to an out-of-state plan.
+
+
+## Line 8 - Student-Assistance Contribution Credit
+
+If you claimed a credit earned during your current year on Schedule 1299-C, Income Tax Subtractions and Credits (for individuals), for contributions you made to a college savings plan on behalf of an employee, enter the amount of the Student-Assistance Contribution Credit (Credit code 5420) from Schedule 1299-C, Step 3, Column G, here.
+
+## Line 9 - Recapture of deductions for contributions to college savings and ABLE plans withdrawn for nonqualified expenses or refunded
+
+If you withdrew funds or received a refund of contributions from a qualified tuition program or ABLE program, the funds were not used for qualified expenses at an eligible institution, and the withdrawal or refund did not result from the death or disability of a beneficiary of the program, include the amount equal to the amount of deductions you claimed for contributions related to the nonqualified withdrawal or refund amount. Enter the smaller of
+
+- the amount of deductions you claimed for amounts contributed to an Illinois college savings plan or Illinois ABLE plan, minus any amount recaptured on Line 7 for this year and any deductions recaptured in prior years for that plan, or
+- the refund or amount you withdrew during the tax year that was not used for qualified expenses in an eligible institution plus any refund of contributions.
+
+
+## Line 10 - RESERVED
+
+## Line 11 - Other income
+
+Include any other amounts that you are required to add to your federal adjusted gross income to arrive at your Illinois base income. Please include a detailed description of each addition on the line provided or on an attached statement.
+Note: For tax years ending on or after December 31, 2021, and beginning prior to January 1, 2026, add back an amount equal to the amount of Pass-through entity tax you included on Line 51 of the Schedule CR.
+Line 12 - Add Lines 1 through 11. Enter the amount here and on Form IL-1040, Line 3.
+
+Step 3: Figure your subtractions for Form IL-1040, Line 7
+Note: Enter your subtractions as positive amounts only.
+
+## Line 13 - Contributions you made to "Bright Start" College
+
+Savings Pool, "Bright Directions" College Savings Pool, and "College Illinois" Prepaid Tuition Program.
+You may subtract Contributions you made to "Bright Start" College Savings Pool, "Bright Directions" College Savings Pool, and "College Illinois" Prepaid Tuition Program. You may also subtract contributions made on your behalf to one of these plans by your employer. You may not subtract contributions made to any other college savings program. If your contributions were made by rolling over funds from another college savings program into a "Bright Start," "Bright Directions," or "College Illinois" account, you may not subtract any income that was earned in the other savings program and rolled over into your Illinois account.
+Note: Do not include rollovers or transfers between 529 accounts.
+Table 13 - For each row, enter the account number in Column A (do not enter a name or other information in this column) and amount of contribution made during the tax year to the "Bright Start" and "Bright Directions" College Savings Pools and "College Illinois" Prepaid Tuition Program in Column B. Enter one account per row. Attach a separate page with any additional accounts, if needed. Add the amounts in Column B and enter the total on Line 13a.
+Check the box in Column C if your contribution was a gift.
+
+## Attach: If you do not have the account number for a gift contribution, attach the following:
+
+- Copy of the cancelled check used to make the contribution, and
+- Account holder's name and address
+
+Enter the lesser amount of Line 13a or $\$ 10,000$ ( $\$ 20,000$ if married filing a joint return) on Line 13.
+Note: Line 13 may not exceed $\$ 10,000$ ( $\$ 20,000$ if married filing a joint return).
+
+## Line 14 - Distributive share of subtractions from a partnership, S corporation, trust, or estate
+
+Enter the amount of your distributive share of subtractions from a partnership, S corporation, trust, or estate shown in Column A on your Schedule K-1-P or K-1-T. The partnership, S corporation, trust, or estate is required to notify you of your share of any of these subtractions. You may enter the amount of such subtractions only if you are notified. An Illinois entity will send you a Schedule K-1-P or K-1-T specifically identifying your subtractions.
+Note: Your distributive share of subtractions from a partnership, S corporation, trust, or estate for
+
+- contributions you made to a job training project should be included on Line 14, not Line 16.
+- special depreciation should be included on Line 14, not Line 19.
+- U.S. government obligations should be included on Line 14, not Line 22.
+Your beneficiary share of payments from certain retirement plans and retirement payments to retired partners reported on Schedule K-1-T should be included on Line 14, not Form IL-1040, Line 5.
+Do not include any distributive share of river edge redevelopment zone and high impact business dividend subtractions from a partnership, S corporation, trust, or estate on this line. These subtractions should be included on Line 24 of this schedule.
+Attach: a copy of Illinois Schedule K-1-P or K-1-T, which identifies you as a partner, shareholder, or beneficiary and lists your Social Security number, or a copy of the notification (which includes the Federal Employer's Identification Number) furnished to you that specifically details the amount of the subtraction being claimed as your distributive share. We will not accept a federal Schedule K-1 or a Schedule K-1 worksheet.
+If the notification you received from a partnership, S corporation, trust, or estate identifies that entity as a grantor trust or disregarded entity and does not show you as the person who will report the income or loss from the grantor trust or disregarded entity, attach a detailed statement explaining the situation.
+
+## Line 15 - Restoration of amounts held under claim of right
+
+Enter the amount equal to
+
+- the deduction used to compute the federal tax credit for restoration of amounts held under claim of right under IRC Section 1341, or
+- any itemized deduction taken from adjusted gross income in the computation of taxable income for restoration of amounts held under claim of right for the taxable year.
+
+
+## Line 16 - Contributions to a job training project
+
+Enter the amount equal to the contributions you made under the Tax Increment Allocation Redevelopment Act to a job training project. For more information, see Informational Bulletin FY 90-40.
+Note: Do not include your distributive share of any contributions to a job training project from a partnership, S corporation, trust, or estate on this line. Your distributive share of subtractions should be included on Line 14 of this schedule.
+
+## Line 17 - Expenses related to federal credits or federally tax-exempt income
+
+Enter the amount
+
+- of any expenses that were disallowed as federal deductions under IRC Section 45G(e)(3), 171(a)(2), 265, or 280C because they are related to income that is exempt from federal tax which you added back on Form IL-1040, Line 2 or
+- because a credit was allowed for the expenses, or included in your adjusted gross income under IRC Section 87.
+
+
+## Line 18 - RESERVED
+
+## Line 19 - Illinois Special depreciation subtraction
+
+Enter the subtraction amount from Form IL-4562, Step 3, Line 19. See Form IL-4562 instructions for more information.
+Note: Do not include your distributive share of any special depreciation subtraction from a partnership, S corporation, trust, or estate on this line. Your distributive share of subtractions should be included on Line 14 of this schedule.
+Attach: Form IL-4562.
+
+## Line 20 - Contributions made to a qualified Illinois ABLE program
+
+Table 20 - For each row, enter the account number in Column A (do not enter a name or other information in this column) and amount of contributions made during the tax year to the qualified Illinois ABLE Program in Column B. Enter one account per row. Attach a separate page with any additional accounts, if needed. Add the amounts in Column B and enter the total on Line 20a.
+Check the box in Column C if your contribution was a gift.
+Attach: If you do not have the account number for a gift contribution, attach the following:
+
+- Copy of the cancelled check used to make the contribution, and
+- Account holder's name and address
+
+Enter the lesser amount of Line 20a or \$10,000 (\$20,000 if married filing a joint return) on Line 20.
+Note: Do not include rollovers or transfers between 529 accounts.
+
+## Line 21 - Military pay earned
+
+Enter the amount of military pay that you received from the U.S. Armed Forces or the National Guard of any state, or that you received as a dual status military technician.
+
+You may not subtract the following:
+
+- combat pay that is not included in your federal adjusted gross income, Form IL-1040, Line 1
+- pay you received
+- under the Voluntary Separation Incentive,
+- from the military as a civilian,
+- under the Ready Reserve Mobilization Income Insurance Program,
+- for duty as an officer in the Public Health Service
+
+For more information, see Publication 102, Illinois Filing Requirements for Military Personnel.
+Attach: Form W-2 showing your military pay. If you report dual status on Line 21, you must attach both Form W-2 and SF-50, Standard Form 50 (Notification of Personnel Action).
+Line 22 - U.S. Treasury bonds, bills, notes, savings bonds, and U.S. agency interest
+Enter the income included in your Form IL-1040, Line 1, you received from U.S. Treasury bonds, bills, notes, savings bonds, U.S. agency interest, and other similar obligations from your
+
+- federal Form 1040 or 1040-SR, or
+- mutual fund statement plus
+any income listed in Publication 101, Income Exempt from Tax, under
+- "What if I have income from obligations of the United States Government?"
+- "What federally-taxable income is exempt from Illinois Income Tax by other federal statutes?"
+- "What if I have distributions from money market trusts (mutual funds)?"
+
+
+## Mutual fund distributions
+
+Include the entire amount of federally taxed distributions received from mutual funds investing exclusively in
+U.S. government obligations. If the mutual fund invests in U.S. government obligations and non-exempt obligations, your deduction is the distribution received from the mutual fund attributable to the U.S. government obligations, as determined by the mutual fund. If the mutual fund does not provide this percentage amount, multiply the total distribution by a fraction. The numerator is the amount invested by the fund in exempt U.S. government obligations, and the denominator is the fund's total investment.
+Note: This subtraction is the amount net of any related bond premium amortization.
+Note: Savings bond interest that is not included in your federal adjusted gross income is not an allowable subtraction.
+Note: Do not include your distributive share of a subtraction for U.S. government obligations from a partnership, an S corporation, a trust, or an estate on this line. Your distributive share of subtractions should be included on Line 14 of this schedule.
+Attach: a copy of federal Form 1040 or 1040-SR, Schedule B, if required federally, a copy of the statement from the mutual fund, and any worksheets that clearly identify your interest from U.S. obligations.
+For more details, see Publication 101, Income Exempt from Tax.
+
+## Line 23 - August 1, 1969, valuation limitation
+
+Enter the amount of your August 1, 1969, valuation limitation from Schedule F, Gains from Sales or Exchanges of Property Acquired Before August 1, 1969, Line 17.
+Attach: Schedule F and copies of required federal forms.
+
+## Line 24 - River edge redevelopment zone and high impact business dividend subtraction
+
+Enter the amount from Schedule 1299-C, Step 1, Line 7.
+Attach: Schedule 1299-C.
+## Line 25 - Recovery of items previously deducted on federal Form 1040 or 1040-SR, Schedule A
+
+Enter the amount of recovery of items (including refunds of any state and local income taxes, other than Illinois) that you deducted on your federal Form 1040 or 1040-SR, Schedule A, in a prior year. You must have included these items on your federal Form 1040 or 1040-SR, Schedule 1, and your Form IL-1040, Line 1, for this tax year.
+Attach: a copy of federal Form 1040 or 1040-SR, page 1, and Schedule 1, and any schedule or attachment to your federal Form 1040 or 1040-SR that shows the nature and source of this deduction.
+
+## Line 26 - Ridesharing money and other benefits
+
+Enter the amount of ridesharing money and benefits (other than salary) received by a driver in a ridesharing arrangement using a motor vehicle if these amounts are included in your Form IL-1040, Line 1. Do not include income received from ridesharing companies.
+
+## Line 27 - Payment of life insurance, endowment, or annuity benefits received
+
+Enter the amount of payment of life insurance, endowment, or annuity benefits received before the time they would have ordinarily been paid as an indemnity for a terminal illness. This amount must be included in your Form IL-1040, Line 1.
+
+## Line 28 - Lloyd's plan of operation income if reported on your behalf on Form IL-1065
+
+Enter the income included in your adjusted gross income from a Lloyd's plan of operation if that amount was reported on your behalf on Form IL-1065.
+
+## Line 29 - Income from Illinois pre-need funeral, burial, and cemetery trusts
+
+Enter the amount of income earned by trust accounts established under the Illinois Pre-Need Cemetery Sales Act or the Illinois Funeral or Burial Funds Act. You may claim this amount only if this income is included on your Form IL-1040, Line 1 or Line 3.
+
+## Line 30 - Education loan repayments for primary care physicians
+
+Enter the amount of education loan repayments made for primary care physicians who agree to practice in designated shortage areas for a specified period of time under the terms of the Underserved Physician Workforce Act. You may claim this amount only if this income is included on your Form IL-1040, Line 1 or Line 3.
+
+## Line 31 - Reparations or other amounts received as a victim of persecution by Nazi Germany
+
+Enter the amount of reparations or other amounts received as a victim of persecution for racial or religious reasons by Nazi Germany or any other Axis regime that are included in your adjusted gross income. Also include any reparations or other amounts received as an heir of such victim that are included in your adjusted gross income.
+
+## Line 32 and 33 - Follow the instructions on the form.
+
+## Line 34 - Interest on tax-exempt obligations of state and local government
+
+Enter the amount of interest on obligations of Illinois state and local governments included on Form IL-1040, Line 1, 2, or 3. This amount is the amount net of any related bond premium amortization. Interest from state and local government obligations is not exempt from Illinois Income Tax except where legislation has been specifically adopted to provide for an exemption.
+The following is a list of securities that are exempt. However, income from these obligations is not exempt if you own them indirectly through owning shares in a mutual fund.
+Securities exempt from Illinois Income Tax include
+
+- Illinois Housing Development Authority bonds and notes (except housing-related commercial facilities bonds and notes)
+- Tri-County River Valley Development Authority bonds
+- Illinois Development Finance Authority bonds, notes, and other
+obligations (only venture fund and infrastructure bonds)
+- Quad Cities Regional Economic Development Authority bonds and notes (only those bonds declared exempt from taxation by the Authority)
+- College savings bonds issued under the General Obligation Bond Act in accordance with the Baccalaureate Savings Act
+- Illinois Sports Facilities Authority bonds
+- Higher Education Student Assistance Act bonds
+- Illinois Development Finance Authority bonds issued under the Illinois Development Finance Authority Act, Sections 7.80 - 7.87
+- Rural Bond Bank Act bonds and notes
+- Illinois Development Finance Authority bonds issued under the Asbestos Abatement Finance Act
+- Quad Cities Interstate Metropolitan Authority bonds
+- Southwestern Illinois Development Authority bonds
+- Illinois Finance Authority bonds issued under the Illinois Finance Authority Act, Sections 820.60 and 825.55, or the Asbestos Abatement Finance Act
+- Illinois Power Agency bonds issued by the Illinois Finance Authority
+- Central Illinois Economic Development Authority bonds
+- Eastern Illinois Economic Development Authority bonds
+- Southeastern Illinois Economic Development Authority bonds
+- Southern Illinois Economic Development Authority bonds
+- Illinois Urban Development Authority bonds
+- Downstate Illinois Sports Facilities Authority bonds
+- Western Illinois Economic Development Authority bonds
+- Upper Illinois River Valley Development Authority Act bonds
+- Will-Kankakee Regional Development Authority bonds
+- Export Development Act of 1983 bonds
+- New Harmony Bridge Authority bonds - Note: For tax years beginning on or after August 19, 2023, the bonds issued by the New Harmony Bridge Authority are no longer eligible for income exemption.
+- New Harmony Bridge Bi-State Commission bonds - Note: For tax years beginning on or after August 19, 2023, the bonds issued by the New Harmony Bridge Bi-State Commission are no longer eligible for income exemption.
+For more information see Publication 101, Income Exempt from Tax.
+Line 35 - Interest on tax-exempt obligations of non-U.S. governments
+Enter the amount of interest on obligations of non-U.S. governments included on Form IL-1040, Line 1, 2, or 3. This amount is the amount net of any related bond premium amortization.
+Interest from non-U.S. government obligations is not exempt from Illinois Income Tax except where legislation has been specifically adopted to provide for an exemption.
+Non-U.S. securities exempt from Illinois Income Tax include
+- Bonds issued by the government of Guam
+- Bonds issued by the government of Puerto Rico
+- Bonds issued by the government of the Virgin Islands
+- Bonds issued by the government of American Samoa
+- Bonds issued by the government of the Northern Mariana Islands
+- Mutual mortgage insurance fund bonds
+
+
+## Line 36 - Your child's interest reported on federal Form 8814
+
+Enter the amount of your child's income that you reported on federal Form 8814, Parents' Election To Report Child's Interest and Dividends, that would be allowed as a subtraction on Lines 22, 34, or 35 of this schedule if you had received it rather than your child. You may claim this amount only if your child's income is included on your Form IL-1040, Line 1 or Line 3.
+# Line 37 - Railroad sick pay and railroad unemployment compensation 
+
+Enter the amount of any railroad sick pay and railroad unemployment compensation that is included in your Form IL-1040, Line 1.
+
+Note: Do not include retirement or third party sick pay on this line.
+Attach: Form 1099-G or Form W-2 showing railroad sick pay or railroad unemployment compensation and a copy of page 1 of your federal return and Schedule 1.
+
+## Line 38 - Unjust imprisonment compensation
+
+Enter the amount of any compensation you were awarded by the Illinois Court of Claims for time unjustly served in an Illinois prison if it is included in your Form IL-1040, Line 1.
+
+## Line 39 - Distributions from "Bright Start," "College Illinois," and "Bright Directions" college savings plans
+
+Enter the amount of distributions from the "Bright Start," "College Illinois," and "Bright Directions" college savings plans if you included them in your federal adjusted gross income because you claimed a federal American Opportunity Credit or Lifetime Learning Credit for the expenditures.
+
+## Line 40 - Disallowed Deductions for Cannabis Establishments
+
+Enter the amount of deductions disallowed federally under Section 280E of the Internal Revenue Code for this taxable year and not added back under IITA Section 203. You may claim this amount if you are a cannabis establishment operating in Illinois and licensed under the Cannabis Regulation and Tax Act or a cannabis cultivation center or medical cannabis dispensing organization operating in Illinois and licensed under the Compassionate Use of Medical Cannabis Program Act.
+
+## Line 41 - Fertility Fraud or Donor Fertility Fraud Settlements
+
+Enter the amounts received as a result of a judgment or settlement for fertility fraud or donor fertility fraud as provided in the Illinois Fertility Fraud Act or similar action in another state.
+
+Line 42 - Add Lines 33 through 41. Enter the amount here and on Form IL-1040, Line 7.

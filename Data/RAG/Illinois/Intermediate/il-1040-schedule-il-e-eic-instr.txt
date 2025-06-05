@@ -1,0 +1,276 @@
+# Illinois Department of Revenue 2024 Schedule IL-E/EITC IL-1040 Instructions
+
+## General Information
+
+## What is the purpose of Schedule IL-E/EITC?
+
+Schedule IL-E/EITC, Illinois Exemption and Earned Income Tax Credit, provides instruction for you to figure the total amount of dependent exemption allowance you are allowed, and the total amount of Illinois Earned Income Tax Credit (EITC) and Child Tax Credit you may claim on Form IL-1040, Individual Income Tax Return. See Publication 132, Illinois Earned Income Tax Credit (EITC) Information.
+
+## What must I attach to Form IL-1040 to claim an exemption, the Illinois EITC, and/or the Child Tax Credit?
+
+If you enter an amount on Form IL-1040, Line 29 or Line 30, you must attach to your Form IL-1040, a completed Schedule IL-E/EITC, a copy of page 1 and 2 and Schedule 1 of your federal Form 1040 or 1040-SR, and any other required documentation listed in the "Step-by-Step Instructions" of this schedule. Note: We will review the EITC you claim and, if necessary, we may ask you to provide additional information to verify your credits. If you fraudulently claim the Illinois EITC, you may not be allowed to claim the credit for up to ten years. You also may have to pay penalties. The Child Tax Credit is a new credit for taxpayers that qualify for the EITC and have at least one child that is your dependent and under the age of 12 years old as of the last day of 2024.
+
+## Do I qualify for the Illinois Earned Income Tax Credit?
+
+In general, if you qualified for the federal EITC, you also qualify for the Illinois EITC. For tax year 2023 and after, Illinois has expanded the qualifications for the Illinois EITC beyond the federal qualifications. You may now be able to claim the Illinois EITC if you meet all of the federal qualifications, except that you (or your spouse, if married):
+
+- file using an IRS-issued Individual Taxpayer Identification Number (ITIN) and/or
+- were age 18-24 or 65 and older as of the last day of the tax year and had no qualifying child(ren) during the tax year.
+
+You must:
+
+- Have earned income under the amounts shown in Table 1 based upon filing status and number of qualifying children.
+
+Table 1 Federal EITC Income Limits
+
+|  Qualifying Children
+Claimed | Filing as Single, Head of
+Household, or Widowed | Filing as Married Filing Jointly  |
+| --- | --- | --- |
+|  Zero | $\$ 18,591$ | $\$ 25,511$  |
+|  One | $\$ 49,084$ | $\$ 56,004$  |
+|  Two | $\$ 55,768$ | $\$ 62,688$  |
+|  Three | $\$ 59,899$ | $\$ 66,819$  |
+
+- Have investment income below $\$ 11,600$.
+- Have not filed federal Form 2555, Foreign Earned Income.
+- Meet certain rules if you are separated from your spouse and not filing a joint tax return.
+- Meet federal special qualifying rules for military members, clergy members, and taxpayers and their relatives with disabilities.
+- Meet federal rules that state a qualifying child may not be claimed by more than one person.
+- Not have been claimed as a qualifying child on anyone else's return without you claiming a qualifying child.
+
+Note: For the Illinois EITC, a valid Social Security number is not required for you, your spouse, and any qualifying children. You may use an IRS-issued Individual Taxpayer Identification Number (ITIN). Note: If you reported business income or loss on your federal return, we may ask you to provide additional information to verify your Illinois EITC.
+
+## Do I qualify for the new Illinois Child Tax Credit?
+
+If you qualified for the Illinois EITC and have at least one child that is your dependent and under the age of 12 years old as of the last day of 2024, you qualify for the Illinois Child Tax Credit.
+
+## What are the requirements for my child to be considered a qualifying child?
+
+For the purpose of the Illinois EITC, a qualifying child must meet the following requirements:
+
+## Age requirements
+
+- be any age and permanently and totally disabled at any time during the year.
+- be under age 19 at the end of the year and younger than you (or your spouse, if you file a joint return).
+- be under age 24 at the end of the year and a full-time student for at least 5 months of the year and younger than you (or your spouse, if you file a joint return).
+
+## Relationship requirements
+
+- must be your son, daughter, stepchild, adopted child or foster child, brother, sister, half-brother, half-sister, stepsister or stepbrother, grandchild, niece or nephew.
+# 2024 Schedule IL-E/EITC Instructions, continued. 
+
+## Residency requirements
+
+- must live in the same home as you in the United States for more than half of the tax year.
+- must have a valid SSN or ITIN.
+
+
+## Filing requirements
+
+- must not have filed a joint return with another person (for example, their husband or wife) to claim any credits such as the EITC. Your child can file a joint tax return only to get a tax refund on tax withheld from their paycheck.
+
+
+## What if I need additional assistance or forms?
+
+- Visit our website at tax.illinois.gov for assistance, forms or schedules,
+
+
+## 2024
+
+## 2024
+
+- write us at
+
+
+## ILLINOIS DEPARTMENT OF REVENUE
+
+PO BOX 19001
+SPRINGFIELD ILLINOIS 62794-9001
+
+- call 1800 732-8866 or 217 782-3336 (TTY at 1800 544-5304), or
+- visit a taxpayer assistance office - 8:00 a.m. to 5:00 p.m. (Springfield office) and 8:30 a.m. to 5:00 p.m. (all other offices), Monday through Friday.
+
+
+## Step-by-Step Instructions
+
+Note: If this Schedule is being attached to Form IL-1040-X, Amended Illinois Income Tax return, check the box at the top of the Schedule.
+
+## Step 1: Provide the following information
+
+Enter your name and Social Security number as shown on your Form IL-1040.
+
+## Illinois Dependent Exemption Allowance
+
+Note: An Illinois exemption allowance is not allowed if the taxpayer's adjusted gross income for the taxable year exceeds $\$ 500,000$ for returns with a federal filing status of married filing jointly, or $\$ 250,000$ for all other returns.
+
+## Step 2: Dependent Information
+
+Enter information in the table for each dependent you are claiming. If claiming more than 10 dependents, complete and attach additional Dependent information tables.
+
+- Dependent's first name - Enter your dependent's first name.
+- Dependent's last name - Enter your dependent's last name.
+- Social Security number or Individual Taxpayer Identification Number - Enter your dependent's complete Social Security number (SSN) or IRS-issued Individual Taxpayer Identification Number (ITIN).
+Note: If your dependent was deceased before a Social Security number was issued, enter "died."
+- Dependent's relationship to you - Enter your dependent's relationship to you (for example, son, daughter, grandchild, niece, nephew, eligible foster child, etc.)
+- Dependent's date of birth - Enter your dependent's date of birth.
+- Is the dependent a full-time student? - Check the box if "yes."
+- Does the dependent have a disability? - Check the box if "yes."
+- Number of months living with you - Enter the number of months the dependent has lived with you during the calendar year. This amount cannot exceed "12."
+- Is the dependent eligible for Illinois Earned Income Tax Credit? - Check the box if the dependent meets the requirements for a "Qualifying Child" for Illinois Earned Income Credit.
+Line 1 - Follow the instructions on the form. Enter the result on Form IL-1040, Line 10d.
+
+
+## Illinois Earned Income Tax Credit
+
+## Step 3: Qualifying Child Information (other than a dependent)
+
+Note: Do not include qualifying children that are included in Step 2 here.
+Complete the table for each child you claimed on your federal Schedule EIC. To report additional qualifying children, complete and attach additional Qualifying Child Information tables.
+
+- Child's first name - Enter your qualifying child's first name.
+- Child's last name - Enter your qualifying child's last name.
+- Social Security number or Individual Taxpayer Identification Number - Enter your qualifying child's complete Social Security number (SSN) or IRS-issued Individual Taxpayer Identification Number (ITIN).
+Note: If your qualifying child was deceased before a Social Security Number was issued, enter "died."
+IL-1040 Schedule IL-E/EITC Instructions Page 2 of 5 (R-12/24)
+# 2024 Schedule IL-E/EITC Instructions, continued. 
+
+- Child's relationship to you - Enter your qualifying child's relationship to you (for example, son, daughter, grandchild, niece, nephew, eligible foster child, etc.)
+- Child's date of birth - Enter your qualifying child's date of birth.
+- Is the child a full-time student? - Check the box if "yes."
+- Does the child have a disability? - Check the box if "yes."
+- Number of months living with you - Enter the number of months the qualifying child has lived with you during the calendar year. This amount cannot exceed "12."
+Line 1 - Follow the instructions on the form.
+Line 2 - Follow the instructions on the form. If you did not enter an amount on Line 2, continue to Line 3.
+Line 3 - Follow the instructions on the form. If you enter an amount on Line 3, you must enter your spouse's Social Security number from your married filing jointly federal return on Line 3a. If you did not enter an amount on Line 3, continue to Line 4.
+Line 3a - If you entered an amount on Line 3, you must follow the instructions on the form.
+Note: If you filed a joint federal return and you elected to file separate Illinois returns because one spouse is an injured spouse, you may each claim the Illinois EITC. However, the total federal credit reported on Schedule IL-E/EITC, Line 6, for both spouses cannot exceed the EITC amount claimed on your joint federal return.
+Line 4 - Check the appropriate box.
+
+
+## Step 4: Figure your Illinois Earned Income Tax Credit
+
+Complete this step to calculate your Illinois EITC. Note: If you qualify for the federal EITC and do not have additional children with an ITIN, skip Line 5, go to Line 6, and do not complete the Illinois Expanded EITC Worksheet.
+Line 5 - Check the box that applies and follow the instructions. Important: If you check a box on Line 5, you must to complete the Illinois Expanded EITC Worksheet.
+Lines 6 through 9 - Follow the instructions on the form.
+Line 8 - If you are a nonresident or a part-year resident of Illinois, you are entitled to the percentage of your Illinois EITC based upon the percentage of your income allocable to Illinois. Enter the decimal from Schedule NR, Line 48.
+Line 9 - Enter the amount from Line 9 on Form IL-1040, Line 29.
+
+## Step 5: Figure your Illinois Child Tax Credit
+
+If you qualify for the Illinois EITC and have at least one child that is your dependent and under the age of 12 years old as of the last day of 2024, you qualify for the Illinois Child Tax Credit. Note: Do not complete this step unless you meet the requirements to claim the credit.
+Line 10 - Check the box if you have at least one child that is your dependent, and under the age of 12 years old as of the last day of 2024.
+Line 11 - Follow the instructions on the form.
+Line 12 - Follow the instructions on the form. Enter the total on Form IL-1040, Line 30.
+Remember: Intentionally submitting false information is a crime under Section 1301 of the Illinois Income Tax Act.
+
+## Instructions for Illinois Expanded EITC Worksheet
+
+The Illinois Expanded EITC Worksheet is used to calculate the federal earned income amount that will be the basis for the Illinois EITC. If you checked a box on Step 4, Line 5, complete the EITC Qualifications Questionnaire on Page 4 first. This Questionnaire was taken from the federal Form 1040 Instructions for Line 27, and converted to see if you qualify for the Illinois EITC.
+You will need to have a copy of your 2024 federal Form 1040 or 1040-SR and all required schedules and attachments to reference while completing this Questionnaire and Worksheet. If you were not required to file a federal return for this tax year, you will need to complete a "pro forma" federal Form 1040. A pro forma form is a federal tax return you complete with your income tax information that can be used as a reference for the questions. Note: Keep this form with your tax records to provide it to us if requested.
+
+## Part 1 Your Earned Income
+
+Line 1 - Enter the amount from federal Form 1040 or 1040-SR, Line 1z.
+
+## Special instructions:
+
+- Taxpayers who filed the federal Schedule SE because they had church employee income of $\$ 108.28$ or more, subtract the amount reported on federal Schedule SE, Part I, Line 5a (that was also reported on federal Form 1040 or 1040-SR, Line 1z) from federal Form 1040 or 1040-SR, Line 1z, and enter the result.
+- Taxpayers who filed the Schedule SE because they were a member of the clergy, subtract the amount reported on federal Schedule SE, Part I, Line 2 (that was also reported on federal Form 1040 or 1040-SR, Line 1z) from federal Form 1040 or 1040-SR, Line 1z, and enter the result.
+Lines 2 through 5 - Follow the instructions on the form.
+# 2024 Schedule IL-E/EITC Instructions, continued. 
+
+## Part 2 Self-Employed, Members of the Clergy, and People With Church Employee Income Filing Federal Schedule SE
+
+Lines 6 through 10 - Complete these lines only if you were self-employed, a member of the clergy, or have church employee income, and are filing federal Schedule SE. Follow the instructions on the form. The figures on these lines correspond with the amounts on federal 1040 Instructions, Worksheet B, Part 1, Lines 1a-1e.
+
+## Part 3 Self-Employed NOT Required to File Federal Schedule SE and Statutory Employees Filing Federal Schedule C
+
+Lines 11 through 12 - Complete these lines only if you were self-employed and not required to file federal Schedule SE. (For example, your net earnings from self-employment were less than $\$ 400$.) Follow the instructions on the form.
+Important: Do not include any statutory employee income, any net profit from services performed as a notary public, any amount exempt from self-employment tax as the result of the filing and approval of federal Form 4029 or federal Form 4361, or any other amounts exempt from self-employment tax. In addition, if you have any federal Schedule K-1 amounts, complete the appropriate line(s) of the federal Schedule SE, Part I and reduce the federal Schedule K-1 amounts as described in the federal Partner's Instructions for Schedule K-1. The figures on these lines correspond with the amounts on federal 1040 Instructions, Worksheet B, Part 2, Lines 2a and 2b.
+Line 13 - Follow the instructions on the form.
+
+## Part 4 Total Earned Income
+
+Lines 14 through 15 - Follow the instructions on the form.
+
+## Part 5 Do You Qualify?
+
+Lines 16 through 23 - Follow the instructions on the form.
+Line 23 - Enter this amount on Page 2, Step 4, Line 6 of the Schedule IL-E/EITC.
+
+## EITC Qualifications Questionnaire
+
+Complete Steps 1 through 4 only if you did not qualify for or qualified for a lesser amount of the federal EITC because
+
+- you, your spouse, or your qualifying child(ren) do not have a valid Social Security Number, but do have a valid ITIN;
+- you and your spouse, if filing jointly, are ages 18 through 25 , or 65 and older, and do not have a qualifying child.
+
+
+## Step 1: All Filers
+
+1. If, in 2024:
+
+- 3 or more qualifying children lived with you, is the amount on Form 1040 or 1040-SR, line 11, less than \$59,899 (\$66,819 if married filing jointly)?
+- 2 qualifying children lived with you, is the amount on Form 1040 or 1040-SR, line 11, less than \$55,768 (\$62,688 if married filing jointly)?
+- 1 qualifying child lived with you, is the amount on Form 1040 or 1040-SR, line 11, less than \$49,084 (\$56,004 if married filing jointly)?
+- no qualifying children lived with you, is the amount on Form 1040 or 1040-SR, line 11, less than \$18,591 (\$25,511 if married filing jointly)?
+$\square$ Yes. Continue. $\square$ No. STOP - You can't take the Illinois EITC.
+
+2. Are you filing federal Form 2555 (relating to foreign earned income)?
+
+Yes. STOP - You can't take the Illinois EITC. $\square$ No. Continue.
+3. Were you or your spouse a US resident for at least half of 2024?
+
+Yes. Continue. $\square$ No. STOP - You can't take the Illinois EITC.
+
+## Step 2: Investment Income
+
+1. Add the amounts from your 2024 federal Form 1040 or 1040-SR:
+
+## Line 2a
+
++ Line 2b
++ Line 3b
++ Line 7 (if a loss, enter $-0-$ )
+$=$ Investment Income
+# 2024 Schedule IL-E/EITC Instructions, continued. 
+
+2. Do any of the following apply for 2024 ?
+
+- You are filing federal Schedule E and/or federal Form 4797.
+- You are reporting income from the rental of personal property not used in a trade or business.
+- You are filing federal Form 8814 (relating to election to report child's interest and dividends on your return).
+- You have income or loss from a passive activity.
+$\square$ Yes. Use Worksheet 1 in federal Pub. 596 to see if you can take the credit. $\square$ No. Continue.
+
+3. Is your investment income more than $\$ 11,600$ ?
+$\square$ Yes. STOP - You can't take the Illinois EITC. $\square$ No. Continue.
+
+## Step 3: Qualifying Child
+
+1. Do you have at least one child who meets the conditions to be your qualifying child for the purpose of claiming the EITC?
+$\square$ Yes. Continue. $\square$ No. Skip questions 2 through 5; go to Step 4.
+2. Are you filing a joint return for 2024?
+$\square$ Yes. Skip questions 3 through 5 and Step 4, and go to Schedule IL-E/EITC, Illinois Expanded EITC Worksheet.
+$\square$ No. Continue.
+3. Are you a married taxpayer whose filing status is married filing separately or head of household?
+$\square$ Yes. Continue. $\square$ No. Skip question 4 and go to question 5.
+4. Did you and your spouse live apart for the last 6 months of 2024 or are you legally separated according to Illinois state law under a written separation agreement, or a decree of separate maintenance and you lived apart from your spouse at the end of 2024?
+$\square$ Yes. Continue. $\square$ No. STOP - You can't take the Illinois EITC.
+5. Could you be a qualifying child of another person for 2024? (Check "No" if the other person is not required to file, and is not filing a 2024 federal tax return or is filing a 2024 federal tax return only to claim a refund of withheld income tax or estimated tax paid (see federal Pub. 596 for examples).)
+$\square$ Yes. STOP - You can't take the Illinois EITC. $\square$ No. Skip Step 4, and go to Schedule IL-E/EITC, Illinois Expanded EITC Worksheet.
+
+## Step 4: Filers without a Qualifying Child
+
+1. Are you a married taxpayer whose filing status is married filing separately or head of household?
+$\square$ Yes. STOP - You can't take the Illinois EITC. $\square$ No. Continue.
+2. Were you, or your spouse if filing a joint return, at least age 18 at the end of 2024? (Check "Yes" if you, or your spouse if filing a joint return, were born on or before December 31, 2006.) If your spouse died in 2024 or if you are preparing a return for someone who died in 2024, see federal Pub. 596 before you answer.
+$\square$ Yes. Continue. $\square$ No. STOP - You can't take the Illinois EITC.
+3. Was your main home, and your spouse's if filing a joint return, in the United States for more than half of 2024? Note: Members of the military stationed outside of the US on extended active duty are considered to live in the United States during that duty period for purposes of the EITC.
+$\square$ Yes. Continue. $\square$ No. STOP - You can't take the Illinois EITC.
+4. Are you filing a joint return for 2024?
+$\square$ Yes. Skip questions 5 and 6, and go to Schedule IL-E/EITC, Illinois Expanded EITC Worksheet. $\square$ No. Continue.
+5. Could you be a qualifying child of another person for 2024? (Check "No" if the other person isn't required to file, and isn't filing, a 2024 tax return or is filing a 2024 return only to claim a refund of withheld income tax or estimated tax paid. See federal Pub. 596 for examples.)Yes. STOP - You can't take the Illinois EITC. $\square$ No. Continue.
+6. Can you be claimed as a dependent on someone else's 2024 tax return? (If the person who could claim you on their 2024 Illinois tax return is not required to file, and is not filing a 2024 federal tax return or is filing a 2024 federal tax return only to claim a refund of withheld income tax or estimated tax paid, check "No.")
+$\square$ Yes. STOP - You can't take the Illinois EITC. $\square$ No. Go to Schedule IL-E/EITC, Illinois Expanded EITC Worksheet.

@@ -1,0 +1,174 @@
+# Illinois Department of Revenue 2024 Schedule ICR IL-1040 Instructions 
+
+## General Information
+
+## Important:
+
+The Illinois Property Tax Credit is not allowed if the taxpayer's adjusted gross income for the taxable year exceeds $\$ 500,000$ for returns with a federal filing status of married filing jointly, or $\$ 250,000$ for all other returns.
+The K-12 Education Expense Credit is not allowed if the taxpayer's adjusted gross income for the taxable year exceeds $\$ 500,000$ for returns with a federal filing status of married filing jointly, or $\$ 250,000$ for all other returns.
+Note: This income limit does not apply to the Volunteer Emergency Worker credit.
+
+## What is the purpose of Schedule ICR?
+
+Schedule ICR, Illinois Credits, allows you to figure the total amount of property tax, K-12 education expense, and Volunteer Emergency Worker credits you may claim on Form IL-1040, Individual Income Tax Return.
+
+## What must I attach to Form IL-1040?
+
+If you enter an amount on Form IL-1040, Line 16, you must attach Schedule ICR and any other required documentation listed in the instructions of this schedule to your Form IL-1040.
+Note: We will review the credits you claim and, if necessary, we may ask you to provide additional information to verify your credits.
+
+## Am I eligible for a property tax credit?
+
+You may figure a credit for the Illinois property taxes you paid in 2024 on your principal residence (not a vacation home or rental property) for the time you owned and lived at the property during 2023, if that residence was in Illinois. Nonresidents of Illinois may not take this credit.
+You may not figure a credit for mobile home privilege tax, penalties, or fees included in your property tax bill, or the portion of the property tax that is deductible as a business expense.
+Note: If you are married and both you and your spouse qualify for a property tax credit on your principal residence, and you are filing separate Illinois returns, you may each claim a property tax credit. However, the total amount of credit claimed between both spouses may not exceed 5 percent of the qualifying property tax.
+
+## Illinois property you purchased
+
+You may figure a credit for Illinois property you purchased during 2023 providing you figure only that portion of your taxes that pertains to the time you owned and lived at the property during 2023. You may not take a credit for taxes you paid if the seller reimbursed you at the time of closing. You also may not take a credit on your 2024 return for property you purchased in 2024.
+
+## Illinois property you sold
+
+You may figure a credit for Illinois property you sold in 2024 by combining the 2023 property tax paid in 2024, as well as a portion of the 2024 tax paid based on the time you owned and lived at the property during 2024. You may not take a credit on your 2024 return for property sold during 2023.
+For more information, see Publication 108, Illinois Property Tax Credit.
+
+## Am I eligible for a K-12 education expense credit?
+
+You may figure a credit for qualified education expenses, in excess of $\$ 250$, you paid during 2024 if
+
+- you were the parent or legal guardian of a full-time student who was under the age of 21 at the close of the school year,
+- you and your student were Illinois residents when you paid the expenses, and
+- your student attended kindergarten through twelfth grade at a public or nonpublic school in Illinois during 2024.
+
+You must complete Section B of Schedule ICR, including the K-12 Education Expense Credit Worksheet to claim this credit.
+Note: Keep any receipts you received from your student's school with your income tax records. You must send us this information if we request it.
+For more details, see Publication 112, Education Expense Credit - General Rules and Requirements for Schools, Home Schools, Parents, and Guardians.
+Attach: the receipts for education expenses.
+Note: If you are the parents or legal guardians of a qualified student and you are filing separate Illinois returns, you may each claim an education expense credit. However, you both may not claim a credit for the same expenses, and the total amount of credit claimed between both parents or guardians may not exceed $\$ 750$.
+# General Information, cont. 
+
+## Qualified education expenses
+
+Education expenses that qualify for this credit include
+tuition (including summer school classes meeting elementary or secondary graduation requirements).
+$\square$ book fees covering the rental of books that were required as a part of the school's education program.
+lab fees covering the use of supplies, equipment, materials, or instruments that were required as part of a lab course in the school's education program. For example, if you rented a musical instrument from the school (not from a business) for a class, or for participation in an extracurricular activity that resulted in a credit toward completion of the school's education program, this rental expense qualifies as an education expense.
+Education expenses that do not qualify for this credit include expenses paid
+
+- to a daycare, preschool, college, university, independent tutoring service, or trade school.
+- for the purchase of supplies, books, or equipment that are not significantly used up during the school year (e.g., purchasing musical instruments, costumes for a play).
+- for the use of supplies, equipment, materials, or instruments if the program does not result in a credit towards completion of the school's education program.
+- directly to a business (e.g., renting a musical instrument from a music store).
+- for tutoring or enrichment classes that do not count toward meeting the required curriculum.
+- for after school care, even if paid to the school.
+- for yourself or your spouse.
+- with a scholarship.
+
+For more details, see Publication 112.
+
+## Am I eligible for a Volunteer Emergency Worker credit?
+
+You may figure a credit of $\$ 500$ for being a Volunteer Emergency Worker only if you received a 2024 Volunteer Emergency Worker Credit Certificate.
+The volunteer emergency worker credit is a non-refundable credit that can be used to reduce your Illinois individual income tax liability. The credit is awarded in February to volunteer emergency workers that apply for, qualify for, and are awarded the credit. The aggregate amount of all tax credits awarded by the Illinois Department of Revenue (IDOR) in any calendar year may not exceed $\$ 5,000,000$. Credits shall be awarded on a first-come first-served basis.
+A volunteer emergency worker is defined as a person who
+
+- serves as a member, other than on a full-time career basis, of a fire department, fire protection district, or fire protection association that has a Fire Department Identification Number issued by the Office of the State Fire Marshal and who does not serve as member on a fulltime career basis for another fire department, fire protection district, fire protection association, or government entity, or
+- is a volunteer member of a county or municipal emergency services and has volunteered for at least 100 hours during the immediately preceding calendar year. These volunteers must also be registered with Illinois Emergency Management Agency (IEMA) and Office of Homeland Security (OHS).
+To qualify for the credit, each individual must
+- have served as a volunteer emergency worker for at least 9 months during the taxable year.
+- not receive compensation for his or her services as a volunteer emergency worker of more than $\$ 5,000$ for the taxable year.
+- submit a complete application with IDOR.
+- be one of the first 10,000 qualified applicants.
+
+
+## What if I need additional assistance or forms?
+
+- Visit our website at tax.illinois.gov for assistance, forms or schedules.
+
+ㅈㅇㅣ
+
+- Write us at:
+
+
+## ILLINOIS DEPARTMENT OF REVENUE
+
+PO BOX 19001
+SPRINGFIELD IL 62794-9001
+
+- Call 1800 732-8866 or 217 782-3336 (TTY at 1800 544-5304).
+- Visit a taxpayer assistance office - 8:00 a.m. to 5:00 p.m. (Springfield office) and 8:30 a.m. to 5:00 p.m. (all other offices), Monday through Friday.
+# Step-by-Step Instructions 
+
+Note: If this Schedule is being attached to Form IL-1040-X, Amended Illinois Income Tax return, check the box at the top of the Schedule.
+
+## Step 1: Provide the following information
+
+Enter your name and Social Security number as shown on your Form IL-1040.
+
+## Step 2: Figure your nonrefundable credit
+
+Lines 1 through 3 - Follow the instructions on the form.
+
+## Section A: Illinois Property Tax Credit
+
+Line 4a - Enter the total amount of Illinois Property Tax paid during the tax year for the principal residence that you own and any adjoining lots that are an extension of your primary residence.
+To qualify for the property tax credit,
+
+- your principal residence must have been in Illinois during the prior year,
+- you must have owned your principal residence, and
+- your property tax bill must have been paid during the taxable year.
+
+Property taxes in Illinois are assessed on property in one year and paid in the next year.
+Note: Include only property taxes paid on real estate that was your principal residence during the tax year.
+Line 4b - Enter the name of the county and the property number, sometimes called "property index number," "parcel number," or "permanent number" for the property listed on Line 4a.
+Note: You must enter your property number exactly as it appears on your property tax bill or assessment notice. Your property number is found near the top of your property tax bill or assessment notice. If your property taxes are paid through your mortgage, you may contact your lender for your property number.
+You may also get this number from your county assessor's office. A list of counties, with contact information, is under the "Individuals" section of our website.
+Note: If you and your spouse each have a principal residence and have included the property tax paid on both residences in Line 4a, enter the county and property number for the second residence on Line 4c.
+Lines 4c and 4d - Enter the name of the county and the property number(s) for any lots that you own and
+
+- adjoin your principal residence,
+- are an extension of your primary residence claimed on line 4b, and
+- you included when calculating the total amount of property tax paid on Line 4a.
+
+Note: You may not claim a vacation home, a vacant lot, rental property, property outside of Illinois, or farmland for this credit.
+Line 4e - Enter the portion of your tax bill that is deductible as a business expense on U.S. income tax forms or schedules, even if you did not take the federal deduction.
+Lines 4 f through 6 - Follow the instructions on the form.
+Note: If you will not claim a K-12 Education Expense Credit in Section B, enter "0" on Line 8 and continue to Section C, Line 10.
+
+## Section B: K-12 Education Expense Credit
+
+Note: You must complete the K-12 Education Expense Credit Worksheet on the last page of Schedule ICR before completing this section.
+Line 7a - Enter the total amount of K-12 education expenses from Line 15 of the worksheet on the last page of Schedule ICR.
+Lines 7c through 9 - Follow the instructions on the form.
+Note: Keep any receipts you received from your student's school with your income tax records. You must send us this information if we request it.
+
+## Section C: Volunteer Emergency Worker Credit
+
+Note: You must have applied for and been awarded a 2024 Volunteer Emergency Worker Credit Certificate from IDOR.
+Line 10a - Enter your Volunteer Emergency Worker Credit Certificate Number.
+Line 10b - Enter your spouse's Volunteer Emergency Worker Credit Certificate Number.
+Line 10c - If either you or your spouse received the Volunteer Emergency Worker Credit, enter $\$ 500$. If both you and your spouse received the credit, enter $\$ 1,000$.
+Lines 11 through 12 - Follow the instructions on the form.
+Note: Keep a copy of your and your spouse's Volunteer Emergency Worker Credit Certificate with your income tax records. You must send us this information if we request it.
+
+## Section D: Total Nonrefundable Credit
+
+Line 13 - Add Lines 5, 8, and 11, and enter this amount on Form IL-1040, Line 16.
+# K-12 Education Expense Credit Worksheet 
+
+Lines 14a through 14j - Complete one line for each qualifying student, filling out Columns A through G using the following instructions. If a student attended more than one school during the tax year, please use a separate line for each school.
+If you need more space, you may attach a separate piece of paper following this format.
+Column A - Enter the first and last name of the student.
+Column B - Enter the full Social Security number (or taxpayer identification number, if applicable) for the student listed in Column A.
+Column C - Enter the student's grade K-12 (kindergarten through twelfth grade).
+Column D - Enter the name of the Illinois school the student attended during the year, or enter "home school," if applicable.
+Column E - Enter the name of the Illinois city where the school is located.
+Column F - Indicate the type of school the student attended during the year. Check
+
+- "P" for public school
+- "N" for non-public school
+- "H" for home school
+
+Only check one box.
+Column G - Enter the total amount of tuition, book fees, and lab fees paid at the school where the student is enrolled during the regular school year.
+Line 15 - Follow the instructions on the worksheet to figure your qualified education expenses. Enter the total on Step 2, Line 7a of Schedule ICR.

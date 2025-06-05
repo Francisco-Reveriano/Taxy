@@ -1,0 +1,192 @@
+# 2024 Form IL-4562 Instructions 
+
+## What's New?
+
+This form has been modified to include calculations for property placed in service after December 31, 2024, and before January 1, 2026, subject to 40 percent federal bonus depreciation. The new subtraction lines dedicated to 40 percent bonus depreciation on Form IL-4562 is used to claim a subtraction for eligible property placed in service after December 31, 2024. Taxpayers who claimed 40 percent bonus depreciation federally prior to that date may not use the new lines. See the "40 percent bonus depreciation instructions" below for more information.
+
+## General Information
+
+## What is the purpose of this form?
+
+Form IL-4562, Special Depreciation, should be filed by taxpayers who file an income or replacement tax return and report special depreciation on their federal Form 4562, Depreciation and Amortization, or Form 2106, Employee Business Expenses. The purpose of Form IL-4562 is to reverse the effects of the $30,40,50,60,80$, or 100 percent bonus depreciation allowed by Internal Revenue Code (IRC) Section 168(k).
+Step 2 of this form figures your Illinois special depreciation addition as required by the Illinois Income Tax Act (IITA). When you sell or transfer property, this step also reverses the Illinois depreciation subtractions you claimed on Form IL-4562 in prior years.
+Step 3 of this form figures your Illinois depreciation subtraction as required by the IITA. When you sell or transfer property, this step also reverses the "bonus depreciation" add back you reported on any prior year Form IL-4562.
+If you filed more than one federal Form 4562, be sure to add the amounts from all federal Forms 4562 and enter the total amounts on this form.
+
+## Who must use Form IL-4562?
+
+You must use Form IL-4562 if you are filing an Illinois income or replacement tax return and you reported the special depreciation on federal Form 4562. Individuals who reported special depreciation on federal Form 2106 should also use Form IL-4562.
+Unitary groups: If you are filing an Illinois combined return, complete one Form IL-4562 for the entire unitary business group.
+Do not include on your Form IL-4562 any amount of depreciation additions or subtractions you receive from
+
+- a partnership or S corporation on Schedule K-1-P, Partner's or Shareholder's Share of Income, Deductions, Credits, and Recapture, or
+- from a trust or estate on Schedule K-1-T, Beneficiary's Share of Income and Deductions.
+
+
+## Should I round?
+
+You must round the dollar amounts on Form IL-4562 to whole-dollar amounts. To do this, you should drop any amount less than 50 cents and increase any amount of 50 cents or more to the next higher dollar.
+
+## When must I file this form?
+
+You must file this form if you acquired new depreciable property after September 10, 2001, and you claimed additional first year depreciation of $30,40,50,60,80$, or 100 percent of the basis of that property on your federal return.
+
+## What if I need additional assistance or forms?
+
+- For assistance, forms, or schedules, visit our website at tax.illinois.gov or scan the QR code provided.
+- Write us at
+
+Illinois Department of Revenue
+P.O. Box 19001
+
+Springfield, Illinois 62794-9001
+
+- Call 1800 732-8866 or 217 782-3336 (TTY at 1800 544-5304).
+- Visit a taxpayer assistance office - 8:00 a.m. to 5:00 p.m. (Springfield office) and 8:30 a.m. to 5:00 p.m. (all other offices), Monday through Friday.
+# Specific Instructions 
+
+If you claimed 30, 50, 60, 80, or 100 percent bonus depreciation on your 2024 federal return, follow the instructions beginning with Step 1 below.
+If you claimed 40 percent bonus depreciation on your 2024 federal return, read the information below and follow the instructions beginning with Step 1 below.
+
+## If a specific line is not referenced, follow the instructions on the form.
+
+## 40 percent bonus depreciation instructions
+
+For taxpayers who claimed 40 percent bonus depreciation federally for eligible property placed in service prior to January 1, 2025 - An Illinois special depreciation addition must be reported in the same year in which you claimed a federal 40 percent bonus depreciation allowance for that property. However, because the IITA did not make a provision for property subject to the federal bonus depreciation rate of 40 percent, an Illinois subtraction modification could not be claimed for the property until
+
+- the asset is sold or otherwise disposed of, or
+- the last taxable year that you claim federal depreciation on the property,
+whichever occurs first. You are required to report an Illinois special depreciation addition in the same year in which you claimed a federal special depreciation allowance for the property even though the subtraction modification will not apply until the last year of regular depreciation.
+Forty percent bonus depreciation is reported
+- as an Illinois addition modification on Step 2, Lines 1 and 2, in the same year in which the amount was claimed as a special depreciation allowance on your federal Form 4562 or 2106.
+- as an Illinois subtraction modification on Step 3, Line 18, in the last year of regular depreciation only. Do not report 40 percent bonus depreciation as a subtraction modification on Step 3, Line 18, before the last year of regular depreciation or for any year on Step 3, Lines 5a through 17.
+For taxpayers who claimed 40 percent bonus depreciation federally for eligible property placed in service on or after January 1, 2025 and before January 1, 2026 - An Illinois special depreciation addition must be reported in the same year in which you claimed a federal 40 percent bonus depreciation allowance for that property. An Illinois subtraction modification may be claimed on items of depreciation claimed on property for which you claimed 40 percent bonus depreciation federally by completing Step 3, Lines 9a through 10.
+
+
+## Step 1: Provide the following information
+
+Enter your name and entire Social Security number (SSN) or federal employer identification number (FEIN) as shown on your Illinois return. Failure to provide the entire SSN or FEIN will result in the delay of processing of your return.
+
+## Step 2: Figure your Illinois special depreciation addition
+
+## Do not use negative figures on this form.
+
+Line 1 - Enter the total amount you claimed as special depreciation on your current year federal Form 4562, Lines 14 and 25, for property you acquired after September 10, 2001. This is the 30, 40, 50, 60, 80, or 100 percent "bonus depreciation" you were allowed to claim on your federal return for this tax year.
+For taxpayers who claimed 40 percent bonus depreciation federally for eligible property placed in service prior to January 1, 2025 - You are required to include amounts for any property subject to the 40 percent bonus depreciation in the same year in which you claimed federal special depreciation for the property even though the Illinois subtraction modification will not apply until the last year of regular depreciation.
+Do not include any special depreciation on Line 1
+
+- for property that you sold, traded, abandoned, or otherwise disposed of in this tax year, or
+- that you claimed on Gulf Opportunity Zone or Liberty Zone property, or cellulosic plant property, reuse and recycling property, disaster assistance property, or recovery assistance property.
+Line 2 - Individuals only: You may have reported "bonus depreciation" on federal Form 2106. That form instructs you to enter IRC Section 179 deductions and special allowances. Depending on the type of expenses you are claiming, you will show these amounts on federal Form 2106, Lines 4 or 31, or both. Illinois Form IL-4562 requires you to report only the special depreciation allowance.
+Do not include any amount from federal Form 2106 that you reported on federal Schedule A, Itemized Deductions.
+Enter the total amount you claimed as special depreciation on your federal Form 2106, Lines 4 and 31, for property you acquired after September 10, 2001. This is the 30, 40, 50, 60, 80, or 100 percent "bonus depreciation" you were allowed to claim on your federal return for this tax year.
+For taxpayers who claimed 40 percent bonus depreciation federally for eligible property placed in service prior to January 1, 2025 - You are required to include amounts for any property subject to the 40 percent bonus depreciation in the same year in which you claimed federal special depreciation for the property even though the Illinois subtraction modification will not apply until the last year of regular depreciation.
+Do not include any special depreciation on Line 2
+
+- for property that you sold, traded, abandoned, or otherwise disposed of in this tax year, or
+- that you claimed on Gulf Opportunity Zone or Liberty Zone property, or cellulosic plant property, reuse and recycling property, disaster assistance property, or recovery assistance property.
+Line 3 - Last year of regular depreciation: Line 3 allows you to claim the same total Illinois depreciation and federal depreciation over the period for which you can claim federal depreciation for an asset.
+For assets that you claim 30, 50, 60, or 80 percent bonus depreciation, you must reverse all the subtractions claimed for each asset if this is the final year for which you can claim regular federal depreciation because the asset
+- was sold, traded, abandoned, or otherwise disposed of, or
+- reached the end of its depreciable life.
+
+For assets that you claim 40 percent federal bonus depreciation and which you claimed subtraction modifications prior to the last year of regular federal depreciation, you must reverse all the subtractions claimed for each asset if this is the final year for which you can claim regular federal depreciation because the asset
+
+- was sold, traded, abandoned, or otherwise disposed of, or
+- reached the end of its depreciable life.
+
+For assets that you claim 100 percent bonus depreciation, you must reverse all the subtractions claimed for each asset if this is the final year for which you would have claimed regular federal depreciation had you elected not to claim bonus depreciation under IRC Section 168(k)(7) because the asset
+
+- was sold, traded, abandoned, or otherwise disposed of, or
+- reached the end of its depreciable life.
+
+Enter the total amount of all Illinois depreciation subtractions you claimed on this year and any prior year Forms IL-4562, Step 3, for these assets.
+Line 4 - Follow the instructions on the form.
+Use the following list of Illinois form and line references for reporting this addition.
+
+# Current year filers - 
+
+If you are an individual, report the addition on
+
+- Schedule M, Step 2, Line 5.
+
+If you are a business, report the addition on
+
+- Form IL-1120 or Form IL-1120-X, Line 5.
+- Form IL-1120-ST or Form IL-1120-ST-X, Line 17.
+- Form IL-1065 or Form IL-1065-X, Line 17.
+- Form IL-1041 or Form IL-1041-X, Line 7.
+
+Note: The sum of the amounts you report on Form IL-1041, Line 7, columns A and B should match the total amount reported on Form IL-4562, Line 4.
+
+## Prior year filers -
+
+For prior year form and line references, see the prior year version of these instructions that correspond to the tax year you are filing.
+Note: Partnerships, S corporations, trusts, and estates pass this modification through to their owners in the same manner as income. See Schedule K-1-P, or Schedule K-1-T, for more information. Partners, shareholders, and beneficiaries do not include any amount of pass-through additions from Schedule K-1-P on Form IL-4562. See Schedule K-1-P(2), Partner's and Shareholder's Instructions, or Schedule K-1-T(2), Beneficiary's Instructions, for information concerning how to correctly report these amounts.
+# Step 3: Figure your Illinois special depreciation subtraction 
+
+Lines 5a through 6 have been reserved for future use.
+Use Lines 7a through 8 for items of depreciation claimed on property for which you claimed 30 percent bonus depreciation.
+
+Line 7a - Enter the portion of depreciation claimed on federal Form 4562, Line 17, plus Line 19, Column g, plus Line 26, Column h, for property for which you claimed special depreciation on federal Form 4562, Lines 14 or 25, for this tax year, or any other tax year ending after September 10, 2001, for bonus depreciation equal to 30 percent of your basis in the property.
+Line 7b - Individuals only: Enter the portion of any depreciation included on federal Form 2106, Lines 4 and 38 for this tax year or any prior tax year for bonus depreciation equal to 30 percent of your basis in the property.
+
+Use Lines 9a through 10 for items of depreciation claimed on property placed in service on or after January 1, 2025, and before January 1, 2026, for which you claimed 40 percent bonus depreciation.
+
+Line 9a - Enter the portion of depreciation claimed on federal Form 4562, Line 19, Column g, plus Line 26, Column h, for property placed in service after December 31, 2024, and before January 1, 2026, for which you claimed special depreciation on federal Form 4562, Lines 14 or 25, for this tax year, or any other tax year, for bonus depreciation equal to 40 percent of your basis in the property.
+Line 9b - Individuals only: Enter the portion of any depreciation included on federal Form 2106, Lines 4 and 38 for this tax year or any prior tax year for bonus depreciation equal to 40 percent of your basis in the property.
+Note: For taxpayers who claimed 40 percent bonus depreciation federally for eligible property placed in service prior to January 1, 2025, no subtraction is allowed on Lines 9a through 10 because the 40 percent bonus depreciation can only be claimed on Line 18 in the last year of regular depreciation.
+Use Lines 11a through 11c for items of depreciation claimed on property for which you claimed 50 percent bonus depreciation.
+
+Line 11a - Enter the portion of depreciation claimed on federal Form 4562, Line 17, plus Line 19, Column g, plus Line 26, Column h, for property for which you claimed special depreciation on federal Form 4562, Lines 14 or 25, for this tax year, or any other tax year ending after September 10, 2001, for bonus depreciation equal to 50 percent of your basis in the property.
+Line 11b - Individuals only: Enter the portion of any depreciation included on federal Form 2106, Lines 4 and 38 for this tax year or any prior tax year for bonus depreciation equal to 50 percent of your basis in the property.
+Use Lines 12a through 13 for items of depreciation claimed on property for which you claimed 60 percent bonus depreciation.
+
+Line 12a - Enter the portion of depreciation claimed on federal Form 4562, Line 17, plus Line 19, Column g, plus Line 26, Column h, for property placed in service after December 31, 2023, and before January 1, 2025, for which you claimed special depreciation on federal Form 4562, Lines 14 or 25, for this tax year, or any other tax year, for bonus depreciation equal to 60 percent of your basis in the property.
+Line 12b - Individuals only: Enter the portion of any depreciation included on federal Form 2106, Lines 4 and 38 for this tax year or any prior tax year for bonus depreciation equal to 60 percent of your basis in the property.
+Use Lines 14a through 15 for items of depreciation claimed on property for which you claimed 80 percent bonus depreciation.
+
+Line 14a - Enter the portion of depreciation claimed on federal Form 4562, Line 17, plus Line 19, Column g, plus Line 26, Column h, for property placed in service after December 31, 2022, and before January 1, 2024, for which you claimed special depreciation on federal Form 4562, Lines 14 or 25, for this tax year, or any other tax year, for bonus depreciation equal to 80 percent of your basis in the property.
+Line 14b - Individuals only: Enter the portion of any depreciation included on federal Form 2106, Lines 4 and 38 for this tax year or any prior tax year for bonus depreciation equal to 80 percent of your basis in the property.
+Line 16 - This line is used to claim a subtraction for assets that you elected federal 100 percent bonus depreciation and which were placed in service after December 31, 2020, and before January 1, 2023. For any taxable year ending on or after December 31, 2021, enter the amount of federal depreciation you would have claimed for this taxable year had you made the election under IRC Section 168(k)(7).
+Note: If this is the final year for which you can claim regular federal depreciation for an asset because the asset was sold, traded, abandoned, or otherwise disposed of or because it has reached the end of its depreciable life, do not include any regular depreciation claimed on that property on Lines 5a through 17.
+Line 18 - Last year of regular depreciation: This line allows you to claim the same total Illinois depreciation and federal depreciation over the period for which you claim federal depreciation for an asset.
+For assets that you claim 30, 40, 50, 60, or 80 percent bonus depreciation, you must reverse all the additions claimed for each asset if this is the final year for which you can claim regular federal depreciation because the asset
+
+- was sold, traded, abandoned, or otherwise disposed of, or
+- reached the end of its depreciable life.
+
+For assets that you elected 100 percent bonus depreciation, you must reverse all the additions claimed for each asset if this is the final year for which you would have claimed regular federal depreciation had you elected not to claim bonus depreciation under IRC Section 168(k)(7) because the asset
+
+- was sold, traded, abandoned, or otherwise disposed of, or
+- reached the end of its depreciable life.
+
+Enter the Illinois special depreciation addition you reported on any prior year Form IL-4562, Line 1 plus Line 2, for this property.
+Line 19 - Follow the instructions on the form. See the list below of Illinois form and line references for reporting this subtraction.
+
+# Current year filers - 
+
+If you are an individual, report the subtraction on
+
+- Schedule M, Step 3, Line 19.
+
+If you are a business, report the subtraction on
+
+- Form IL-1120 or Form IL-1120-X, Line 18.
+- Form IL-1120-ST or Form IL-1120-ST-X, Line 30.
+- Form IL-1065 or Form IL-1065-X, Line 30.
+- Form IL-1041 or Form IL-1041-X, Line 20.
+
+Note: The sum of the amounts you report on Form IL-1041, Line 20, columns A and B should match the total amount reported on Form IL-4562, Line 19.
+
+## Prior year filers -
+
+For prior year form and line references, see the prior year version of these instructions that correspond to the tax year you are filing.
+Note: Partnerships, S corporations, trusts, and estates pass this modification through to their owners in the same manner as income. See Schedule K-1-P or Schedule K-1-T for more information. Partners, shareholders, and beneficiaries do not include any amount of pass-through subtractions from Schedule K-1-P on Form IL-4562. See Schedule K-1-P(2), Partner's and Shareholder's Instructions, or Schedule K-1-T(2), Beneficiary's Instructions, for information concerning how to correctly report these amounts.
+If you report an amount on Line 19, you must complete Step 3, Lines 5 through 18, as applicable. Failure to complete Step 3 may result in a delay in the processing of your return or a delay in the generation of any refund.
+
+## A Special Note regarding Bonus Depreciation on Luxury Automobiles:
+
+Federal income tax law imposes a "cap" on the depreciation allowed for a luxury automobile [IRC Section 280F(a)]. Pursuant to 280F(d)(7)(A), the IRS adjusts the "cap" yearly for inflation. In many cases, the "bonus depreciation" allowed by IRC Section 168(k) will be greater than the "cap" (i.e., $100 \%, 80 \%$, etc. federal bonus depreciation is greater than the yearly "cap"). In those cases, during the first year the property was acquired and placed in service and in years in which bonus depreciation is allowed federally, you are allowed bonus depreciation equal to the cap, and regular depreciation of zero.
+Under Illinois law, if you claim a bonus depreciation on an asset on your federal return, you are required to add the bonus depreciation back to your Illinois net income. You are also allowed to subtract a percentage of regular depreciation on that asset, both in the year you claimed the bonus depreciation and in subsequent years. Therefore, if you claimed $30 \%, 40 \%, 50 \%$, $60 \%$, or $80 \%$ bonus depreciation on a luxury automobile and the amount exceeded the cap, then no subtraction is allowed during the first year the property was acquired and placed in service because no regular depreciation is allowed federally. In subsequent tax years, for a luxury automobile which you claimed $30 \%, 40 \%, 50 \%, 60 \%$, or $80 \%$ bonus depreciation, you will be allowed a subtraction equal to the percentage of the regular depreciation claimed on the automobile, even if that causes your total depreciation to exceed the cap. If you claimed $100 \%$ federal bonus depreciation on a luxury automobile and the amount exceeded the cap, then you are allowed a subtraction in the first year the property was acquired and placed in service, and in all subsequent tax years. This subtraction is equal to the amount which would have been allowed federally if bonus depreciation was not claimed, subject to the IRC Section 280F cap for luxury automobiles, even if that causes your total depreciation to exceed the cap.
+When the vehicle is disposed of or at the end of its depreciable life, all of the Illinois additions and subtractions will be reversed so that you will receive the same total depreciation for Illinois purposes as you received for federal purposes over the life of the vehicle.

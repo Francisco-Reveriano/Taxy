@@ -1,0 +1,147 @@
+# Illinois Department of Revenue Schedule F IL-1040 Instructions 
+
+## What is the purpose of Schedule F?
+
+The purpose of this schedule is to determine, for certain property acquired before August 1, 1969, the amount of appreciation that is attributable to the period between the date you acquired the property and August 1, 1969. Illinois does not tax the gain resulting from appreciation that accrued before that date, which is the effective date of the Illinois Income Tax Act. The amount of appreciation that accrued before August 1, 1969, is often called the "valuation limitation amount" or the "pre-August 1, 1969, appreciation amount."
+
+## Who should file?
+
+You should file Schedule F only if
+
+- you reported a capital gain from property that you acquired before August 1, 1969, and you have a net capital gain on federal Form 1040 or 1040-SR, Schedule D, Capital Gains and Losses, or federal Form 8949, Sales and Other Dispositions of Capital Assets; or
+- you reported a gain on federal Form 4797, Sales of Business Property, from Section 1231, 1245, and 1250 property acquired before August 1, 1969; or
+- you reported a gain on federal Form 6252, Installment Sale Income, from an installment sale on property acquired before August 1, 1969.
+Do not file Schedule F for any transaction that resulted in a loss. For exceptions, see "What if I Had Gains or Losses From Casualty or Theft?".
+
+
+## Should I attach copies of other forms?
+
+If gain subject to the valuation limitation was reported on any of the following forms or schedules, you must attach copies of them to your Schedule F: federal Form 1040 or 1040-SR, Schedule D; federal Form 4797; federal Form 6252; federal Form 8949; Illinois Schedule K-1-P, Partner's or Shareholder's Share of Income, Deductions, Credits, and Recapture; and Illinois Schedule K-1-T, Beneficiary's Share of Income and Deductions.
+
+Note: For installment sales, see instructions on the back of Schedule F.
+
+## Step 2 - August 1, 1969, Valuation Limitation Amounts for Capital (Non-depreciable) Assets Line 1
+
+Column A - Enter a description of the property or full name of security as shown on your federal Form 1040 or 1040-SR, Schedule D (or federal Form 8949, if applicable) or federal Form 6252.
+Column B - Enter the month and year you acquired the property. For securities you acquired through the exercise of rights, warrants, or options, enter the date exercised.
+Column C - Enter the month and year you disposed of the property. Column D - Enter the total gain in the taxable year for each property as shown on federal Form 1040 or 1040-SR, Schedule D (or federal Form 8949, if applicable) or federal Form 6252.
+Note: If you reported gain on the sale of your home on federal Form 8949, enter in Column D the amount of that gain minus any "Section 121 exclusion" you reported for your home on federal Form 8949.
+Column E - Enter the fair market value on August 1, 1969, or the "applicable fraction" for each property. Your entry for each property will depend upon whether the property was a listed security on August 1, 1969, or, if it was not listed, whether you have an appraisal of its fair market value as of August 1, 1969. See below.
+How do I determine the fair market value of my property?
+
+- Listed Securities: If the gain was from a security listed on a national securities exchange or quoted in the over-the-counter market between July 28 and 31, 1969, determine the market value of the property on August 1, 1969, as follows:
+
+If the security was traded between July 28 and 31, 1969, use the price of the last sale during the period to value the security. If the security was not traded during the period, use the average of the bid and ask quotations on July 31, 1969, to value the security.
+If, through a tax-free exchange, you traded a listed security that you held on August 1, 1969, for an unlisted security and in the taxable year you sold the unlisted security, you must use the listed value on August 1, 1969, as the fair market value.
+However if, through a tax-free exchange, you traded an unlisted security that you held on August 1, 1969, for a listed security and in the taxable year you sold the listed security, you must use a bona fide appraisal, if you have one, to compute the August 1, 1969, fair market value. In the absence of an appraisal, you must use the "number-of-months" method.
+
+- Other Properties: Fair Market Value Readily Ascertainable by Appraisal - If the gain was not from a security traded or quoted between July 28 and 31, 1969, enter the fair market value of the property on August 1, 1969, only if the fair market value was readily ascertainable on that date. Attach a bona fide, independent appraisal as of August 1, 1969, made by a competent appraiser of recognized standing and ability to support the readily ascertainable fair market value. Book value is not generally acceptable as evidence of the August 1, 1969, fair market value.
+- Other Properties: Fair Market Value Not Readily Ascertainable The Number-of-Months Method - If the fair market value of the property was not readily ascertainable on August 1, 1969, enter a fraction (also called "applicable fraction") whose numerator is the number of full calendar months you held the property before August 1, 1969, and whose denominator is the total number of full calendar months you held the property. Do not include in the numerator or denominator the month that you acquired or disposed of the property. If the property was acquired in July, 1969, enter zero in Columns E and G.
+Column F - If you entered the fair market value of the property in Column E, enter in Column F the federal income tax basis of the property as of August 1, 1969. Federal income tax basis is the amount you would have entered as "cost or other basis" on federal Form 1040 or 1040-SR, Schedule D (or federal Form 8949, if applicable), or federal Form 6252 if you had sold the property on August 1, 1969. If you entered a fraction in Column E, leave Column F blank.
+Column G - If you entered the fair market value of the property in Column E, subtract Column F from Column E and enter the difference. However, if Column F is equal to or greater than Column E, enter zero. If you entered a fraction in Column E, multiply Column D by the fraction and enter the result.
+Column H - Enter the lesser of Column D or Column G.
+
+
+## Line 2
+
+Enter your share of any pre-August 1, 1969, appreciation amounts for capital gains received from
+
+- partnerships or S corporations as reported on Schedules K-1-P, Partner's or Shareholder's Share of Income, Deductions, Credits, and Recapture, Step 6, Line 51.
+- trusts or estates as reported on Schedules K-1-T, Beneficiary's Share of Income and Deductions, Step 6, Line 48.
+Note: You must include the amounts reported to you on all K-1-P schedules received from partnerships and $S$ corporations and all K-1-T schedules received from trusts and estates.
+
+
+## Line 3
+
+Enter any gain you realized from a sale of employer securities received in a distribution from a qualified employee benefit plan. You will find the amount on Form IL-4644, Gains from Sales of Employer's Securities Received from a Qualified Employee Benefit Plan, Line 18.
+## Line 4
+
+Add Lines 1 through 3. Enter the amount here and on Step 4, Line 9.
+
+## Step 3 - August 1, 1969, Valuation Limitation Amounts for Property Used in Trade or Business (Sections 1231, 1245, and 1250 Property)
+
+If you reported a gain or loss from an involuntary conversion because of casualty or theft of property acquired before August 1, 1969, see "What if I Had Gains or Losses From Casualty or Theft?".
+
+## Line 5
+
+Column A - Enter a description of the property as shown on your federal Form 4797 or federal Form 6252.
+Column B - Enter the month and year you acquired the property. For securities you acquired through the exercise of rights, warrants, or options, enter the date exercised.
+Column C - Enter the month and year you disposed of the property. Column D - Enter the total gain in the taxable year reported for federal income tax purposes from each property listed in Column A. These gains are shown on federal Form 4797, Part I, Line 2, Column g, and Part III, Line 24, or on federal Form 6252, Part II, Line 24.
+Column D1 - Enter for each property the portion of Column D that is ordinary income under Section 1245 or 1250 of the Internal Revenue Code (IRC). This is reported on federal Form 4797, Part III, Lines 25b and 26g, or on federal Form 6252, Part II, Line 25.
+Column D2 - Enter for each property the portion of Column D that is a gain under Section 1231 of the IRC. Find this amount
+
+- by subtracting the sum of federal Form 4797, Lines 25b, and 26g, from Line 24 of the same form, or
+- on federal Form 6252, Line 26.
+
+Column E - See instructions for Step 2, Line 1, Column E.
+Column F - If you entered the fair market value of the property in Column E, enter in Column F the federal income tax basis as of August 1, 1969. Federal income tax basis is the amount you would have entered as "cost or other basis" on federal Form 4797 or federal Form 6252 if you had sold the property on August 1, 1969. If you entered a fraction in Column E, leave Column F blank.
+Column G - See instructions for Step 2, Line 1, Column G.
+Column H - Enter the smaller of Column G or Column D1. If you show no amount in Column D1, enter zero in Column H.
+Column I - Enter the smaller of Column D2 or the result of subtracting Column H from Column G. If Column D2 is blank, enter zero in Column I.
+
+## Line 6
+
+Column H - Enter your share of any pre-August 1, 1969, appreciation amounts for Sections 1245 and 1250 gains from
+
+- partnerships or $S$ corporations as reported on all K-1-P schedules, Step 6, Line 48.
+- trusts or estates as reported on all K-1-T schedules, Step 6, Line 46.
+Column I - Enter your share of any pre-August 1, 1969, appreciation amounts for Section 1231 gains from
+- partnerships or $S$ corporations as reported on all K-1-P schedules, Step 6, Lines 49 and 50.
+- trusts or estates as reported on all K-1-T schedules, Step 6, Line 47.
+Note: You must include the amounts reported to you on all K-1-P schedules received from partnerships and $S$ corporations and all K-1-T schedules received from trusts and estates.
+
+
+## Line 7
+
+Add Lines 5 and 6, Column H. Enter the amount here and on Step 4, Line 16.
+Line 8
+Add Lines 5 and 6, Column I. Enter the amount here. Also, if your federal Form 1040 or 1040-SR, Schedule D, Line 11, shows a gain, enter the amount from Line 8 on Step 4, Line 10.
+
+## Step 4 - August 1, 1969, Valuation Limitation Amount. This part must be completed. Line 9
+
+Enter the amount from Step 2, Line 4.
+
+## Line 10
+
+Enter
+
+- the amount from Step 3, Line 8 if your federal Form 1040 or 1040SR, Schedule D, Line 11, shows a gain; or
+- zero if your federal Form 1040 or 1040-SR, Schedule D, Line 11, is blank or shows a loss.
+
+
+## Line 11
+
+Add Lines 9 and 10 and enter the total.
+
+## Line 12
+
+Enter
+
+- the net capital gain from your federal Form 1040 or 1040-SR, Schedule D, Line 16; or
+- zero if your federal Form 1040 or 1040-SR, Schedule D, Line 16, is blank or shows a loss.
+
+
+## Line 13
+
+If you sold employer securities received in a distribution from a qualified employee benefit plan and realized gain on the sale, include on Line 13 the amount from Form IL-4644, Line 13.
+If you are a beneficiary of an estate or trust that received a capital gain distribution from a qualified employee benefit plan or realized a capital gain on the disposition of certain employer securities that were distributed under such a plan, the amount of the gain you received as a beneficiary of such estate or trust may be subject to limitation. Include the amount of your share of these amounts.
+Note: If you received a lump-sum distribution from a qualified employee benefit plan and a portion of that distribution was reported as capital gain on your federal Form 1040 or 1040-SR, Schedule D, you must include the amount of the capital gain on this line. However, you may claim the subtraction for this capital gain on your Form IL1040, Line 5, not on Schedule F. See Form IL-1040 instructions.
+
+## Lines 14 through 17
+
+Follow the instructions on Schedule F.
+
+## What if I Had Gains or Losses From Casualty or Theft?
+
+If you report a gain or a loss from an involuntary conversion because of casualty or theft of property acquired before August 1, 1969, follow these steps:
+
+- If you reported on federal Form 4797 a gain from such conversion, report the gain in accordance with the instructions for Step 3 of this schedule.
+- If you reported on federal Form 4797 a net loss from such conversion, complete Step 3 only if you reported Section 1245 or 1250 gain on the conversion. Complete Columns A through D1 and Columns E through H in accordance with the Step 3 instructions for those Columns. Enter zero in Column D2 and Column I.
+
+
+## What about partnerships or $S$ corporations?
+
+If you shared in pre-August 1, 1969, appreciation amounts from a partnership or $S$ corporation because of involuntary conversion by casualty or theft of property acquired before August 1, 1969, complete Step 3, Line 6, Column I as follows:
+
+- If you reported a net gain on your federal Form 4797, enter your share of Section 1231 appreciation amounts from all K-1-P schedules, Step 6, Line 49.
+- If you reported a net loss on your federal Form 4797, enter your share of Section 1231 appreciation amounts excluding appreciation amounts attributable to involuntary conversions by casualty or theft from all K-1-P schedules, Step 6, Line 50.

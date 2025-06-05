@@ -1,0 +1,333 @@
+# 2024 Schedule 1299-C (IL-1040) Instructions 
+
+## General Information
+
+Complete Schedule 1299-C, Income Tax Subtractions and Credits (for Individuals), if you are filing Form IL-1040, Individual Income Tax Return, and are entitled to any of the credits listed on Schedule 1299-I, or any of the following subtractions:
+
+- Dividends from river edge redevelopment zones
+- Dividends from foreign trade zones (or sub-zones)
+
+NOTE: See the Department of Commerce and Economic Opportunity (DCEO) website for a list of enterprise zones, river edge redevelopment zones, and DCEO contact information.
+
+- If you have more qualifying subtractions than space provided on Schedule 1299-C, attach additional Schedule(s)1299-C or additional sheets in the same format provided on the Schedule 1299-C to your original Schedule 1299-C. Enter the total subtractions you may claim on your original Schedule 1299-C. Do not enter the total on your additional schedules.
+For example, if you have more than three corporations from whom you received qualifying dividends for the River Edge Redevelopment Zone Dividend Subtraction, attach an additional Schedule 1299-C or sheet in the same format provided on the Schedule 1299-C. Add the totals from Schedule 1299-C and the attachment and enter the total on your original Schedule 1299-C, Line 3.
+- In order to claim amounts reported to you on an Illinois Schedule K-1-P or K-1-T, the tax year ending listed on the Illinois Schedule K-1-P or K-1-T you received must fall within your tax year.
+- If you receive more than one Schedule K-1-P, Partner's or Shareholder's Share of Income, Deductions, Credits, and Recapture, or Schedule K-1-T, Beneficiary's Share of Income and Deductions, for any eligible subtraction, you should add the amounts from all Schedules K-1-P or K-1-T for that subtraction and enter the total on the corresponding line item on your original Schedule 1299-C.
+This schedule must be completed if you earned or carried credits this year; even if you are not using the credits to offset current tax liability.
+
+
+## What must I attach?
+
+If applicable, you must attach:
+
+- Schedule(s) K-1-P, Partner's or Shareholder's Share of Income, Deductions, Credits, and Recapture, received from a partnership or S corporation
+- Schedule(s) K-1-T, Beneficiary's Share of Income and Deductions
+- Certificates issued by the Department of Commerce and Economic Opportunity (DCEO)
+- Certificates issued by the Illinois Department of Natural Resources (DNR)
+- Certificates issued by the Illinois Department of Human Services (DHS)
+- Any other documents, including transfer documentation, required by the Illinois Department of Revenue (IDOR) and noted in these instructions or Schedule 1299-I.
+NOTE: Specific information about what to attach to your Schedule 1299-C can be found in Schedule 1299-I.
+Failure to follow these instructions and attach required documentation will result in one or more of the following: a delay in the processing of your return, the disallowance of the subtraction or credit, or the issuance of correspondence from the Department. You also may be required to submit further information to support your filing.
+
+
+## Should I round?
+
+You must round the dollar amounts on Schedule 1299-C to whole-dollar amounts. To do this, you should drop any amount less than 50 cents and increase any amount of 50 cents or more to the next higher dollar.
+
+## What if I need additional assistance or forms?
+
+- Visit our website, tax.illinois.gov, for assistance, forms or schedules.
+
+W1299
+1299
+1299
+1299
+Write us at:
+
+## ILLINOIS DEPARTMENT OF REVENUE
+
+PO BOX 19001
+SPRINGFIELD IL 62794-9001
+
+- Call 1800 732-8866 or 217 782-3336 (TTY at 1800 544-5304).
+- Visit a taxpayer assistance office - 8:00 a.m. to 5:00 p.m. (Springfield office) and 8:30 a.m. to 5:00 p.m. (all other offices), Monday through Friday.
+# Specific Instructions 
+
+In order to claim amounts reported to you on an Illinois Schedule K-1-P or K-1-T, the tax year ending listed on the Illinois Schedule K-1-P or K-1-T you received must fall within your tax year.
+Note: If this Schedule is being attached to Form IL-1040-X, Amended Illinois Income Tax return, check the box at the top of the Schedule.
+
+## Step 1: Figure your subtractions
+
+If you have more qualifying subtractions than space provided on Schedule 1299-C, attach additional Schedule(s) 1299-C. Include the individual amounts from additional schedules in the total line for each subtraction on your original Schedule 1299-C. Do not enter the total on your additional schedules.
+
+For example, if you have more than three corporations from whom you received qualifying dividends for the River Edge Redevelopment Zone Dividend subtraction, add the amounts from the original Schedule 1299-C, Step 1, Line 1, and the additional schedules, and include that total on your original Schedule 1299-C, Line 3.
+Additionally, if you receive more than one Schedule K-1-P or K-1-T for any eligible subtraction, you should add the amounts from all Schedules K-1-P or K-1-T for that subtraction and enter the total in Step 1 on the corresponding line item of your original Schedule 1299-C.
+
+## River Edge Redevelopment Zone Dividend Subtraction
+
+You may claim a subtraction for dividends you received from a corporation that conducts substantially all of its business operations in an Illinois River Edge Redevelopment Zone.
+
+NOTE: You may deduct only the portion of these dividends that is included in your Illinois base income. Do not include any dividends from high impact businesses operating in a foreign trade zone (or sub-zone).
+
+## Line 1
+
+Column A - Enter the name of the corporation from which you received dividends.
+Column B - Enter the name of the river edge redevelopment zone in which the corporation is located.
+Column C - Enter the amount of dividends you received from the corporation.
+Line 2 - Follow the instructions on the form.
+Line 3 - Add the amounts on Column C, Lines 1a through 1c (including the amounts on any additional schedules you attached) and Line 2, and enter the total on your original Schedule 1299-C.
+
+## High Impact Business within a Foreign Trade Zone (or sub-zone) Dividend Subtraction
+
+You may claim a subtraction for dividends you received from a corporation that is designated by DCEO as a "High Impact Business" and conducts business operations in a federally designated foreign trade zone (or sub-zone) located in Illinois.
+
+## Line 4
+
+Column A - Enter the name of the corporation from which you received dividends.
+Column B - Enter the name of the foreign trade zone (or sub-zone) in which the corporation is operating.
+Column C - Enter the amount of dividends you received from the corporation.
+NOTE: You may deduct 100 percent of these dividends if they are included in your Illinois base income. However, dividends eligible for the river edge redevelopment zone subtraction are not eligible for the foreign trade zone (or sub-zone) subtraction.
+Line 5 - Follow the instructions on the form.
+Line 6 - Add the amounts on Column C, Lines 4a through 4c (including the amounts on any additional schedules you attached) and Line 5, and enter the result on your original Schedule 1299-C.
+Line 7 - Add Step 1, Lines 3 and 6. Enter the total here and on your Schedule M, Line 24. This is your total dividend subtraction.
+
+## Step 2: Worksheets
+
+Complete this step only if you earned any of these income tax credits during your current tax year.
+
+## Research and Development
+
+Complete this step before entering any Research and Development credit earned in the current year in Step 3.
+Complete the Research and Development Worksheet on Schedule 1299-I. Bring the corresponding amounts from the Schedule 1299-I Worksheet, Line 6, Columns A and B, to Schedule 1299-C, Step 2, Line 8, Columns A and B. Follow the instructions on Schedule 1299-C to calculate the amount to list in Step 3, Column E on the line that you enter " 5 " in Column A and Credit Code 5340 in Column B.
+
+## K-12 Instructional Materials and Supplies
+
+Complete this step before entering any K-12 Instructional Materials and Supplies credit earned in the current year in Step 3.
+Follow the instructions in Schedule 1299-I and any line instructions on Schedule 1299-C to calculate the amount to list in Step 3, Column E on the line that you enter " 5 " in Column A and Credit Code 5740 in Column B.
+The K-12 Instructional Materials and Supplies credit is available to eligible educators for qualified expenses paid during the taxable year. If you were a kindergarten through twelfth grade teacher, instructor, counselor, principal, or aide in a qualified school for at least 900 hours during a school year, you can claim a credit up to $\$ 500$ for qualified expenses you paid in the current taxable year. If you and your spouse are filing jointly, and both of you were eligible educators, the maximum credit is $\$ 1,000$.
+# Adoption 
+
+Complete this step before entering any Adoption credit earned in the current year in Step 3.
+Follow the instructions in Schedule 1299-I to calculate the amount to list in Step 3, Column E on the line that you enter "5" in Column A and Credit Code 5780 in Column B.
+
+## Step 3: Figure your Income Tax credit
+
+You must list all credits that are available this year, including all carried forward credits, new credits, and distributive shares or transferred credits. This schedule must be completed if you earned or carried credits this year, even if you are not using the credits to offset current tax liability.
+If you have more qualifying credits than space provided on Schedule 1299-C, attach additional Schedule(s) 1299-C and enter the total credit you may claim on your original Schedule 1299-C, Step 3, Line 43. Do not enter the total on your additional pages.
+
+Additionally, if you received more than one Schedule K-1-P for any eligible credit, add the amounts from all Schedules K-1-P for that credit and enter the total in Step 3, Column F on the line with that credit code on your Schedule 1299-C.
+
+Follow the instructions below to complete Schedule 1299-C, Step 3, Columns A through D and Columns F through J. To determine the correct amount to list in Schedule 1299-C, Step 3, Column E, use the Schedule 1299-I instructions and worksheets.
+
+## Lines 17 through 20 - Follow the instructions on the form.
+
+## Lines 21 through 41 - Enter your credits
+
+## Column A - Years Left to Carry
+
+NOTE: Any credit (e.g., Apprenticeship Education Expense) that has no carryforward should be listed first on your Schedule 1299 and show 0 in Column A.
+Write the number of years the credit has left to carry before it is fully used. For the first year the credit is claimed, enter $0,2,5$, or 10 depending on the number of years the credit can be carried forward. For the last year the credit is carried forward enter 0.
+Using the four-digit code identified in the Column B instructions below and starting on Line 21, list your credits in the following order:
+
+Credits that cannot be carried forward
+Two-year credits in last year of carryforward
+Five-year credits in last year of carryforward
+Ten-year credits in last year of carryforward
+These credits will have $\mathbf{0}$ in Column A
+Two-year credits available to carry one more year
+Five-year credits available to carry one more year
+Ten-year credits available to carry one more year
+These credits will have $\mathbf{1}$ in Column A
+Two-year credits available to carry two more years
+Five-year credits available to carry two more years
+Ten-year credits available to carry two more years
+These credits will have $\mathbf{2}$ in Column A
+Five-year credits available to carry three more years
+Ten-year credits available to carry three more years
+These credits will have $\mathbf{3}$ in Column A
+Five-year credits available to carry four more years
+Ten-year credits available to carry four more years
+These credits will have $\mathbf{4}$ in Column A
+Five-year credits available to carry five more years
+Ten-year credits available to carry five more years
+These credits will have $\mathbf{5}$ in Column A
+
+Ten-year credits available to carry six more years
+These credits will have $\mathbf{6}$ in Column A
+Ten-year credits available to carry seven more years
+These credits will have $\mathbf{7}$ in Column A
+Ten-year credits available to carry eight more years
+These credits will have $\mathbf{8}$ in Column A
+Ten-year credits available to carry nine more years
+These credits will have $\mathbf{9}$ in Column A
+Ten-year credits available to carry ten more years
+These credits will have $\mathbf{1 0}$ in Column A
+Column A should start with 0 (credits with no carry forward then credits in the last year of credit availability for carryforward) and increase by year (if you have available credit in every year). If you have multiple credits with the same number of carryforward years, list them in ascending order by credit code within the zero-year, then two-year, then five-year and finally ten-year credits (see Column B instructions below for credit codes).
+Applying the credits in this manner ensures that the credits are used in the correct order. Credits are applied based on the earliest expiration.
+# Column B - Credit Code 
+
+## Credit Code Income Tax Credit Name
+
+## Active Credits
+
+0160
+0180
+2000
+2200
+5000
+5080
+5220
+5120
+5160
+5230
+5240
+5250
+5260
+5300
+5320
+5340
+5380
+5420
+5460
+5480
+5500
+5540
+5560
+5580
+5620
+5680
+5740
+5780
+5820
+5830
+5840
+5850
+1030
+
+Apprenticeship Education Expense
+Recovery and Mental Health
+TECH-PREP Youth Vocational Programs
+Dependent Care Assistance Program
+Film Production Services
+Enterprise Zone Investment
+High Impact Business Investment
+Enterprise Zone Construction Jobs
+High Impact Business Construction Jobs
+Reimagining Energy and Vehicles (REV) Illinois Investment
+REV Illinois
+REV Construction Jobs
+Affordable Housing Donations
+Economic Development for a Growing Economy (EDGE)
+New Construction EDGE
+Research and Development
+Wages Paid to Returning Citizens
+Student-Assistance Contributions
+Angel Investment
+Quantum Computing Campuses
+New Markets Development
+River Edge Historic Preservation
+River Edge Construction Jobs
+Live Theater Production
+Hospital
+Music and Musicians
+K-12 Instructional Materials and Supplies
+Adoption
+Data Center Construction Employment
+Manufacturing Illinois Chips for Real Opportunity (MICRO) Investment
+MICRO Illinois
+MICRO Construction Jobs
+Historic Preservation
+Expired Credits, but can still be carried forward
+5440
+Agritourism Liability Insurance (Credit earned in tax years ending on or before December 31, 2023). Credit may not be transferred, carried forward, or distributed on returns for tax periods ending after December 31, 2028.
+Invest in Kids (Credit earned in tax years ending on or before December 31, 2023). Credit may not be transferred, carried forward, or distributed on returns for tax periods ending after December 31, 2028.
+1000 Historic Preservation (Credit earned in tax years ending on or before December 31, 2015) Credit may not be transferred, carried forward, or distributed on returns for tax periods ending after December 31, 2025.
+
+## Column C - IL Tax Year Credit Earned
+
+Write the four-digit year and two-digit month of your Illinois tax year ending during which the credit was first earned. Separate the year and the month with a dash (YYYY-MM). For example, if you first earned and received a Department of Commerce and Economic Opportunity (DCEO) certificate for an Film Production Services credit in August of 2024 and you are a fiscal filer with a tax year beginning July 1, 2024 and ending June 30, 2025, you will enter "2025-06" for this credit.
+
+## Column D - Identifying Number
+
+Note: Only list the identifying number in the first year you claim the credit. Do not list anything in Column D when the credit is carried forward.
+
+- If you are claiming a credit for amounts transferred to you, write the FEIN of the entity that originally claimed the credit.
+- All other credits leave this column blank.
+
+See Example 1 at the end of these instructions.
+# Column E - Credit Earned or Carried 
+
+- Use the instructions and worksheets in Schedule 1299-I to determine the correct amount of credit to report in this column for credits earned in the current year.
+- If you are carrying credit forward from past years, use your 2023 Schedule 1299-C to determine the correct information to list on your 2024 Schedule 1299-C.
+Enter the amount from Column J of your 2023 Schedule 1299-C in Column E. The amount in Column A, Years Left to Carry, should be determined by subtracting " 1 " from the number of years available to carry as indicated on the corresponding line of Step 3 of the 2023 Schedule.
+In addition, if you are carrying a credit from Step 3 of the 2023 Schedule 1299-C, you must identify the particular credit or credits that are being carried in Column B. Use the codes provided on that schedule to identify the credit.
+
+For example, if you earn Dependent Care Assistance Program Tax Credit of $\$ 400$ and received $\$ 175$ in distributive share in 2024 and are also carrying credits from past years in the amount of a $\$ 750$ credit earned in 2023 and a $\$ 125$ credit earned in 2022, then
+
+- enter "0" in Column A, "2200" in Column B, "2022-12" in Column C and $\$ 125$ in Column E;
+- enter "1" in Column A, "2200" in Column B, "2023-12" in Column C, and $\$ 750$ in Column E; and
+- enter "2" in Column A, "2200" in Column B, "2024-12" in Column C, $\$ 400$ in Column E, $\$ 175$ in Column F and $\$ 575$ in Column G. See Example 2 at the end of these instructions.
+Keep a copy of Schedules 1299-I and 1299-C in your records. You may be asked to provide a copy of Schedule 1299-I as additional verification and you will use these schedules to complete your credit carryforward information on next year's Schedule 1299-C.
+
+
+## Column F - Distributive Share or Transfer
+
+Enter the sum of your distributive share of credits that were received from an $S$ corporation or partnership on Schedule K-1-P and include any amount transferred to you by a taxpayer who earned the credit. In order to claim the amount reported to you on a Schedule K-1-P the tax year ending listed on a Schedule K-1-P you received must fall within your tax year. If you report an amount in this column include
+
+- a copy of the Schedule(s) K-1-P you received,
+- a copy of the written notice (new certificate) of the transfer that the seller or donor received from the Department of Commerce and Economic Opportunity, or
+- a copy of the written notice of the transfer that the seller or donor sent to the Illinois Department of Revenue.
+
+If you receive more than one Schedule K-1-P with a distributive share of the same eligible credit, you should add the amounts from all Schedules K-1-P for that credit and enter the total on the corresponding line on Schedule 1299-C, Step 3, Column F.
+Amounts in this column should only contain Distributive Shares of Credit reported on Schedule K-1-P or transfers of credit received in the current tax year. Otherwise Column F should be blank. For subsequent years, the credit is carried forward and listed in Schedule 1299-C, Step 3, Column E.
+NOTE: List your tax year ending as YYYY-MM in Column C. Do not list the tax year ending from Schedules K-1-P.
+See Example 3 at the end of these instructions.
+
+## Column G - Total Credit
+
+Add Columns E and F for each line and enter in Column G.
+
+## Column H - Calculation
+
+In this step you are subtracting the income tax credit from the income tax due as follows:
+
+- Subtract the amount on Line 21, Column G from the amount on Line 20 and enter the total on Line 21, Column H.
+- Subtract the amount on Line 22, Column G from the amount on Line 21, Column H and enter the total on Line 22, Column H.
+- Continue subtracting Column G of each line from Column H of the previous line and entering the amount in Column H until you have subtracted all available credits listed on this schedule (or additional schedules) or when the Column H amount becomes zero or a negative number.
+STOP calculating when Column H becomes zero or negative. Do not enter any amounts in Column H below the line when Column H becomes zero or negative.
+
+
+## Column I - Credit Applied
+
+- If the amount in Column H is zero or positive, transfer Column G to Column I.
+- If the amount in Column H is negative, add the negative amount in Column H to Column G and enter the total in Column I.
+- If there is no amount in Column H, write " 0 " in Column I.
+
+
+## Column J - Credit Carryforward
+
+Figure your credit available to carryforward to next year.
+
+- If the number in Column A is " 0 ", write " 0 " in Column J. This is the final year that this credit may be used or carried regardless of any unused amount.
+- If the number in Column A is " 1 " or greater, subtract Column I from Column G and enter the result in Column J. The amount in Column J is your credit available for carryforward to next year.
+# Line 42 
+
+Add the amounts on Column I, Lines 21 through 41 (including the amounts on any additional schedules you attached), and enter the result on your original Schedule 1299-C.
+
+## Line 43
+
+If Step 3, Lines 20 and 42 amounts are the same, enter that amount here. Otherwise, enter the lesser of Step 3, Line 20 or Line 42 on Line 43 of your original Schedule 1299-C. Do not enter the total on your additional pages.
+
+This is your Schedule 1299-C Credit. Enter this amount on your Form IL-1040, Line 17.
+Keep a copy of Schedule 1299-C for your records and for use next year.
+
+## Examples
+
+EXAMPLE 1 - How to report multiple credits for the same year with different certificate numbers.
+![img-0.jpeg](img-0.jpeg)
+
+EXAMPLE 2 - How to report a credit carry forward, a current amount, and a distributive share (only listed in the current year) on the same credit.
+![img-1.jpeg](img-1.jpeg)
+
+EXAMPLE 3 - How to report a distributive share received during your current tax year. Use your tax year ending information in Column C.
+![img-2.jpeg](img-2.jpeg)

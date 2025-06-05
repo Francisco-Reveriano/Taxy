@@ -1,0 +1,791 @@
+# **Illinois Department of Revenue Schedule NR IL-1040 Instructions 2024 General Information**
+
+## **What is the purpose of Schedule NR?**
+
+Schedule NR, Nonresident and Part-Year Resident Computation of Illinois Tax, allows part-year or nonresidents of Illinois to determine the income that is taxed by Illinois during the tax year and to figure Illinois Income Tax. See Publication 119, Illinois Schedule NR for Individuals.
+
+**Attach:** Schedule NR to Form IL-1040, Individual Income Tax Return.
+
+## **What if I was a nonresident of Illinois for the entire tax year?**
+
+If you were a nonresident of Illinois during the entire tax year, you must complete and file Form IL-1040 and Schedule NR if you:
+
+- earned enough taxable income from Illinois sources to have a tax liability (i.e., your Illinois base income from Schedule NR is greater than your Illinois exemption allowance on Schedule NR), or
+- are entitled to a refund of Illinois Income Tax that was withheld from your pay in error.
+
+**Note:** If you were not a resident of Iowa, Kentucky, Michigan, or Wisconsin, you must attach a statement from your employer, on company letterhead, indicating that your wages were not earned in Illinois and Illinois tax was withheld in error.
+
+## **What if I was a resident of a reciprocal state for the tax year, I was a resident of another state living in Illinois only to accompany my spouse who was stationed in Illinois for military service, or I was a spouse who elected to use my service member spouse's state of residence for tax purposes pursuant to the Veterans Benefits and Transition Act of 2018?**
+
+If you were an Iowa, Kentucky, Michigan, or Wisconsin resident or a military spouse, and earned income in Illinois, you are exempt from paying Illinois Income Tax on income you earned from salaries, wages, tips, and other employee compensation. You are exempt because Illinois has a reciprocal agreement with these states or because military spouse wages are taxable to the state of residence. You must file Form IL-W-5-NR, Employee's Statement of Nonresidence in Illinois, with your employer to be entitled to exemption from withholding. If you are a resident of a reciprocal state or a military spouse, you do not have to file Form IL-1040 and Schedule NR unless you:
+
+- earned income in Illinois from sources **other than** wages paid to you as an employee, or
+- had Illinois Income Tax withheld from your pay in error.
+
+## **What if I was a nonresident professional athlete?**
+
+All nonresident members of a professional athletic team are subject to Illinois Income Tax on the Illinois portion of their total compensation for services performed as a member of such a team. For more information, see Publication 130, Who is Required to Withhold Illinois Income Tax, or refer to "What if I need additional assistance?" on page 2 of these instructions.
+
+## **What if I was an Illinois resident for part of the tax year?**
+
+If you were a resident of Illinois during part of the tax year, you are considered a part-year resident and must complete and file Form IL-1040 and Schedule NR if you:
+
+- earned or received income from any source while you were an Illinois resident,
+- earned or received income from Illinois sources while you were not an Illinois resident, or
+- are entitled to receive a refund of Illinois Income Tax.
+
+As a part-year resident, the rules you use to determine Illinois income and tax depend on whether or not you were a resident of Illinois when you received the income.
+
+If you were a resident of Illinois when you received the income, you will (within certain limitations) be taxed on 100 percent of the income you received while you were a resident, regardless of the source.
+
+If you were a nonresident of Illinois when you received the income, you will be taxed only on the income you received from Illinois sources.
+
+When completing Schedule NR, you must include in Column B of each line the income you received during the time you were a resident and the Illinois income you received during the time you were not a resident. See "Part-Year Resident Step-by-Step Instructions" for details.
+
+Use the same method of reporting that you use for filing your federal return. Report your income when you receive it and your deductions when they are paid. However, if you use the accrual method, "received" means "earned or received." Income that you received through partnerships, S corporations, trusts, or estates is considered received on the last day of the entity's tax year.
+
+**Note:** Temporary absences from Illinois during the tax year do not qualify you for part-year resident status.
+
+## **What if I received income from a business or a farm during the tax year?**
+
+If, while you were a nonresident of Illinois, you received:
+
+- business income earned both inside and outside Illinois, or
+- farm income earned both inside and outside Illinois,
+
+you must complete the Business or Farm Income Apportionment Formula (IAF) Worksheet on Page 10. The IAF Worksheet allows you to figure the Illinois portion of your business or farm income. Be sure to keep a copy of this worksheet with your income tax records.
+
+## **What is business income?**
+
+Business income is income you earned or received from any activity that you took part in during the regular course of your trade or business. It does not include wages or other compensation you received as an employee. It includes all income (other than compensation) that may be apportioned by formula among the states in which you are doing business without violating the Constitution of the United States. All income (other than compensation) you received is business income unless it is clearly attributable to only one state and is earned or received through activities totally unrelated to any business you are conducting in more than one state. Business income is net of all deductions attributable to that income.
+
+## **What if I received income from partnerships, S corporations, trusts, or estates?**
+
+If you received income from an Illinois partnership or S corporation, that entity is required to send you an Illinois Schedule K-1-P, Partner's or Shareholder's Share of Income, Deductions, Credits, and Recapture. Also, the entity is required to send you the partner's and shareholder's instructions for completing Schedule NR.
+# General Information 
+
+If you received income from an Illinois trust or estate, that entity is required to send you an Illinois Schedule K-1-T, Beneficiary's Share of Income and Deductions. Also, the entity is required to send you the beneficiary's instructions for completing Schedule NR.
+Note: If you are a nonresident and your only income in Illinois is from one or more partnerships, $S$ corporations, or trusts that made sufficient pass-through withholding on your behalf to cover your Illinois Income Tax liability, you are not required to file a Form IL-1040.
+
+What if I need additional assistance or forms?
+
+- Visit our website at tax.illinois.gov for assistance, forms or schedules.
+![img-0.jpeg](img-0.jpeg)
+- Write us at:
+
+
+## ILLINOIS DEPARTMENT OF REVENUE
+
+PO BOX 19001
+SPRINGFIELD ILLINOIS 62794-9001
+
+- Call 1800 732-8866 or 217 782-3336 (TTY at 1800 5445304).
+- Visit a taxpayer assistance office - 8:00 a.m. to 5:00 p.m. (Springfield office) and 8:30 a.m. to 5:00 p.m. (all other offices), Monday through Friday.
+
+
+## Nonresident Step-by-Step Instructions
+
+Note: If this Schedule is being attached to Form IL-1040-X, Amended Illinois Income Tax return, check the box at the top of the Schedule.
+
+## Step 1: Provide the following information
+
+Line 1: Check the "Yes" box if
+
+- you were a full-year resident of Illinois during the tax year, or
+- your filing status is "married filing jointly" and your spouse was a full-year resident of Illinois during the tax year.
+Check the "No" box if
+- you are not filing a joint return, and you were not a full-year resident of Illinois during the tax year, or
+- you are filing a joint return, and neither you nor your spouse was a full-year resident of Illinois during the tax year.
+Note: If you check the "Yes" box on Line 1, you cannot use Schedule NR. If you file your Illinois return indicating your filing status as "married filing jointly" and one spouse is a full-year resident of Illinois, both spouses must use full-year residency status. However, if you are filing a joint federal return and one spouse is an Illinois resident while the other is a full-year nonresident, you may choose to file with Illinois as "married filing separately." In this case, do not recompute any items on your federal return. Instead, you must divide each item of income and deduction shown on your joint federal return between your separate Illinois returns following the Allocation Worksheet in the Form IL-1040 Instructions. The spouse filing as a nonresident must attach a completed Schedule NR.
+Lines 2a and 2b: Full-year nonresidents, skip these lines.
+Line 3: If you were a resident of Iowa, Kentucky, Michigan, or Wisconsin, during any part of the tax year, were living in Illinois only to accompany your military service member spouse who was stationed in Illinois or if you elected to use your service member spouse's state of residence for tax purposes, check the appropriate box.
+Note: If you check the military spouse box, attach the military service member's Form W-2 showing military wages.
+Line 4: If you claimed residency for tax purposes in 2024 in any state other than those listed on Line 3, enter the two-letter abbreviation of the state(s) on the lines provided.
+
+
+## Step 2: Complete Form IL-1040
+
+Complete Lines 1 through 10 of your Form IL-1040 as if you were a full-year Illinois resident. Follow the Form IL-1040 Instructions.
+
+## Step 3: Figure the Illinois portion of your federal adjusted gross income Column A - Federal Total
+
+In Column A of each line, except Line 19, enter the amounts exactly as reported on the corresponding line of your federal income tax return.
+Note: Line 19, Other income, should not include any net operating loss (NOL) carryforward to this year that is available to carry forward to next year. See Form IL-1040, Line 1 instructions.
+Note: If you filed a joint federal income tax return and are filing a separate Illinois return, include in Column A only your share of the amounts from your joint federal income tax return. Complete the Allocation Worksheet in the Form IL-1040 Instructions to determine your share of the amounts from your joint federal return.
+
+## Column B - Illinois Portion
+
+Enter the portion of Column A, Federal Total, that is taxed by Illinois. To determine the taxable amount, you must read and follow the instructions for each line.
+Note: If you received an Illinois Schedule K-1-P or K-1-T, refer to that form's instructions to figure the amount to include on each line.
+
+## Income
+
+## Line 5: Wages, salaries, tips, etc.
+
+Enter the amount shown as Illinois wages on the Illinois copy of the W-2 forms you received while you were a nonresident.
+Do not include any Illinois wages you received while
+
+- you were a resident of Iowa, Kentucky, Michigan, or Wisconsin.
+- you were living in Illinois only to accompany your military service member spouse who was stationed in Illinois.
+- you were living in Illinois and elected to use your military service member spouse's state of residence for tax purposes.
+Note: If the Illinois wages as shown on your W-2 are incorrect, you must attach a letter from your employer, on company letterhead, stating the correct amount of Illinois wages and the number of work days performed in each state. If any of the compensation was earned in a prior tax year, (i.e. deferred compensation or exercised stock options), the statement must include a detailed calculation of how this income has been sourced. We will not accept a letter from you or your tax preparer.
+Note: If any of your wages are for military pay, be sure to complete Step 4, Line 44 and Schedule M.
+# Nonresident Instructions 
+
+## Line 6: Taxable interest
+
+Interest income you received, other than business interest income, is not taxed by Illinois.
+Business interest income you received as part of a business conducted in Illinois is taxed by Illinois. If this income is from a business conducted
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+
+
+## Line 7: Ordinary dividends
+
+Dividend income you received, other than business dividend income, is not taxed by Illinois.
+Business dividend income you received as part of a business conducted in Illinois is taxed by Illinois. If this income was received from a business conducted
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+
+
+## Line 8: Taxable refunds, credits, or offsets of state and local income taxes
+
+Enter the amount of any Illinois Income Tax refund you included in your taxable income because you claimed this refund as an itemized deduction on a previous year's federal return. If you received this refund from business taxes, include any refund amount to the extent that the original deduction was allocated to Illinois.
+
+## Line 9: Alimony received
+
+Do not enter an amount on this line. As a nonresident, alimony you received is not taxed by Illinois.
+
+## Line 10: Business income or loss
+
+Business income or loss that you received as part of a business conducted in Illinois is taxed by Illinois. If your business income or loss was received from a business conducted
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+
+
+## Line 11: Capital gain or loss
+
+Enter any capital gains or losses, other than business capital gains or losses, you received from the sale of real property or tangible personal property located in Illinois at the time of the sale or exchange. Nonbusiness capital gains or losses that resulted from your sale of intangibles are not taxed by Illinois.
+Capital gains or losses you received as part of a business conducted in Illinois are taxed by Illinois. If the business was conducted
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+Note: You may include any capital loss amounts only to the extent those loss amounts were included in your federal adjusted gross income.
+
+
+## Line 12: Other gains or losses
+
+Other gains or losses you received as part of a business conducted in Illinois are taxed by Illinois. All gains or losses that you included on federal Form 4797, Sales of Business Property, are classified as business income.
+
+If this income or loss was received from a business conducted
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+
+
+## Line 13: Taxable IRA distributions
+
+Do not enter an amount on this line. As a nonresident, your IRA distributions are not taxed by Illinois.
+
+## Line 14: Taxable pensions and annuities
+
+Do not enter an amount on this line. As a nonresident, your pensions and annuities are not taxed by Illinois.
+
+## Line 15: Rental real estate, royalties, partnerships, $S$ corporations, trusts, etc.
+
+Figure the total amount to enter on this line by adding
+
+- the net amount of income or loss, other than business income, you received from
+- real estate located in Illinois.
+- tangible personal property, to the extent it was used in Illinois.
+Note: You can determine the extent of Illinois use of tangible personal property by dividing the number of days the property was in Illinois during the rental or royalty period in the taxable year by the number of days the property was everywhere during all rental or royalty periods in the taxable year. Multiply the resulting fraction by the net amount of rents and royalties received.
+- patents and copyrights (the amount that was used in Illinois). Note: A patent is used in Illinois when it is employed in the production, fabrication, manufacturing, or other processing of a product, or when a patented product is produced in Illinois. A copyright is used in Illinois when the printing or publication originated in Illinois.
+- income or loss you received from an Illinois business. If your business was conducted
+- entirely in Illinois, include the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+- income or loss you received from partnerships, S corporations, trusts, and estates as directed by Illinois Schedules K-1-P and K-1-T.
+
+
+## Line 16: Farm income or loss
+
+All farm income or loss you included on federal Schedule F, Profit or Loss from Farming, and that you received from an Illinois farm is taxed by Illinois. If your farm income or loss was received
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+
+
+## Line 17: Unemployment Compensation
+
+Enter the total amount of unemployment compensation you received from the Illinois Department of Employment Security.
+
+## Line 18: Taxable Social Security benefits
+
+Do not enter an amount on this line. As a nonresident, your Social Security benefits are not taxed by Illinois.
+# Nonresident Instructions 
+
+## Line 19: Other income
+
+Note: Only include losses in Column B that are included in Column A. Enter the total amount of income that you received from
+
+- the Illinois State Lottery, Illinois gambling, and sports wagering winnings (even if you were a resident of a reciprocal state). Payments of winnings from sports wagering are conducted in accordance with the Sports Wagering Act for tax years ending on or after December 31, 2021.
+- the sale of your Illinois State Lottery installment payments.
+- a business net operating loss (NOL) from an earlier year that is being carried forward. If your loss was derived
+- from a partnership or an S corporation, the loss is allocated to Illinois to the same extent that business income from that entity is apportioned to Illinois on the Illinois Schedule K-1-P for this year.
+- from a business you conducted entirely in Illinois, the entire amount is allocated to Illinois.
+- from a business you conducted inside and outside Illinois, figure the Illinois portion on the IAF Worksheet, Page 10, and include the amount from Line 3 of the worksheet.
+- a recovery or reimbursement for a deduction claimed in a prior year to the extent that the deduction was allocated to Illinois.
+Line 20: Follow the instructions on Schedule NR.
+
+
+## Adjustments to Income
+
+Line 21: Follow the instructions on Schedule NR.
+
+## Line 22: Educator expenses
+
+Write the amount of educator expenses you deducted this year that were incurred in connection with your Illinois employment.
+
+## Line 23: Certain business expenses of reservists, performing artists, and fee-basis government officials
+
+Enter the amount of business expenses you deducted this year for which the related compensation is allocable to Illinois. If only a portion of the compensation related to your total business expenses shown in Column A is allocated to Illinois, allocate the same portion of these expenses to Illinois in Column B.
+
+## Line 24: Health savings account deduction
+
+Enter the amount of health savings account deduction you claimed this year as shown in Column A.
+
+## Line 25: Moving expenses for members of the Armed Forces
+
+Enter the amount of expenses you paid if you are a member of the Armed Forces on active duty and, due to a military order, you move to Illinois because of a permanent change of station. See Federal Form 3903 Instructions.
+
+## Self-employment decimal for Lines 26, 27, and 28
+
+Complete the following calculation to determine your Illinois self-employment (ISE) decimal for use on Lines 26, 27, and 28. The ISE decimal may not exceed 1.0 or be less than zero.
+
+| Self-employment income included in Column B | $\begin{aligned} & + \\ & \text { Self-employment income } \\ & \text { on federal Schedule SE } \\ & \text { Part I, Line 3 } \\ & \text { plus 5a } \end{aligned}$ | Illinois selfemployment (ISE) decimal |
+| :--: | :--: | :--: |
+
+Line 26: Deductible part of self-employment tax
+Figure the amount of your Illinois deduction for self-employment tax by completing the following calculation, and enter the amount on Line 26, Column B.
+
+| ISE decimal | $x$ | Column A, Line 26 | $=\$$ | Column B, Line 26 |
+| :--: | :--: | :--: | :--: | :--: |
+
+Line 27: Self-employed SEP, SIMPLE, and qualified plans
+Figure the amount of your Illinois deduction by completing the following calculation using the ISE decimal, and enter the amount on Line 27, Column B.
+
+| ISE decimal | $x$ | Column A, Line 27 | $=\$$ | Column B, Line 27 |
+| :--: | :--: | :--: | :--: | :--: |
+
+## Line 28: Self-employed health insurance deduction
+
+Figure the amount of your Illinois deduction by completing the following calculation using the ISE decimal, and enter the amount on Line 28, Column B.
+
+| ISE decimal | $x$ | Column A, Line 28 | $=\$$ | Column B, Line 28 |
+| :--: | :--: | :--: | :--: | :--: |
+
+If this deduction is for health insurance premiums paid for you (or reimbursed to you) by an $S$ corporation and reported to you as wages, include the amount in Column B if your wages from the $S$ corporation are included in Line 5, Column B.
+
+## Line 29: Penalty on early withdrawal of savings
+
+Enter the penalty amount you paid when you withdrew money from a business savings account earning interest that is allocated to Illinois. If only a portion of the interest on the account is allocated to Illinois, allocate the same portion of this penalty to Illinois.
+
+## Line 30: Alimony paid
+
+Enter the amount of alimony you paid during the tax year as shown in Column A.
+
+## Line 31: IRA deduction
+
+Figure the amount of your Illinois IRA deduction by completing the calculation below, and enter the result on Line 31, Column B.
+
+| Wages, salaries, tips, earned income received from an Illinois source | Wages, salaries, tips, alimony, earned income received from all sources |
+| :--: | :--: |
+| Decimal | $x$ Column A, Line 31 Column B, Line 31 |
+
+## Line 32: Student loan interest deduction
+
+Enter the amount of student loan interest you deducted this year as shown in Column A.
+
+## Line 33: RESERVED
+
+## Line 34: Archer MSA deduction
+
+Enter the amount of Archer MSA deduction you received this year as shown in Column A.
+
+## Line 35: Other adjustments
+
+Use this line only if the Internal Revenue Service instructs you to include an amount on your federal Form 1040 or 1040-SR, Schedule 1, Line 24 that is not listed as a separate line item on the federal Form 1040 or 1040-SR, Schedule 1, Lines 11 through 23. Include only the amount of unlisted items, not the Line 25 total. If the federal adjustment is
+
+- an item of income, you may include the subtraction in Column B only if the amount is included as income in Column B on another line of this Schedule NR.
+- an expenditure related to income, you may include in Column B the same percentage of Column A as the percentage of the total related income included in Column B on any line of this schedule.
+- an expenditure unrelated to income, you may include in Column B the amount from Column A.
+Lines 36 through 38: Follow the instructions on Schedule NR.
+# Nonresident Instructions 
+
+## Step 4: Figure your Illinois additions and subtractions
+
+## Column A - Form IL-1040 Total
+
+Enter the amounts in Column A from your Form IL-1040 by following the instructions on Schedule NR.
+
+## Column B - Illinois Portion
+
+To determine the Illinois portion of additions and subtractions, you must read and follow the instructions for each line.
+Note: Partnerships, S corporations, trusts, or estates
+If you received an Illinois Schedule K-1-P or K-1-T, refer to that form's instructions to figure the amount to include on each line.
+
+## Additions
+
+## Line 39: Federally tax-exempt interest and dividend income
+
+Interest and dividends, except from a business, are not taxed by Illinois. Federally tax-exempt interest income you received as part of a business conducted in Illinois is taxed by Illinois. If this income was received
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+
+
+## Line 40: Other additions
+
+Include the following:
+
+- any distributive share of additions received from partnerships, S corporations, trusts, and estates as reported on Schedules K-1-P and K-1-T.
+- any Lloyd's plan of operation loss if reported on your behalf on Form IL-1065, Partnership Replacement Tax Return, and included in your adjusted gross income.
+- any nonbusiness amount you reported on Form IL-4562, Special Depreciation, that resulted from Illinois property.
+- any business amounts you reported on Form IL-4562 and the addition for Student-Assistance Contribution Credit claimed on Schedule 1299-C, Income Tax Subtractions and Credits. If the amount was incurred in a business conducted
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+- business expense recapture if you reported income from an asset or activity as business income in prior years and reported any income from that asset or activity as nonbusiness income on your Schedule NR for this year. Enter the amount of business expense recapture included in Column A multiplied by the greater of
+- the decimal on Line 1 of the IAF Worksheet on Page 10, or
+- the decimal on Line 1 of the IAF Worksheet for this year plus the IAF decimals for your two most recent years, divided by 3 . If you filed Schedule NR for only one prior year, add the IAF decimal from that year's Schedule NR and the IAF decimal from this year's Schedule NR, and divide by 2.
+- recapture of deductions for contributions to Illinois college savings plans and ABLE plans transferred to an out-of-state plan.
+- recapture of deductions for contributions to college savings plans withdrawn for nonqualified expenses or refunded.
+Line 41: Follow the instructions on Schedule NR.
+
+
+## Subtractions
+
+## Line 42: Federally taxed Social Security and retirement income
+
+Do not enter an amount on this line. As a nonresident, federally taxed Social Security and retirement income are not taxed by Illinois and should not be included in Column B, Lines 13, 14, or 18.
+
+## Line 43: Illinois Income Tax overpayment
+
+Enter the amount of any Illinois Income Tax overpayment that you included in Column B, Line 8.
+
+## Line 44: Other subtractions
+
+Include the total amount of the following:
+
+- "Bright Start" or "Bright Directions" College Savings Pool contributions and "College Illinois" Prepaid Tuition
+Program contributions from your Schedule M, Other Additions and Subtractions for Individuals, Line 13.
+- Restoration of amounts held under claim of right from your Schedule M, Line 15.
+- Contributions to a job training project from your Schedule M, Line 16.
+Use the instructions for each of the following items to figure the amount to include:
+- Enter the amount of the following items from your Schedule NR, Column A, Line 44 that is included as income in Column B of any line of your Schedule NR.
+- August 1, 1969, valuation limitation
+- River Edge Redevelopment Zone and High Impact Business Dividend Subtraction
+- Ridesharing money and other benefits
+- Payment of life insurance, endowment, or annuity benefits received
+- Lloyd's plan of operation income if reported on your behalf on Form IL-1065
+- Illinois Pre-Need Cemetery Sales Act trust income
+- Education loan repayments to primary care physicians Reparations or other amounts received as a victim of persecution by Nazi Germany
+- Interest from obligations of Illinois state and local government
+- Your child's interest income reported on federal Form 8814
+- Military pay - Enter the amount of military pay you received for duty in the U.S. Armed Forces. This income must be included in your federal adjusted gross income and in Column B, Line 5.
+- U.S. government obligations - Enter the amount of any interest income from U.S. Treasury bonds, bills, notes, savings bonds, and U. S. agency interest you included in Column B, Line 6.
+- Distributive share of subtractions from a partnership, S corporation, trust, or estate - Enter the nonresident member's or beneficiary's share apportioned or allocated to Illinois and reported to you on Column B of the Schedule K-1-P or Schedule K-1-T from the partnership, S corporation, trust, or estate.
+- Expenses of federally tax-exempt income and federal credits - For expenses related to
+- federal credits, include the amount from Column A.
+- income that is exempt from federal taxation, multiply the amount in Column A by the percentage of that income included in Column B of your Schedule NR for the line on which this income was added back to your base income.
+# Nonresident/Part-Year Resident Instructions 
+
+- Special Depreciation subtraction - Enter any amount you reported on Form IL-4562, Special Depreciation. If this depreciation was incurred in a business conducted
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+- Contributions made to a qualified Illinois ABLE account from your Schedule M, Other Additions and Subtractions for Individuals, Line 20.
+- Recovery of items previously deducted on federal Form 1040, Schedule A - Enter any amount from Column A that is included as income in Column B, Line 8 or Line 19.
+- Non-U.S. bond interest - Enter the amount of any interest income from bonds issued by the governments of Guam, Puerto Rico, or the Virgin Islands, or the mutual mortgage insurance fund that you included in Column B, Line 6 or Line 39.
+- Railroad sick pay and railroad unemployment - Enter any amount from Column A that is included as income in Column B, Line 5.
+- Unjust imprisonment compensation awarded by Illinois Court of Claims - Do not enter an amount on this line.
+- Distributions from "Bright Start," "Bright Directions," and "College Illinois" college savings plans - Enter the amount of distributions you included in Line 37 because you claimed a federal American Opportunity or Lifetime Learning Credit to the extent you included the distributions in Line 38.
+- Disallowed deductions under IRC Section 280E for cannabis businesses. Enter any amount from Column A that is included as income in Column B, Line 5.
+- Amounts awarded as a result of a judgment or settlement for fertility fraud or donor fertility fraud. Enter any amount from Column A that is included as income in Column B, Line 5.
+Line 45 - Follow the instructions on Schedule NR.
+
+
+## Step 5: Figure your Illinois income and tax
+
+Lines 46 through 52 - Follow the instructions on Schedule NR.
+
+## Part-Year Resident Step-by-Step Instructions
+
+Note: If this Schedule is being attached to Form IL-1040-X, Amended Illinois Income Tax return, check the box at the top of the Schedule.
+
+## Step 1: Provide the following information
+
+Line 1: Check the "Yes" box if
+
+- you were a full-year resident of Illinois during the tax year, or
+- your filing status is "married filing jointly," and your spouse was a full-year resident of Illinois during the tax year.
+Check the "No" box if
+- you are not filing a joint return, and you were not a full-year resident of Illinois during the tax year, or
+- you are filing a joint return, and neither you nor your spouse was a full-year resident of Illinois during the tax year.
+Note: If you check the "Yes" box on Line 1, you cannot use Schedule NR. If you file your Illinois return indicating your filing status as "married filing jointly" and one spouse is a full-year resident of Illinois, you must file your return using full-year residency status. However, if you are filing a joint federal return and one spouse is an Illinois resident while the other is a part-year resident, you may choose to file with Illinois as "married filing separately." In this case, do not recompute any items on your federal return. Instead, you must divide each item of income and deduction shown on your joint federal return between your separate Illinois returns following the Allocation Worksheet in the Form IL-1040 Instructions. The spouse filing as a part-year resident must attach a completed Schedule NR.
+As a part-year resident, you may be allowed to take a credit against Illinois Income Tax for income tax you paid to another state if the income you earned while an Illinois resident is also being taxed by another state. See the instructions for Form IL-1040, Line 16 and Schedule CR, Credit for Tax Paid to Other States.
+Line 2a: Enter the dates that you lived in Illinois during the tax year, the name of the other state where you lived during the tax year, and the dates you lived in the other state. Attach a separate sheet of paper with this information if you need more room.
+Line 2b: If your filing status is "married filing jointly," enter the dates your spouse lived in Illinois during the tax year, the name of the other state where your spouse lived during the tax year, and the dates your spouse lived in the other state. Attach a separate sheet of paper with this information if you need more room.
+
+Note: You must enter dates that fall within the tax year (January 2024 through December 2024, for calendar-year filers) on Lines 2a and $2 b$. For example, if you or your spouse
+
+- began living in Illinois on or before January 1, 2024, enter 01/01/24.
+- began living in Illinois after January 1, 2024, enter the actual month, day, and year you began living in Illinois.
+- moved out of Illinois on or after December 31, 2024, enter 12/31/24.
+- moved out of Illinois before December 31, 2024, enter the actual month, day, and year you moved out of Illinois.
+Line 3: If you were a resident of Iowa, Kentucky, Michigan, or Wisconsin, during any part of the tax year or were living in Illinois only to accompany your military service member spouse who was stationed In Illinois, check the appropriate box.
+Note: If you check the military spouse box, attach the military service member's Form W-2 showing military wages.
+Line 4: If you earned income or filed an income tax return in any state other than those listed on Lines 2 and 3, enter the two-digit abbreviation of the state(s) on the lines provided.
+
+
+## Step 2: Complete Form IL-1040
+
+Complete Lines 1 through 10 of your Form IL-1040 as if you were a full-year Illinois resident. Follow the Form IL-1040 Instructions.
+
+## Step 3: Figure the Illinois portion of your federal adjusted gross income
+
+## Column A - Federal Total
+
+In Column A of each line, except Line 19, enter the amounts exactly as reported on the corresponding line of your federal income tax return.
+Note: Line 19, Other income, should not include any net operating loss (NOL) carryforward to this year that is available to carry forward to next year. See Form IL-1040, Line 1 instructions.
+Note: If you filed a joint federal income tax return and are filing a separate Illinois return, include in Column A only your share of the amounts from your joint federal income tax return. Complete the Allocation Worksheet in the Form IL-1040 Instructions to determine your share of the amounts from your joint federal return.
+IL-1040 Schedule NR Instructions (R-12/24)
+# Part-Year Resident Instructions 
+
+## Column B - Illinois Portion
+
+Enter the portion of Column A, Federal Total, that is taxed by Illinois. To determine the taxable amount, you must read and follow the instructions for each line. As a part-year resident, you must include the income you received from any source during the time you were a resident, plus the Illinois income you received during the time you were a nonresident.
+Note: If you received an Illinois Schedule K-1-P or K-1-T, refer to that form's instructions to figure the amount to include on each line. For the purposes of determining if income was received by you while you were an Illinois resident, all income from these entities is considered received on the last day of the entity's tax year.
+
+## Income
+
+## Line 5: Wages, salaries, tips, etc.
+
+Enter the amount of all wages you received as an Illinois resident, including wages received from employment in lowa, Kentucky, Michigan, or Wisconsin.
+Also include all Illinois wages you received while you were a nonresident. These wages are identified as Illinois wages on the Illinois copy of your W-2 forms.
+Do not include any Illinois wages you received while
+
+- you were a resident of lowa, Kentucky, Michigan, or Wisconsin.
+- you were living in Illinois only to accompany your military service member spouse who was stationed in Illinois.
+- you were living in Illinois and elected to use your military service member spouse's state of residence for tax purposes.
+Note: If the Illinois wages as shown on your W-2 are incorrect, you must attach a letter from your employer, on company letterhead, stating the correct amount of Illinois wages and Illinois Income Tax withheld. We will not accept a letter from you or your tax preparer.
+Note: If any of your wages are for military pay, be sure to complete Step 4, Line 44 and Schedule M.
+
+
+## Line 6: Taxable interest
+
+Enter the total amount of interest income from Column A you received as an Illinois resident. Also, include any business interest income you received while you were a nonresident and that you received from an Illinois business conducted
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+Interest income you received while you were a nonresident, other than business interest income, is not taxed by Illinois.
+
+
+## Line 7: Ordinary dividends
+
+Enter the total amount of dividend income from Column A you received as an Illinois resident. Also, include business dividend income you received while you were a nonresident and that you received from an Illinois business conducted
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+Any dividend income you received while a nonresident, other than business dividend income, is not taxed by Illinois.
+
+
+## Line 8: Taxable refunds, credits, or offsets of state and local income taxes
+
+Enter the amount of any income tax refund from Column A you received as an Illinois resident and any Illinois Income Tax refund you received while you were a nonresident. Include these refunds only if they are included in your taxable income because you claimed them as itemized deductions on a previous year's federal return.
+
+If you received a refund from business taxes, you must include any refund you received as a nonresident to the extent that the original deduction was allocated to Illinois.
+
+## Line 9: Alimony received
+
+Enter the amount of alimony you received as an Illinois resident.
+
+## Line 10: Business income or loss
+
+Enter the amount of business income or loss from Column A you received as an Illinois resident. Also, include the amount of business income or loss you received while a nonresident and that you received from an Illinois business conducted
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+
+
+## Line 11: Capital gain or loss
+
+Enter any capital gains or losses from Column A you received as an Illinois resident. Include any capital gains or losses, other than business capital gains or losses, you received while a nonresident and that were associated with the sale of real property or tangible personal property located in Illinois at the time of the sale or exchange.
+Also, include any capital gains or losses you received while a nonresident from an Illinois business conducted
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+Note: You may include any capital loss amounts only to the extent those loss amounts were included in your federal adjusted gross income.
+
+
+## Line 12: Other gains or losses
+
+Enter the total amount of other gains or losses from Column A you received as an Illinois resident and any amount you received while you were a nonresident from an Illinois business conducted
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+
+
+## Line 13: Taxable IRA distributions
+
+Enter the amount of IRA distributions from Column A you received as an Illinois resident, regardless of where you were a resident when you made the contributions.
+
+## Line 14: Taxable pensions and annuities
+
+Enter the amount of pensions and annuities from Column A you received as an Illinois resident, regardless of the source.
+
+## Line 15: Rental real estate, royalties, partnerships, S corporations, trusts, etc.
+
+Enter the total amount of income or loss from Column A you received as an Illinois resident. Include any amount you received from Illinois sources while you were a nonresident. Add the total
+
+- net amount of income or loss, other than business income, that you received from
+- real estate located in Illinois.
+- tangible personal property, to the extent it was used in Illinois.
+Note: You can determine the extent of Illinois use of tangible personal property by dividing the number of days the property was in Illinois during the rental or royalty period in the taxable year by the number of days the property was everywhere during all rental or royalty periods in the taxable year. Multiply the resulting fraction by the net amount of rents and royalties received.
+- patents and copyrights (the amount used in Illinois).
+
+Note: A patent is used in Illinois when it is employed in the production, fabrication, manufacturing, or other processing of a product, or when a patented product is produced in Illinois.
+A copyright is used in Illinois when the printing or publication originated in Illinois.
+
+- income or loss you received from an Illinois business conducted
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+- income or loss from partnerships, S corporations, trusts, and estates as directed on Illinois Schedules K-1-P and K-1-T.
+
+
+## Line 16: Farm income or loss
+
+Enter the total amount of farm income or loss from Column A you received as an Illinois resident. Also, include farm income or loss you received while a nonresident if this income or loss was received
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+
+
+## Line 17: Unemployment Compensation
+
+Enter the total amount of unemployment compensation from Column A you received while you were an Illinois resident and the total amount of unemployment compensation you received from the Illinois Department of Employment Security as a nonresident.
+
+## Line 18: Taxable Social Security benefits
+
+Enter the total amount of Social Security income from Column A you received as an Illinois resident.
+
+## Line 19: Other income
+
+Note: Only include losses in Column B that are included in Column A.
+Enter the total amount of other income from Column A you received as an Illinois resident, plus any amount you received while you were a nonresident from
+
+- the Illinois State Lottery, sports wagering, and Illinois gambling winnings (even if you were a resident of a reciprocal state). Payments of winnings from sports wagering are conducted in accordance with the Sports Wagering Act for tax years ending on or after December 31, 2021.
+- the sale of your Illinois State Lottery installment payments.
+- a business net operating loss (NOL) from an earlier year that is being carried forward. If your loss was derived
+- from a partnership or an S corporation, the loss is allocated to Illinois to the same extent that business income from that entity is apportioned to Illinois on the Illinois Schedule K-1-P for this year.
+- from a business you conducted entirely in Illinois, the entire amount is allocated to Illinois.
+- from a business you conducted inside and outside Illinois, figure the Illinois portion on the IAF Worksheet, Page 10, and include the amount from Line 3 of the worksheet.
+- a recovery or reimbursement for a deduction from a prior year to the extent that the deduction was allocated to Illinois.
+Line 20: Follow the instructions on Schedule NR.
+
+
+## Adjustments to Income
+
+Line 21: Follow the instructions on Schedule NR.
+
+## Line 22: Educator expenses
+
+Write the amount of educator expenses from Column A you established this year in connection with your
+
+- employment while you were an Illinois resident, or
+- Illinois employment while you were a nonresident.
+
+Line 23: Certain business expenses of reservists, performing artists, and fee-basis government officials
+Enter the amount of business expenses you deducted this year for which the related compensation is allocable to Illinois. If only a portion of the compensation related to your total business expenses shown in Column A is allocated to Illinois, allocate the same portion of these expenses to Illinois in Column B.
+
+## Line 24: Health savings account deduction
+
+Enter the amount of health savings account deduction you claimed this year as shown in Column A.
+
+## Line 25: Moving expenses for members of the Armed Forces
+
+Enter the amount of moving expenses you paid if you are a member of the Armed Forces on active duty and, due to a military order, you move to Illinois because of a permanent change of station. See Federal Form 3903 Instructions. If you moved outside of Illinois, you must provide receipts showing the expenses were paid while you were an Illinois resident.
+
+## Self-employment decimal for Lines 26, 27, and 28
+
+Complete the following calculation to determine your Illinois self-employment (ISE) decimal for use on Lines 26, 27, and 28. The ISE decimal may not exceed 1.0 or be less than zero.
+
+| Self-employment income included in Column B | Self-employment income on federal Schedule SE Part I, Line 3 plus 5a |  | Illinois selfemployment (ISE) decimal |
+| :--: | :--: | :--: | :--: |
+
+## Line 26: Deductible part of self-employment tax
+
+Figure the amount of your Illinois deduction for self-employment tax by completing the following calculation, and enter the amount on Line 26, Column B.
+
+|  | $\times$ |  | $=\$$ |  |
+| :--: | :--: | :--: | :--: | :--: |
+| ISE decimal |  | Column A, Line 26 |  | Column B, Line 26 |
+
+Line 27: Self-employed SEP, SIMPLE, and qualified plans
+Figure the amount of your Illinois deduction by completing the following calculation using the ISE decimal, and enter the amount on Line 27, Column B.
+
+|  | $\times$ |  | $=\$$ |  |
+| :--: | :--: | :--: | :--: | :--: |
+| ISE decimal |  | Column A, Line 27 |  | Column B, Line 27 |
+
+## Line 28: Self-employed health insurance deduction
+
+Figure the amount of your Illinois deduction by completing the following calculation using the ISE decimal, and enter the amount on Line 28, Column B.
+
+|  | $\times$ |  | $=\$$ |  |
+| :--: | :--: | :--: | :--: | :--: |
+| ISE decimal |  | Column A, Line 28 |  | Column B, Line 28 |
+
+If this deduction is for health insurance premiums paid for you (or reimbursed to you) by an $S$ corporation and reported to you as wages, include the amount in Column B if your wages from the $S$ corporation are included in Line 5, Column B.
+
+## Line 29: Penalty on early withdrawal of savings
+
+Enter the amount from Column A you paid as an Illinois resident when you withdrew money from a savings account plus any penalty you paid while a nonresident that is allocated to Illinois. If only a portion of the interest on the account is allocated to Illinois, allocate the same portion of this penalty to Illinois.
+
+## Line 30: Alimony paid
+
+Enter the amount of alimony you paid during the tax year as shown in Column A.
+# Part-Year Resident Instructions 
+
+## Line 31: IRA deduction
+
+Figure the amount of your Illinois IRA deduction as follows, and enter the amount on Line 31, Column B.
+
+Wages, salaries, tips, alimony, earned income included in Column B
+$\underset{\text { Decimal }}{\stackrel{\rightharpoonup}{\times}} \times$ Column A, Line 31
+$=\$ \underset{\text { Column B, Line } 31}{\text { Column B, Line } 31}$
+
+## Line 32: Student loan interest deduction
+
+Enter the amount of student loan interest you deducted this year as shown in Column A.
+
+## Line 33: RESERVED
+
+## Line 34: Archer MSA deduction
+
+Enter the amount of Archer MSA deduction you received this year as shown in Column A.
+
+## Line 35: Other adjustments
+
+Use this line only if the Internal Revenue Service instructs you to include an amount on your federal Form 1040 or 1040-SR, Schedule 1, Line 24 that is not listed as a separate line item on the federal Form 1040 or 1040-SR, Schedule 1, Lines 11 through 23. Include only the amount of unlisted items, not the Line 25 total.
+If the federal adjustment is
+
+- an item of income, you may include the subtraction in Column B only if the amount is included as income in Column B on another line of this Schedule NR.
+- an expenditure related to income, you may include in Column B the same percentage of Column A as the percentage of the total related income included in Column B on any line of this Schedule NR.
+- an expenditure unrelated to income, you may include in Column B the amount from Column A.
+Lines 36 through 38 - Follow the instructions on Schedule NR.
+
+
+## Step 4: Figure your Illinois additions and subtractions
+
+## Column A - Form IL-1040 Total
+
+Enter the amounts in Column A from your Form IL-1040 by following the instructions on Schedule NR.
+
+## Column B - Illinois Portion
+
+To determine the Illinois portion of additions and subtractions, you must read and follow the instructions for each line.
+
+## Additions
+
+## Line 39: Federally tax-exempt interest and dividend income
+
+Enter the amount of federally tax-exempt interest from Column A you received as an Illinois resident.
+Interest and dividends, other than from a business, you received while a nonresident are not taxed by Illinois.
+Include any federally tax-exempt interest income you received while a nonresident that came from an Illinois business conducted
+
+- entirely in Illinois, enter the amount from Column A.
+- both inside and outside Illinois, complete the IAF Worksheet on Page 10 to figure the Illinois portion of that income, and include the amount from Line 3 of the worksheet.
+
+
+## Line 40: Other additions
+
+See the nonresident instructions for Line 40 for a list of other additions. Include each of the items from Column A that you received or incurred while an Illinois resident. You must also include on this line the Illinois portion of any federally tax-exempt interest income reported on federal Form 8814 and any earnings distributed from IRC Section 529 college savings programs you received while you were a resident if they are not included in your federal adjusted gross income.
+Also, include the amount of the items you received while a nonresident to the extent required in the nonresident instructions for Line 40.
+Enter the total Illinois amount of other additions.
+Line 41: Follow the instructions on Schedule NR.
+
+## Subtractions
+
+## Line 42: Federally taxed Social Security and retirement income
+
+Enter the amount of federally taxed Social Security and retirement income from Column A you received as an Illinois resident and that is included in the Illinois portion of your federal adjusted gross income, Line 38. For most taxpayers, this is the total of Column B, Lines 13, 14, and 18.
+
+## Line 43: Illinois Income Tax overpayment
+
+Enter the amount of any Illinois Income Tax overpayment you included in Column B, Line 8.
+
+## Line 44: Other subtractions
+
+See the nonresident instructions for Line 44 for a list of other subtractions. Include each of the items you received or incurred while an Illinois resident. You must include on this line the Illinois portion of any deductible interest income reported on federal Form 8814.
+
+Also, include the amount of the items you received while a nonresident to the extent required in the nonresident instructions for Line 44.
+Line 45 - Follow the instructions on Schedule NR.
+
+## Step 5: Figure your Illinois income and tax
+
+Lines 46 through 52 - Follow the instructions on Schedule NR.
+# Business or Farm Income Apportionment Formula (IAF) Worksheet 
+
+You must complete this worksheet if, while a nonresident of Illinois, you received business or farm income from both inside and outside of Illinois. If you have more than one source of business or farm income, make copies of this worksheet and prepare a separate worksheet for each line of the Schedule NR on which you reported business income.
+
+Worksheet for Schedule NR, Line
+
+## Column A
+
+Total sales everywhere
+
+## Column B
+
+Total sales inside Illinois
+
+## Column C
+
+Apportionment Factor Column B + Column A
+
+1 Figure your apportionment factor. $\qquad$
+2 Enter the amount of your business or farm income from Schedule NR, Column A.
+
+3 Apportioned Income - Multiply Line 2 by the Line 1 decimal. Enter the result here and on the corresponding line on Schedule NR, Column B.
+
+## Column D
+
+Apportionment Factor Column B + Column A
+
+Keep a copy of this worksheet with your income tax records.
+
+## IAF Worksheet Instructions
+
+## Line 1: Apportionment factor
+
+## Column A
+
+Enter the total amount of sales you received from both inside and outside Illinois.
+
+## Column B
+
+Enter the total amount of sales you received in Illinois.
+
+## Column C
+
+Divide Column B by Column A. Carry the decimal to six places. This is your apportionment factor.
+
+## Line 2: Business or farm income
+
+Enter the amount of your business or farm income from the appropriate line on Schedule NR, Column A.
+
+## Line 3: Apportioned income
+
+Multiply the amount of your business or farm income, Line 2, by the apportionment factor, Line 1 decimal. Enter the result on Line 3 and on the corresponding line of Schedule NR, Column B.
+
+Note: If you need more detailed instructions, see the instructions for Form IL-1120, Corporation Income and Replacement Tax Return, Step 4. If your business income was derived from a transportation company, an insurance company, or a financial organization, see Form IL-1120 Specific Instructions for "Apportionment Formulas."
