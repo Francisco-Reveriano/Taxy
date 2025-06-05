@@ -93,6 +93,8 @@ class UserProfile(BaseModel):
     '''Tax filling status of the Employee'''
     dependents: int
     '''Number of dependents of the Employee'''
+    Income: float
+    ''' Total Employer Wages, Tips, and Other Compensation'''
     address: str
     '''Mailing Address of the Employee'''
     state: str

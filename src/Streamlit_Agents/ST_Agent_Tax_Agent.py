@@ -33,7 +33,7 @@ class Form1040Profile(BaseModel):
     Employee_DoB: str
     "Employee Date of Birth from the Employee W-2. Should be in the format of 'MM/DD/YYYY'"
     Income: float
-    ''' Total Employer Income'''
+    ''' Total Employer Wages, Tips, and Other Compensation'''
     Deduction: float
     '''What is the Total Employee Deductions?'''
     Deduction_Reasoning: str

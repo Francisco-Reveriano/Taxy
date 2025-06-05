@@ -89,14 +89,8 @@ with st.sidebar:
         key="w2_uploader",
     )
     st.subheader("Financial Summary")
-    a, b = st.columns(2)
-    a.metric("Income ($)", millify(st.session_state.total_income,precision=1))
-    b.metric("Tax Withheld ($)", millify(st.session_state.total_tax_withheld, precision=1))
-    c,d = st.columns(2)
-    c.metric("Deductions ($)", millify(st.session_state.total_deduction,precision=1))
-    d.metric("Tax Credits ($)", millify(st.session_state.total_tax_credits,precision=1))
-    st.metric("Tax Due ($)", millify(st.session_state.total_tax_due,precision=2))
-    st.metric("Refunds ($)", millify(st.session_state.total_refunds,precision=2))
+    # Reserve a placeholder for the metrics:
+    metrics_placeholder = st.empty()
 
 # ─── Redisplay prior chat history ──────────────────────────────────────────
 for msg in st.session_state.messages:
@@ -212,6 +206,16 @@ if "profile_result" in st.session_state:
         st.session_state.total_tax_credits = result.final_output.taxCredits
         st.session_state.total_tax_due = result.final_output.federalTaxDue
         st.session_state.total_refunds = result.final_output.refundAmount
+        with metrics_placeholder.container():
+            a, b = st.columns(2)
+            a.metric("Income ($)", millify(st.session_state.total_income, precision=1))
+            b.metric("Tax Withheld ($)", millify(st.session_state.total_tax_withheld, precision=1))
+            c, d = st.columns(2)
+            c.metric("Deductions ($)", millify(st.session_state.total_deduction, precision=1))
+            d.metric("Tax Credits ($)", millify(st.session_state.total_tax_credits, precision=1))
+            st.metric("Tax Due ($)", millify(st.session_state.total_tax_due, precision=2))
+            st.metric("Refunds ($)", millify(st.session_state.total_refunds, precision=2))
+
         st.session_state.context.append({"role": "assistant", "content": "# Tax Profile\n" + str(result.final_output)})
         client = OpenAI()
         rewrite_stream = client.chat.completions.create(
@@ -227,5 +231,41 @@ if "profile_result" in st.session_state:
             rewritten = st.write_stream(rewrite_stream)
         st.session_state.messages.append({"role": "assistant", "content": rewritten})
         st.session_state.context.append({"role": "assistant", "content": rewritten})
-        st.rerun()
 
+        # Show a chat_input; when the user submits, send context + new query to OpenAI:
+        user_prompt = st.chat_input("Ask me anything about your tax result…")
+
+        if user_prompt:
+            # 1) Display the user question in the Streamlit chat UI
+            with st.chat_message("user"):
+                st.markdown(user_prompt)
+
+            # 2) Append the user question to both messages and context
+            st.session_state.messages.append({
+                "role": "user",
+                "content": user_prompt,
+            })
+            st.session_state.context.append({
+                "role": "user",
+                "content": user_prompt,
+            })
+
+            # 3) Call OpenAI in streaming mode, passing the full context so far
+            client = OpenAI()
+            chat_stream = client.chat.completions.create(
+                model=st.session_state.model_name,
+                stream=True,
+                messages=st.session_state.context,  # entire conversation history
+            )
+            with st.chat_message("assistant"):
+                rewritten = st.write_stream(chat_stream)
+
+            st.session_state.messages.append({
+                "role": "assistant",
+                "content": chat_stream,
+            })
+            st.session_state.context.append({
+                "role": "assistant",
+                "content": chat_stream,
+            })
+            st.rerun()
