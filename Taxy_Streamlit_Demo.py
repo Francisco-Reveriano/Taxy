@@ -14,7 +14,7 @@ from typing import Final
 
 from dotenv import load_dotenv
 from openai import OpenAI
-
+from millify import millify
 from src.Agent_OCR import DocumentOCR
 from src.Streamlit_Agents.ST_Agent_User_Profile import UserProfileAgent
 from src.Streamlit_Agents.ST_Question_Function import run_question_flow
@@ -56,7 +56,18 @@ if "context" not in st.session_state:
         {"role": "system",
          "content": "You are a helpful assistant for tax preparations."},
     ]
-
+if "total_income" not in st.session_state:
+    st.session_state.total_income = 0.00
+if "total_tax_withheld" not in st.session_state:
+    st.session_state.total_tax_withheld = 0.00
+if "total_deduction" not in st.session_state:
+    st.session_state.total_deduction = 0.00
+if "total_tax_due" not in st.session_state:
+    st.session_state.total_tax_due = 0.00
+if "total_tax_credits" not in st.session_state:
+    st.session_state.total_tax_credits = 0.00
+if "total_refunds" not in st.session_state:
+    st.session_state.total_refunds = 0.00
 # ─── Sidebar (upload & controls) ───────────────────────────────────────────
 with st.sidebar:
     st.header("📑 Your documents")
@@ -77,6 +88,15 @@ with st.sidebar:
         help="Select a W-2 PDF to begin OCR and tax assistance.",
         key="w2_uploader",
     )
+    st.subheader("Financial Summary")
+    a, b = st.columns(2)
+    a.metric("Income ($)", millify(st.session_state.total_income,precision=1))
+    b.metric("Tax Withheld ($)", millify(st.session_state.total_tax_withheld, precision=1))
+    c,d = st.columns(2)
+    c.metric("Deductions ($)", millify(st.session_state.total_deduction,precision=1))
+    d.metric("Tax Credits ($)", millify(st.session_state.total_tax_credits,precision=1))
+    st.metric("Tax Due ($)", millify(st.session_state.total_tax_due,precision=2))
+    st.metric("Refunds ($)", millify(st.session_state.total_refunds,precision=2))
 
 # ─── Redisplay prior chat history ──────────────────────────────────────────
 for msg in st.session_state.messages:
@@ -124,14 +144,16 @@ if "profile_result" in st.session_state:
 
     if not result.final_output.complete:
         qa_state = st.session_state["followup_state"]
-
-        answers = run_question_flow(
-            questions=result.final_output.missing_questions,
-            state=qa_state,
-            model=st.session_state.model_name,
-        )  # → returns dict *only* after last answer
+        qa_container = st.container()
+        with qa_container:
+            answers = run_question_flow(
+                questions=result.final_output.missing_questions,
+                state=qa_state,
+                model=st.session_state.model_name,
+            )  # → returns dict *only* after last answer
 
         if answers is not None:
+            qa_container.empty()
             logger.info("Collected follow-up answers: %s", answers)
 
             adjusted_msg = (
@@ -172,7 +194,6 @@ if "profile_result" in st.session_state:
             st.markdown("✅ I now have all the information I need! "
                         "Here is your completed profile:")
             st.markdown(result.final_output)
-        st.session_state.messages.append({"role": "assistant", "content": result.final_output})
         # Calculate Tax Profile
         updated_message ='''
                             # Complete Employee Profile \n
@@ -185,19 +206,26 @@ if "profile_result" in st.session_state:
                             {}
                             '''.format(str(st.session_state["Full_User_Profile"]), str(st.session_state["W2_Profile"]), st.session_state["W2_Form"])
         result = asyncio.run(Runner.run(TaxAgent, updated_message))
-        print(result.final_output.Income)
+        st.session_state.total_income = result.final_output.Income
+        st.session_state.total_tax_withheld = result.final_output.taxWithheld
+        st.session_state.total_deduction = result.final_output.Deduction
+        st.session_state.total_tax_credits = result.final_output.taxCredits
+        st.session_state.total_tax_due = result.final_output.federalTaxDue
+        st.session_state.total_refunds = result.final_output.refundAmount
+        st.session_state.context.append({"role": "assistant", "content": "# Tax Profile\n" + str(result.final_output)})
         client = OpenAI()
         rewrite_stream = client.chat.completions.create(
             model=st.session_state.model_name,
             stream=True,
             messages=[
                 {"role": "system",
-                 "content": "Create a well-structured, clear, and succinct message that explains the tax results. Your response should reason through the major components contributing to the outcome (e.g., income, deductions, credits, filing status), using straightforward and professional language Do not include any additional commentary or disclaimers outside the message itself."},
+                 "content": "Create a well-structured report that explains the tax results. Your response should reason through the major components contributing to the outcome (e.g., income, deductions, credits, filing status), using straightforward and professional language Do not include any additional commentary or disclaimers outside the message itself."},
                 {"role": "user", "content": str(result.final_output)},
             ],
         )
         with st.chat_message("assistant"):
             rewritten = st.write_stream(rewrite_stream)
         st.session_state.messages.append({"role": "assistant", "content": rewritten})
+        st.session_state.context.append({"role": "assistant", "content": rewritten})
         st.rerun()
 

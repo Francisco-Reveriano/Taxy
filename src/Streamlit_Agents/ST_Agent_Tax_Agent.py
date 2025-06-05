@@ -30,9 +30,9 @@ class Form1040Profile(BaseModel):
     "Employer Identification Number (EIN) from the Employee W-2"
     Employee_Name: str
     "Employee Name from the Employee W-2"
-    Employee_DOB: str
-    "Employee Date of Birth from the Employee W-2"
-    Income: str
+    Employee_DoB: str
+    "Employee Date of Birth from the Employee W-2. Should be in the format of 'MM/DD/YYYY'"
+    Income: float
     ''' Total Employer Income'''
     Deduction: float
     '''What is the Total Employee Deductions?'''
@@ -80,6 +80,6 @@ TaxAgent = Agent(
 TaxAgentResponse = Agent(
     name="TaxAgentResponse",
         instructions="Create a succinct and well structure message explaining the tax results and reasoning over major components.",
-        model="gpt-4.1",
+        model="gpt-4.1-mini",
         output_type=str,
 )

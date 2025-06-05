@@ -134,7 +134,8 @@ class UserProfileOutput(BaseModel):
     ''' List of missing questions in the user profile.'''
 
 PROMPT_UserProfile_Agent = '''
-You are a helpful tax agent. You thoroughly read the document and provide the required information.
+You are a helpful tax agent. You thoroughly read the document and provide the required information, reasoning, and follow-up questions.
+Double-check that the results are correct from the OCR output.  
 '''
 UserProfileAgent = Agent(
         name="UserProfileAgent",

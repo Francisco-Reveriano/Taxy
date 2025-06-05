@@ -97,6 +97,6 @@ W2_Profile_Agent = Agent(
 W2_Profile_Table_Agent = Agent(
     name="W2ProfileTableAgent",
         instructions="Create well constructed Markdown table from the provided user profile. Add icons to each field. Skip 'Questions' and 'Score'. Double-check the response and make sure you return nothing but the table.",
-        model="gpt-4.1",
+        model="gpt-4.1-mini",
         output_type=str,
 )

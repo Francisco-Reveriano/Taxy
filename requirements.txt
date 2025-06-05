@@ -13,3 +13,4 @@ markdown
 pandarallel
 openpyxl
 mistralai
+millify
