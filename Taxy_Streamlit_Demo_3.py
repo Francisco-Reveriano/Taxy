@@ -294,7 +294,7 @@ if st.session_state.tax_done:
         general_response = asyncio.run(Runner.run(TaxAgent, user_prompt))
 
         with st.chat_message("assistant"):
-            rewritten = st.write_stream(general_response.final_output)
+            rewritten = st.markdown(general_response.final_output)
 
         st.session_state.messages.append({
             "role": "assistant",
