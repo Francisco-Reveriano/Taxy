@@ -1,0 +1,120 @@
+# Worksheet G 
+
+## Part I - Homeowners
+
+## Main Homes Owned in New Jersey (Lines 1-3)
+
+List the address of each qualified New Jersey residence you owned and occupied as your main home during 2024. Complete columns a through e for each address. If you lived for part of the year in a residence that was not a qualified residence, do not include any information for that residence. For example, you owned a five-unit property and used one of the units as your main home.
+
+If you were both an owner and a tenant at the same address, enter the required information in both Part I and Part II.
+
+## Column a
+
+Enter the number of days you owned and occupied this home as your main home in 2024. If this was your residence all year, enter 366. The total number of days in Part I and Part II cannot be more than 366.
+
+## Column b
+
+Enter the share (percentage) of this property you (and your spouse) owned. Enter the figure as a decimal. If you (and your spouse) were the sole owner(s), enter 1.00 for $100 \%$. If you owned $50 \%$ of the property with someone who was not your spouse, you would enter 0.50 . You must enter your percentage of ownership even if there are multiple owners and you were the only one who occupied the property and you paid all the taxes.
+
+Example: You and your wife owned a single-family home with your sister. You lived in the home with your wife. Your sister did not live with you, and you and your wife paid all the property taxes. You must enter 0.50 because you and your wife owned only one-half $(50 \%)$ of the property.
+# Worksheet G 
+
+## PART I: HOMEOWNERS
+
+## Main homes you owned in New Jersey during 2024
+
+| Address | (a) <br> Number of days in 2024 in this residence as an owner | (b) <br> Share (\%) of property owned by you (and your spouse) | (c) <br> Share (\%) of property used as your main home | (d) <br> Total property taxes paid on this property for this period | (e) <br> Your share of property taxes paid on this property for this period |
+| :--: | :--: | :--: | :--: | :--: | :--: |
+| 1. |  |  |  |  |  |
+| 2. |  |  |  |  |  |
+| 3. |  |  |  |  |  |
+| 4. Your share of total property taxes paid for 2024 for your main home (total of column e) If you were also a tenant in New Jersey during the year, continue with Part II. Otherwise, go to Part III |  |  |  |  |  |
+
+## PART II: TENANTS
+
+## Main homes you rented in New Jersey during 2024
+
+| Address | (a) <br> Number of days in 2024 in this residence as a tenant | (b) <br> Total number of tenants who shared the rent | (c) <br> Total rent paid by all people living in this residence during this period | (d) <br> Total rent paid by you (and your spouse) for this residence during this period |
+| :--: | :--: | :--: | :--: | :--: |
+| 5. |  |  |  |  |
+| 6. |  |  |  |  |
+| 7. |  |  |  |  |
+| 8. Your share of total rent paid for 2024 for your main homes (total of column d). |  |  |  |  |
+| 9. Allowable portion of rent. Line $8 \times 0.18$. Continue to Part III |  |  |  |  |
+
+## PART III: TOTAL
+
+10. Add line 4 and line 9. Enter the total here and on line 40a, Form NJ-1040. If your filing status is married/CU partner, filing separate return and both you and your spouse maintained the same main home, use one-half of this amount when completing line 40a.
+(Keep for your records)
+
+## Column c
+
+If this property consisted of more than one unit, enter the share (percentage) of the property you (and your spouse) used as your main home. Enter the figure as a decimal. For example, enter $25 \%$ as 0.25 . The units in a multi-unit property are considered equal in size unless the local tax assessor has determined they are not equal.
+
+Example: You owned a four-unit property. The units were equal in size, and one of the units was your main home. You must enter 0.25 because you occupied one-fourth ( $25 \%$ ) of the property as your main home.
+
+## Column d
+
+Enter the total property taxes paid on this property for 2024 for the period indicated in column a.
+
+## Column e
+
+Multiply the decimal in column c by the property tax amount in column d . If there is no figure in column c , use the decimal in column b. Enter the result in column e.
+
+Example: Total property taxes paid were $\$ 2,000$. Column b is 1.00 , and column c is 0.50 . The calculation for column e is 0.50 x $\$ 2,000=\$ 1,000$.
+# Line 4: Property Taxes 
+
+Add your share of property taxes paid in column e, lines 1 through 3, and enter the total.
+
+## Part II - Tenants
+
+## Main Homes Rented in New Jersey (Lines 5-7)
+
+List the address of each qualified New Jersey residence you rented and occupied as your main home during 2024. Complete columns a through d for each address. If you lived for part of the year in a residence that was not a qualified residence, do not include any information for that residence. For example, you rented an apartment in a building that is exempt from property taxes.
+
+If you were both an owner and a tenant at the same address, enter the required information in both Part I and Part II.
+
+## Column a
+
+Enter the number of days you rented and occupied this home as your main home in 2024. If this was your residence all year, enter 366. The total number of days in Part I and Part II cannot be more than 366.
+
+## Column b
+
+If you lived with someone who was not your spouse and shared the rent with them, enter the total number of tenants who shared the rent, including yourself. For this purpose, spouses are considered one tenant.
+
+## Column c
+
+Enter the total amount of rent paid by all tenants, including yourself, during 2024 for the period indicated in column a.
+
+## Column d
+
+Divide the amount in column c by the number in column b , and enter the result in column d .
+
+## Line 8: Rent
+
+Add your share of rent paid in column d, lines 5 through 7, and enter the total.
+
+## Line 9: Allowable Portion of Rent
+
+Multiply the amount on line 8 by $18 \%(0.18)$ and enter the result.
+
+## Part III - Total
+
+## Line 10: Total
+
+Add line 4 and line 9. Enter the total here and on line 40a, Form NJ-1040. If your filing status is married/CU partner, filing separately, enter one-half of this amount on line 40a.
+
+## Line 40b - Homeowner/Tenant Status
+
+Fill in only one oval to indicate whether you were a homeowner, a tenant, or both a homeowner and tenant during 2024.
+
+## Line 41 - Property Tax Deduction
+
+If you met the eligibility requirements on page 25 , you can take either a Property Tax Deduction of up to $\$ 15,000(\$ 7,500$ if you and your spouse file separate returns but maintained the same main home) or a Property Tax Credit.
+
+There are two ways to determine whether you will get a greater benefit by taking a deduction on line 41 or a credit on line 56. If you:
+
+- Are not claiming a credit for taxes paid to other jurisdictions, complete Worksheet H;
+- Are claiming a credit for taxes paid to other jurisdictions, first complete lines 1 and 2 of Worksheet H. Then complete Schedule NJ-COJ and Worksheet I. (See instructions for Schedule NJ-COJ on page 31.)
+
+If you will receive a greater benefit by taking the deduction, enter on line 41 the amount of the Property Tax Deduction from Worksheet H or Schedule NJ-COJ and make no entry on line 56.

@@ -1,0 +1,30 @@
+{
+    "pages": [
+        {
+            "index": 0,
+            "markdown": "# Form GIT-311\n\n## 2024\n\n### New Jersey Gross Income Tax Neighborhood Revitalization State Tax Credit\n\n|  Your Social Security Number | Last Name, First Name, Initial  |\n| --- | --- |\n|  Your Spouse's/CU Partner's Social Security Number |   |\n\n**Read the instructions before completing this form.**\n\nThis form is to be used for tax years beginning in 2024.\n\n### Part I: Qualifications\n\n1. Have you received a tax credit certificate issued by the New Jersey Department of Community Affairs? ☐ Yes ☐ No Check the box to indicate a copy of the certificate is included with this form.\n2. Did you provide the assistance within the same year in which the certificate was issued? ☐ Yes ☐ No If the answer to question 1 or 2 is \"No,\" do not complete the rest of this form. You are **not** eligible for this tax credit.\n3. Enter the business entity name shown on the tax credit certificate.\n\n1. Enter the business entity's taxpayer identification number.\n\n### Part II: Calculation of the Allowable Credit Amount\n\n1. Enter the amount of the Neighborhood Revitalization State Tax Credit approved by the New Jersey Department of Community Affairs.\n\n1. Total tax credit available. Enter the lesser of line 5 or $1,000,000.\n\n1. Enter the net profits from business, distributive share of partnership income, or pro rata share of S corporation income from the business that earned the credit as reported on Form NJ-BUS-1 (see instructions).\n\n1. Enter the New Jersey Gross Income from line 29 of Form NJ-1040, line 29 of Form NJ-1040NR, or line 14 of Form NJ-1041.\n\n1. Divide line 7 by line 8.\n\n1. Enter the tax from line 43 of Form NJ-1040, line 42 of Form NJ-1040NR, or line 27 of Form NJ-1041.\n\n1. Tax attributable to the income from the business that earned the credit. Multiply line 10 by line 9.\n\n1. Allowable credit for the current tax year. Enter the lesser of line 6 or line 11.\n\n**There is no carryover provision for this tax credit.**",
+            "images": [],
+            "dimensions": {
+                "dpi": 200,
+                "height": 2200,
+                "width": 1700
+            }
+        },
+        {
+            "index": 1,
+            "markdown": "# Instructions for Form GIT-311 Neighborhood Revitalization State Tax Credit \n\nUse this form to claim a Neighborhood Revitalization State Tax Credit against the tax due under the New Jersey Gross Income Tax Act. To qualify for this credit, you must have received a tax credit certificate from the New Jersey Department of Community Affairs for providing funds to implement a qualified neighborhood preservation and revitalization project. Credits may be provided up to $100 \\%$ of the approved assistance. This credit cannot be claimed on the New Jersey Income Tax return (Form NJ-1040, NJ-1040NR, or NJ-1041); however, you must file the return before claiming the credit. To obtain the credit, submit a completed Form GIT-311 along with:\n\n- A cover letter requesting the credit. The letter must include your name, daytime phone number, and current mailing address;\n- A copy of your New Jersey Income Tax return; and\n- A copy of the tax credit certificate.\n\nMail all documents to:\nNew Jersey Division of Taxation\nGrant \\& Credit Review Unit\nAttn: Kelly R. Carman, Chief\nPO Box 272\nTrenton, NJ 08695-0272\n\n## Part I Qualifications\n\nTo be eligible for the tax credit, the answer to questions 1 and 2 must be yes. If the answer to question 1 or 2 is no, you are not entitled to the Neighborhood Revitalization State Tax Credit. A copy of the tax credit certificate must be included with Form GIT-311 or the tax credit will be denied.\n\nEnter the name of the business entity as shown on the tax credit certificate. Also enter the entity's taxpayer identification number. This number is not shown on the tax credit certificate.\n\n## Part II Calculation of the Allowable Credit Amount\n\nThe maximum credit allowed in any tax year is $\\$ 1,000,000$ and can only be applied to the tax on the income attributable to the business that earned the credit. There is no carryover provision for this tax credit. Any unused credit is forfeited.\n\nLine 7 - Enter the amount of income reported on Form NJ-BUS-1 that is from the business that earned the credit. If you have a loss from another business in the same category of income (e.g., the eligible business is a partnership and you have a loss from another partnership), you must reduce the income of the eligible business by the loss.\n\nLine 9 - Divide line 7 by line 8 and carry the result to 6 decimal places (. 123456 or $12.3456 \\%$ ).\n\n## For Additional Information Contact\n\nNew Jersey Department of Community Affairs\nDivision of Housing and Community Resources\nPO Box 811\n101 South Broad Street\nTrenton, NJ 08625\n(609) 633-6286",
+            "images": [],
+            "dimensions": {
+                "dpi": 200,
+                "height": 2200,
+                "width": 1700
+            }
+        }
+    ],
+    "model": "mistral-ocr-2505-completion",
+    "usage_info": {
+        "pages_processed": 2,
+        "doc_size_bytes": 170756
+    },
+    "document_annotation": null
+}

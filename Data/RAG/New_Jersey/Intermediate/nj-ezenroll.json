@@ -1,0 +1,30 @@
+{
+    "pages": [
+        {
+            "index": 0,
+            "markdown": "# 2024 NJ-EZ Enroll Form Easy Enrollment Health Insurance \n\n## Your Social Security Number\n\nLast Name, First Name, Initial (Joint filers enter first name and middle initial of each.)\n\nNew Jersey Easy Enrollment helps people find quality, affordable health insurance through Get Covered New Jersey (www.getcovered.nj.gov), the state's Official Health Insurance Marketplace. Many pay $\\$ 10$ or less per person per month, and some have free or nearly free health coverage.\n\n## Waiver of Shared Responsibility Payment\n\nYou are required to make a shared responsibility payment for the months that you and any family members did not have minimum essential health coverage or a coverage exemption. The shared responsibility payment is often more than the cost of a health plan on GetCoveredNJ.\n\nIf you fill in the \"Yes\" oval at Step 3, and you and any uninsured members of your household enroll in minimum essential health coverage and keep that coverage in place for the remainder of the year, any shared responsibility payment assessed on your 2024 NJ-1040 will be waived. However, if you do not enroll in and maintain minimum essential health coverage, any waived shared responsibility payment will be reinstated. If you fill in the \"No\" oval at Step 3, the shared responsibility payment will not be waived and you will be responsible for paying any amount due.\n\n## Step 1 We need to know how to contact you\n\nEmail address\n\n## Phone number (optional)\n\n$\\square$\n$\\square$\n\nWe will email you a cost estimate for health insurance and an invitation to open an account on GetCoveredNJ. Would you like us to send an invitation in the mail as well?\n\n## Step 2 We only need two more pieces of information\n\nYour date of birth\nIf married, your spouse's date of birth\nMM/DD/YYY\n\n## Step 3 We need your permission\n\nI want GetCoveredNJ to use the information in this return and available data from other relevant sources to see if my household would qualify for affordable health coverage.\n\n## What happens next?\n\nGetCoveredNJ will estimate how much health coverage will cost for you and your family.\nWe will email you the results along with an invitation code to claim your account.\nLook out for an email from GetCoveredNJ!",
+            "images": [],
+            "dimensions": {
+                "dpi": 200,
+                "height": 2175,
+                "width": 1650
+            }
+        },
+        {
+            "index": 1,
+            "markdown": "# Quick Guide to NJ-EZ Enroll Form \n\n## What is Get Covered New Jersey?\n\n## Who can shop on Get Covered New Jersey\n\n## What is the NJ-EZ Enroll form?\n\n## Why am I receiving this information?\n\n## What happens next?\n\nGet Covered New Jersey is the state's Official Health Insurance Marketplace where individuals and families can easily shop for and buy coverage. It is the only place you can apply for financial help to lower the cost of your monthly insurance premiums and out-of-pocket costs.\n\nGet Covered New Jersey is a source of affordable health insurance for New Jersey residents who do not have health coverage from their employers or access to other health care programs. Financial help is available to help lower the cost of premiums and out-of-pocket costs for those who qualify.\n\nThe purpose of the NJ-EZ Enroll form, Easy Enrollment Health Insurance program, is to assist consumers who do not have health care coverage in obtaining coverage through Get Covered New Jersey, the state's Official Health Insurance Marketplace.\n\nIf anyone in your tax household does not have health insurance at the time you file your return, you can choose to allow Get Covered New Jersey to use your information to assess eligibility for affordability assistance.\n\nGet Covered New Jersey will use the information in this return and available data from other relevant sources to estimate how much health coverage will cost for you and your family. If you are not eligible for coverage through Get Covered New Jersey, you can find out if you qualify for free or low-cost health insurance through NJ FamilyCare, New Jersey's publicly funded health insurance program.\n\nWe will email you the results along with an invitation code to claim your account to allow you to shop and apply for coverage.\n\nLook out for an email from GetCoveredNJ!",
+            "images": [],
+            "dimensions": {
+                "dpi": 200,
+                "height": 2175,
+                "width": 1650
+            }
+        }
+    ],
+    "model": "mistral-ocr-2505-completion",
+    "usage_info": {
+        "pages_processed": 2,
+        "doc_size_bytes": 229852
+    },
+    "document_annotation": null
+}

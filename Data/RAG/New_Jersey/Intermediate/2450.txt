@@ -1,0 +1,65 @@
+# Form NJ-2450
+
+# Employee's Claim for Credit For Excess UI/WF/SWF, Disability Insurance, and/or Family Leave Insurance Contributions for Calendar Year 2024
+
+To claim this credit, you must complete the items below using the information from your W-2 forms. Enclose this form and the W-2s with your New Jersey State Income Tax return. Any items not substantiated by a W-2 or any information that is incomplete will cause the claim to be rejected. The amount withheld for unemployment insurance/workforce development partnership fund/ supplemental workforce fund, disability insurance, and family leave insurance must be reported separately on all W-2 statements.
+
+**Note on Joint NJ-1040 return:** Each spouse/CU partner must file a separate Form NJ-2450 when claiming a refund for excess contributions.
+
+Claimant Name: ***_******_******_******_******_*** **Claimant SSN: ***_******_******_******_*****
+
+Address: ***_******_******_******_******_*** **City: ***_******_******_******_******_***** State: ***_*** ZIP Code: ***_******_******_******_******_***__
+
+## Take All Information From Your W-2 Forms.
+
+If the amount deducted by any one employer exceeds the maximum for either UI/WF/SWF, disability insurance, or family leave insurance, enter the maximum in the appropriate column(s) and contact that employer for a refund of the balance of the deduction.
+
+|   | Column A | Column B | Column C  |
+| --- | --- | --- | --- |
+|   | UI/WF/SWF Deducted | Disability Insurance Deducted | Family Leave Insurance Deducted  |
+|  1A. |  |  |   |
+|  Employer's Name |  |  |   |
+|  Fed. Emp. I.D.# |  | 0.00 |   |
+|  Private Plan#: | Wages: |  |   |
+|  B |  |  |   |
+|  Employer's Name |  |  |   |
+|  Fed. Emp. I.D.# |  | 0.00 |   |
+|  Private Plan#: | Wages: |  |   |
+|  C. |  |  |   |
+|  Employer's Name |  |  |   |
+|  Fed. Emp. I.D.# |  | 0.00 |   |
+|  Private Plan#: | Wages: |  |   |
+|  D. |  |  |   |
+|  Employer's Name |  |  |   |
+|  Fed. Emp. I.D.# |  | 0.00 |   |
+|  Private Plan#: | Wages: |  |   |
+|  E. |  |  |   |
+|  Employer's Name |  |  |   |
+|  Fed. Emp. I.D.# |  | 0.00 |   |
+|  Private Plan#: | Wages: |  |   |
+|  F. |  |  |   |
+|  *If additional space is required, enclose a rider and enter the total on this line. |  | 0.00 |   |
+|  2. | Total Deducted. Add lines 1A through 1F. Enter here. | 0.00 |   |
+|  3. | Correct UI/WF/SWF, Disability Insurance, and/or Family Leave Deductions. | 179.78 | 145.26  |
+|  4. | Subtract line 3 column A from line 2 column A. Enter on line 59 of the NJ-1040. |  |   |
+|  5. | Subtract line 3 column B from line 2 column B. There were no employee disability insurance contributions required for 2024. If an employer withheld contributions, contact that employer for a refund. (See instructions). |  |   |
+|  6. | Subtract line 3 column C from line 2 column C. Enter on line 61 of the NJ-1040. |  |   |
+
+I hereby apply for a credit for worker contributions deducted in excess of $179.78 for NJ UI/WF/SWF and/or in excess of $145.26 for NJ Family Leave Insurance deductions by reason of having received wages from two or more employers during the above calendar year and hereby submit the following statement of wages and deductions.
+
+Claimant's Signature: ***_******_******_******_******_*** **Date: ***_******_******_******_*****
+# Instructions for obtaining a credit for excess UI/WF/SWF, Disability Insurance, and/or Family Leave Insurance Contributions 
+
+To claim the credit, you must enclose Form NJ-2450 with your NJ-1040 return. If this form is not enclosed with the NJ-1040, or if the required information from the W-2 forms is not available to substantiate the claim, the credit will be denied. The law prohibits the processing of claims submitted later than two years after the calendar year in which wages were paid.
+
+If a joint NJ-1040 return is filed and both spouses/CU partners have excess contributions withheld by two or more employers, each spouse/CU partner must file his or her own claim form along with the NJ-1040 return.
+
+If any single employer withholds more than the maximum for either UI/WF/SWF, disability insurance, and/or family leave insurance contributions, enter only the maximum on the claim form. Any amounts over the maximum were withheld in error and must be refunded by that particular employer. Refunds of overwithholdings of contributions by an individual employer are the responsibility of that employer and cannot be claimed as a credit on your Income Tax return.
+
+If additional space is required due to the number of employers, enclose a list with the required information as on the NJ-2450 form. If this list is incomplete or is not enclosed with the claim, the credit will be denied.
+
+After lines 1A through 1F are completed, complete all necessary calculations from lines 2 through 6 . Carry the amounts on lines 4,5 , and/or 6 to the specified lines on the NJ-1040 return.
+
+If you are notified that your claim has been denied by the Division of Taxation for any reason, you must refile your claim for refund of excess UI/WF/SWF or family leave insurance contributions with the Department of Labor and Workforce Development on Form UC-9A, "Employees Claim for Refund of Excess Contributions." Once your claim has been denied by the Division of Taxation, it cannot be reinstated.
+
+2024 NJ disability insurance contributions. The rate for NJ disability insurance contributions was $0 \%$ for Tax Year 2024. If an employer withheld disability insurance contributions in error, you cannot use Form NJ-2450 to claim a refund of those contributions. You must contact that employer to get the refund.

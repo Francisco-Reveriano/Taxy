@@ -1,0 +1,76 @@
+# Form GIT-330
+
+**2024**
+
+## New Jersey Gross Income Tax Apprenticeship Program Tax Credit
+
+**Your Social Security Number**
+
+Last Name, First Name, Initial
+
+**Your Spouse's/CU Partner's Social Security Number**
+
+Read the instructions before completing this form
+
+### Part I: Qualifications
+
+1. Does the taxpayer have a letter of approval from the New Jersey Department of Labor and Workforce Development to receive this tax credit?
+2. [ ] Yes
+3. [ ] No
+
+If the answer is "NO," do not complete the rest of this form. The taxpayer is not eligible for this tax credit. Otherwise, go to Part II.
+
+### Part II: Calculation of the Allowable Credit Amount
+
+1. Available credit. Enter the amount of the credit for the initial year of participation in an apprenticeship program as approved by the Department of Labor and Workforce Development.
+2. [ ]
+
+|  3. | Enter the tax from line 50 of Form NJ-1040, line 47 of Form NJ-1040NR, or line 31 of Form NJ-1041  |
+| --- | --- |
+|  |   |
+
+1. List any other credit taken for the current tax year but **not** shown on Form NJ-1040, NJ-1040NR, or NJ-1041.
+2. (a) _____________________________________________________________________________________________________________________________________________________________________
+3. (b) _____________________________________________________________________________________________________________________________________________________________________
+4. [ ]
+
+|  5. | Subtract line 4 from line 3. If zero or less, enter zero  |
+| --- | --- |
+|  |   |
+
+1. Allowable credit for the current tax year. Enter lesser of line 2 or line 5.
+
+**Note:** There is no carryforward provision for this tax credit.
+
+## Instructions
+
+Use Form GIT-330 to claim an Apprenticeship Program Tax Credit against the tax otherwise due under the New Jersey Gross Income Tax Act (N.J.S.A. 54A:4-18). To qualify for this credit, you must have received a letter of approval from the New Jersey Department of Labor and Workforce Development as part of the Apprenticeship Start-Up Grant Program. Taxpayers with approved applications will be allowed a $5,000 tax credit for documented qualified start-up costs associated with the initial year of participation in an apprenticeship program. There is an additional $5,000 tax credit if the apprenticeship program provides opportunities for workers in key industries such as manufacturing, construction, healthcare, logistics, pharmaceuticals, transportation, tourism, and renewable energy.
+
+The Apprenticeship Program Tax Credit must be used in the initial year of participation in the Apprenticeship Start-Up Grant Program. There is no carryforward provision for this tax credit. Any unused tax credit amount is forfeited. Amounts included in the calculation of the Apprenticeship Program Tax Credit cannot be included in the calculation of any other tax credit or exemption claimed on a tax return filed with the Division of Taxation, or included in the calculation of an award of business assistance or incentive, for a period of time that coincides with the privilege period for which a tax credit is allowed.
+
+This credit cannot be claimed on the New Jersey Income Tax return (Form NJ-1040, NJ-1040NR, or NJ-1041); however, you must file the return before you can claim the credit. To obtain the credit, submit a completed Form GIT-330 along with the following:
+
+- A cover letter requesting the credit. The letter must include your name, daytime phone number, and current mailing address;
+- A copy of your New Jersey Income Tax return; and
+- A copy of the letter of approval from the New Jersey Department of Labor and Workforce Development.
+
+Mail all documents to:
+
+New Jersey Division of Taxation
+Grant & Credit Review Unit
+Attn: Kelly R. Carman, Chief
+PO Box 272
+Trenton, NJ 08695-0272
+# Completing the Form 
+
+## Part I - Qualifications
+
+To be eligible for the tax credit, the answer to question 1 must be yes. If the answer is no, the taxpayer is not entitled to the Apprenticeship Program Tax Credit.
+
+## Part II - Calculation of the Allowable Credit Amount
+
+The maximum credit allowed in any tax year is $\$ 5,000$ ( $\$ 10,000$ for certain industries) and cannot exceed an amount that would reduce the total tax liability below zero.
+
+Line 2 - Enter the amount of the credit for the initial year of participation in an apprenticeship program as approved by the Department of Labor and Workforce Development.
+
+Line 4 - List the name and amount of any other tax credits taken for the current tax year but not shown on the NJ-1040, NJ-1040NR, or NJ-1041 (e.g., New Jersey Angel Investor Tax Credit). Additional credits taken can be entered on a separate sheet and attached to this form.

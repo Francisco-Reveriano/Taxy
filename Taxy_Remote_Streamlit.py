@@ -1,16 +1,18 @@
-# Saved for remote deployment
-# ─── Streamlit must be first ─────────────────────────────────────────────
+# ─── Streamlit must be first ─────────────────────────────────────────────────
 import streamlit as st
-st.set_page_config(page_title="Taxy.ai",
-                   layout="wide",
-                   page_icon=":oncoming_taxi:")
+st.set_page_config(
+    page_title="Taxy.ai",
+    layout="wide",
+    page_icon=":oncoming_taxi:",
+)
 
-# ─── Standard library & third-party imports ───────────────────────────────
+# ─── Standard library & third-party imports ─────────────────────────────────
 import asyncio
 import os
 from datetime import datetime
 from pathlib import Path
 from typing import Final
+import tempfile
 
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -20,17 +22,16 @@ from src.Agent_OCR import DocumentOCR
 from src.Streamlit_Agents.ST_Agent_User_Profile import UserProfileAgent
 from src.Streamlit_Agents.ST_Question_Function import run_question_flow
 from src.Streamlit_Agents.ST_Agent_W2_Profile import W2_Profile_Agent, W2_Profile_Table_Agent
-from src.Streamlit_Agents.ST_Agent_Tax_Agent import *
+from src.Streamlit_Agents.ST_Agent_Tax_Agent import TaxAgent
 from src.Streamlit_Agents.ST_Agent_General_Response import call_TaxAgent
 from agents import Runner, set_trace_processors
 
 from weave.integrations.openai_agents.openai_agents import WeaveTracingProcessor
 import weave
-import tempfile
 
 load_dotenv()
 
-# ─── Config & constants ───────────────────────────────────────────────────
+# ─── Config & constants ────────────────────────────────────────────────────
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 APP_TITLE: Final[str] = "🧮 Taxy.ai – GenAI Tax Preparation"
@@ -48,7 +49,7 @@ if "messages" not in st.session_state:
         },
         {
             "role": "assistant",
-            "content": "👋 Hi there! Please upload your W-2 to get started…"
+            "content": "👋 Hi there! You can ask me general tax questions, or upload your W-2 to get started…"
         },
     ]
 
@@ -73,12 +74,22 @@ for key in (
 # Prevent the tax block from re-executing
 st.session_state.setdefault("tax_done", False)
 
-# ─── Sidebar (upload & controls) ──────────────────────────────────────────
+# ─── Sidebar (upload & controls) ───────────────────────────────────────────
 with st.sidebar:
     st.header("📑 Your documents")
 
     if st.button("🔄 New conversation"):
-        for k in ("messages", "context", "profile_result", "followup_state", "tax_done"):
+        for k in (
+            "messages",
+            "context",
+            "profile_result",
+            "followup_state",
+            "tax_done",
+            "uploaded_path",
+            "W2_Form",
+            "W2_Profile",
+            "Full_User_Profile",
+        ):
             st.session_state.pop(k, None)
         st.rerun()
 
@@ -98,12 +109,51 @@ with st.sidebar:
     st.subheader("Financial Summary")
     metrics_placeholder = st.empty()
 
-# ─── Redisplay prior chat history ─────────────────────────────────────────
+# ─── Redisplay prior chat history ───────────────────────────────────────────
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
 
-# ─── One-time document ingestion & first agent run ────────────────────────
+# ─── General Q&A (before any W-2 is uploaded) ───────────────────────────────
+if uploaded_file is None and not st.session_state.tax_done:
+    # Let the user ask ANY tax question even without a W-2:
+    general_prompt = st.chat_input("Ask me any general tax question…")
+    if general_prompt:
+        # Display user’s question in the chat window
+        with st.chat_message("user"):
+            st.markdown(general_prompt)
+
+        # Append question to conversation
+        st.session_state.messages.append({
+            "role": "user",
+            "content": general_prompt
+        })
+        st.session_state.context.append({
+            "role": "user",
+            "content": general_prompt
+        })
+
+        # Call TaxAgent for general advice
+        TaxAgentGen = call_TaxAgent(st.session_state.model_name)
+        general_response = asyncio.run(Runner.run(TaxAgentGen, general_prompt))
+
+        # Display TaxAgent’s answer
+        with st.chat_message("assistant"):
+            st.markdown(general_response.final_output)
+
+        st.session_state.messages.append({
+            "role": "assistant",
+            "content": general_response.final_output
+        })
+        st.session_state.context.append({
+            "role": "assistant",
+            "content": general_response.final_output
+        })
+
+        # Force a rerun so that the new messages appear immediately
+        st.rerun()
+
+# ─── One-time document ingestion & first agent run ─────────────────────────
 if uploaded_file is not None and "profile_result" not in st.session_state:
     with st.chat_message("assistant"):
         st.markdown("Thank you for uploading your W-2. We’re processing it now…")
@@ -140,10 +190,11 @@ if uploaded_file is not None and "profile_result" not in st.session_state:
 
     st.rerun()
 
-# ─── Follow-up Q&A loop ────────────────────────────────────────────────────
+# ─── Follow-up Q&A loop for completing the user profile ────────────────────
 if "profile_result" in st.session_state:
     result = st.session_state.profile_result
 
+    # If the profile isn’t complete, ask missing questions
     if not result.final_output.complete:
         qa_state = st.session_state["followup_state"]
         qa_container = st.container()
@@ -156,7 +207,6 @@ if "profile_result" in st.session_state:
 
         if answers is not None:
             qa_container.empty()
-
             adjusted_msg = (
                 "# Additional User Information\n"
                 f"{answers}\n"
@@ -171,16 +221,16 @@ if "profile_result" in st.session_state:
 
             st.session_state.context.append({
                 "role": "assistant",
-                "content": "# Full User Profile\n" +
-                           str(dict(st.session_state.profile_result.final_output))
+                "content": "# Full User Profile\n"
+                           + str(dict(st.session_state.profile_result.final_output))
             })
             st.session_state["Full_User_Profile"] = dict(
                 st.session_state.profile_result.final_output
             )
-
             st.session_state.followup_state = {}
             st.rerun()
 
+    # If profile is complete and we haven’t done taxes yet, build W-2 and calculate taxes
     elif result.final_output.complete and not st.session_state.tax_done:
         # Build W-2 profile
         updated_message = (
@@ -263,19 +313,19 @@ if "profile_result" in st.session_state:
 
         st.session_state.tax_done = True
 
-# ─── Financial metrics ─────────────────────────────────────────────────────
+# ─── Financial metrics (once taxes are done) ───────────────────────────────
 if st.session_state.tax_done:
     with metrics_placeholder.container():
         a, b = st.columns(2)
-        a.metric("Income ($)",          millify(st.session_state.total_income, precision=1))
-        b.metric("Tax Withheld ($)",    millify(st.session_state.total_tax_withheld, precision=1))
+        a.metric("Income ($)",       millify(st.session_state.total_income, precision=1))
+        b.metric("Tax Withheld ($)", millify(st.session_state.total_tax_withheld, precision=1))
         c, d = st.columns(2)
-        c.metric("Deductions ($)",      millify(st.session_state.total_deduction, precision=1))
-        d.metric("Tax Credits ($)",     millify(st.session_state.total_tax_credits, precision=1))
-        st.metric("Tax Due ($)",        millify(st.session_state.total_tax_due, precision=2))
-        st.metric("Refunds ($)",        millify(st.session_state.total_refunds, precision=2))
+        c.metric("Deductions ($)",   millify(st.session_state.total_deduction, precision=1))
+        d.metric("Tax Credits ($)",  millify(st.session_state.total_tax_credits, precision=1))
+        st.metric("Tax Due ($)",     millify(st.session_state.total_tax_due, precision=2))
+        st.metric("Refunds ($)",     millify(st.session_state.total_refunds, precision=2))
 
-# ─── User follow-up Q&A ────────────────────────────────────────────────────
+# ─── User follow-up Q&A (after taxes are done) ─────────────────────────────
 if st.session_state.tax_done:
     user_prompt = st.chat_input("Ask me anything about your tax result…")
     if user_prompt:
@@ -291,11 +341,11 @@ if st.session_state.tax_done:
             "content": user_prompt
         })
 
-        TaxAgent = call_TaxAgent(st.session_state.model_name)
-        general_response = asyncio.run(Runner.run(TaxAgent, user_prompt))
+        TaxAgentPost = call_TaxAgent(st.session_state.model_name)
+        general_response = asyncio.run(Runner.run(TaxAgentPost, user_prompt))
 
         with st.chat_message("assistant"):
-            rewritten = st.markdown(general_response.final_output)
+            st.markdown(general_response.final_output)
 
         st.session_state.messages.append({
             "role": "assistant",

@@ -1,0 +1,50 @@
+{
+    "pages": [
+        {
+            "index": 0,
+            "markdown": "# Form GIT-317\n\n**New Jersey Gross Income Tax**\n\n**Sheltered Workshop Tax Credit**\n\n**For Return Periods Beginning January 1, 2024**\n\n**For GIT-317**\n\n**Tax Year:** 2024\n\n## Part I: Identification\n\n**Entity Name:** ***_******_******_******_* **Federal ID Number**** ***_******_******_*** **NJ Allocated Income** ***_******_******_***___\n\n**Check Entity Type:** ☐ Partnership ☐ Sole Proprietorship ☐ Limited Liability Company\n\n## Part II: Qualifications\n\n1. Is each employee for which a credit is claimed a \"Qualified Person\" in accordance with P.L. 2005, c. 318?\n2. ☐ Yes ☐ No\n\n2. Did each employee for which a credit is claimed work for at least 26 weeks during the privilege period and work at least 25 hours per week at or under the supervision of a sheltered workshop?\n3. ☐ Yes ☐ No\n\n**Note:** If the answer to either of the above questions is no, do not complete the rest of this form. The taxpayer does not qualify for the sheltered workshop tax credit. Otherwise, go to Part III.\n\n## Part III: Calculation of the Available Sheltered Workshop Tax Credit\n\n|   | (A) Social Security Number | (B) Name | (C) Total Wages | (D) 20% of Column C – Max $1,000  |\n| --- | --- | --- | --- | --- |\n|  1. |  |  |  |   |\n|  2. |  |  |  |   |\n|  3. |  |  |  |   |\n|  4. |  |  |  |   |\n\n**Available Sheltered Workshop Tax Credit (Add lines 1, 2, 3, and 4):**\n\n*If there are more names, attach a schedule corresponding to Part III.*\n\n## Part IV: Calculation of the Allowable Credit Amount\n\n1. Carryover credit from prior years (Not applicable in first year): 1.\n\n2. Available current year Sheltered Workshop Tax Credit (Total from Part III or NJK-1): 2.\n\n3. Total Sheltered Workshop Tax Credits (Add lines 1 and 2): 3.\n\n4. NJ allocated income (From Part I above): 4.\n\n5. NJ Gross Income: 5.\n\n6. Percentage (Divide line 4 by line 5): 6.\n\n7. NJ Tax after credit for taxes paid to other jurisdictions: 7.\n\n8. Apportioned NJ tax (Multiply line 7 by line 6): 8.\n\n9. Maximum Allowable Credit (Multiply line 8 by 50%): 9.\n\n10. New Jersey Earned Income Tax Credit: 10.\n\n11. Allowable credit (Subtract line 10 from line 9. Do not enter less than zero): 11.\n\n12. Current year credit (Lesser of line 11 or line 3): 12.\n\n13. Carryover credit (Subtract line 12 from line 3): 13.",
+            "images": [],
+            "dimensions": {
+                "dpi": 200,
+                "height": 2200,
+                "width": 1700
+            }
+        },
+        {
+            "index": 1,
+            "markdown": "Form GIT-317 Page 2\n\n# Part V Sheltered Workshop Tax Credit Carryover Worksheet \n\nComplete this schedule if the allowable tax credit is less than the total credit available for the current year or if a tax credit was carried forward from a previous tax year. Read the instructions for Part V before completing this schedule.\n\n| (A) <br> Entity Name |  |  |  |  |  | (B) <br> Federal ID Number |  |  |\n| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |\n| Check Entity Type |  | Partnership |  |  | Sole Proprietorship |  | Limited Liability Company |  |\n|  |  | $\\begin{gathered} \\text { A } \\\\ 2017 \\end{gathered}$ | $\\begin{gathered} \\text { B } \\\\ 2018 \\end{gathered}$ | $\\begin{gathered} \\text { C } \\\\ 2019 \\end{gathered}$ | $\\begin{gathered} \\text { D } \\\\ 2020 \\end{gathered}$ | $\\begin{gathered} \\text { E } \\\\ 2021 \\end{gathered}$ | $\\begin{gathered} \\text { F } \\\\ 2022 \\end{gathered}$ | $\\begin{gathered} \\text { G } \\\\ 2023 \\end{gathered}$ | $\\begin{gathered} \\text { H } \\\\ 2024 \\end{gathered}$ |\n| 1. Enter the tax credit calculated for each tax year* |  |  |  |  |  |  |  |  |\n| 2. Enter the amount used in tax year: |  |  |  |  |  |  |  |  |\n| a) 2017 |  |  |  |  |  |  |  |  |\n| b) 2018 |  |  |  |  |  |  |  |  |\n| c) 2019 |  |  |  |  |  |  |  |  |\n| d) 2020 |  |  |  |  |  |  |  |  |\n| e) 2021 |  |  |  |  |  |  |  |  |\n| f) 2022 |  |  |  |  |  |  |  |  |\n| g) 2023 |  |  |  |  |  |  |  |  |\n| h) 2024 |  |  |  |  |  |  |  |  |\n| 3. Carryover amount Line 1 minus lines 2a through 2 h |  |  |  |  |  |  |  |  |\n| 4. Total tax credit carryover, total of line 3, columns A through H |  |  |  |  |  |  |  |  |\n\n* Exclude the amount of any tax credit carried over from a prior tax year.",
+            "images": [],
+            "dimensions": {
+                "dpi": 200,
+                "height": 2200,
+                "width": 1700
+            }
+        },
+        {
+            "index": 2,
+            "markdown": "# Instructions for Form GIT-317 Sheltered Workshop Tax Credit \n\n## Part I - Identification\n\nEnter the entity's name, its federal employer identification number, and the amount of New Jersey allocated income that is earned, received, or acquired from sources within this state for this entity. Check the appropriate box showing entity type.\n\n## Part II - Qualifications\n\nCheck boxes for questions 1 and 2. If either of the \"No\" boxes is checked, do not complete the rest of this form. The taxpayer does not qualify for this credit.\n\n## Part III - Calculation of the Available Credit Amount\n\nSole Proprietorship. Complete Part III as follows:\nA. Enter the Social Security number of each qualified person employed by your business.\nB. Enter the name of each qualified person employed by your business.\nC. Enter the salary and wages paid during the tax year.\nD. Enter the lesser of $20 \\%$ of column $C$ or $\\$ 1,000$ per qualified person.\nE. Complete Part IV (see instructions).\n\nPartnership. Skip Part III and complete Part IV to calculate the credit (see instructions).\nLimited Liability Company. Complete Part III as follows:\nA. LLCs that consist of one member follow the sole proprietorship instructions.\nB. LLCs that consist of more than one member follow the partnership instructions.\n\nIf you have more than one entity, add line 12 from each GIT-317 and enter on line 46 of Form NJ-1040, line 43 of Form NJ-1040NR, or line 30 of Form NJ-1041.\n\nThe credit otherwise allowable that cannot be taken this year due to limitations may be carried over to the next seven tax years following the original tax year for which this credit was allowed.\n\n## Part IV - Calculation of The Allowable Credit Amount\n\n## Line 1 - Carryover credit from prior years\n\nEnter the amount from line 13, Part IV of the prior year's GIT-317.\n\n## Line 2 - Available Current Year Sheltered Workshop Tax Credit\n\nIf the entity is a sole proprietorship or a limited liability company with a single member, enter total of available Sheltered Workshop Tax Credit from Part III of current year's GIT-317.\n\nIf the entity is a partnership or a limited liability company with more than one member, enter the amount from the NJK-1.\n\n## Line 3 - Total Sheltered Workshop Tax Credits\n\nAdd lines 1 and 2 and enter the total.\n\n## Line 4 - NJ allocated income\n\nEnter the amount of NJ Allocated Income from Part I.\n\n## Line 5 - NJ Gross Income\n\nEnter the amount of New Jersey gross income from line 29 of Form NJ-1040, line 29 of Form NJ-1040NR, or line 14 of Form NJ-1041.\n\n## Line 6 - Percentage\n\nDivide line 4 by line 5 and enter the result. Carry the result to 6 decimal places (. 123456 or $12.3456 \\%$ )",
+            "images": [],
+            "dimensions": {
+                "dpi": 200,
+                "height": 2200,
+                "width": 1700
+            }
+        },
+        {
+            "index": 3,
+            "markdown": "# Line 7 - NJ Tax (after credit for taxes paid to other jurisdictions) \n\nEnter amount of NJ Tax after the credit for taxes paid to other jurisdictions from line 45 of Form NJ-1040, line 42 of Form NJ-1040NR, or line 29 of Form NJ-1041.\n\n## Line 8 - Apportioned NJ tax\n\nMultiply line 7 by line 6 and enter the result.\n\n## Line 9 - Maximum Allowable Credit\n\nMultiply line 8 by $50 \\%$ and enter the result.\n\n## Line 10 - New Jersey Earned Income Tax Credit\n\nTake this amount from line 58 of Form NJ-1040 (this credit is only allowable to NJ residents). If taxpayer is including more than one entity, the NJEITC should be prorated based on the combined NJ allocated income.\n\n## Line 11 - Allowable credit\n\nSubtract line 10 from line 9 and enter the result. If zero or less, make no entry.\n\n## Line 12 - Current year credit\n\nEnter the lesser of line 3 or line 11.\n\n## Line 13 - Carryover credit\n\nSubtract line 12 from line 3 and enter the result.\n\n## Part V - Sheltered Workshop Tax Credit Carryover Worksheet\n\nThe amount of the tax credit that cannot be applied to the current tax period due to the applicable limitations can be carried over to the seven privilege periods following the privilege period for which the credit was allowed. Complete this worksheet to validate the tax credit carryover amount.",
+            "images": [],
+            "dimensions": {
+                "dpi": 200,
+                "height": 2200,
+                "width": 1700
+            }
+        }
+    ],
+    "model": "mistral-ocr-2505-completion",
+    "usage_info": {
+        "pages_processed": 4,
+        "doc_size_bytes": 198410
+    },
+    "document_annotation": null
+}

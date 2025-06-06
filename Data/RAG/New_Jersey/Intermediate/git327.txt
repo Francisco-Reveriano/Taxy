@@ -1,0 +1,88 @@
+# Form GIT-327
+
+## 2024
+
+### New Jersey Gross Income Tax Film and Digital Media Tax Credit
+
+|  Your Social Security Number | Last Name, First Name, Initial  |
+| --- | --- |
+|  Your Spouse's/CU Partner's Social Security Number |   |
+
+**Read the instructions before completing this form**
+
+**Note:** This form is to be used for tax years beginning on or after January 1, 2024.
+
+### Part I: Qualifications
+
+1. Has the taxpayer been approved by the New Jersey Economic Development Authority to receive a Film and Digital Media Tax Credit?
+2. [ ] Yes
+3. [ ] No
+4. Has the taxpayer received a tax credit or credit transfer certificate issued by the New Jersey Division of Taxation?
+5. [ ] Yes
+6. [ ] No
+
+Check the box to indicate a copy of the certificate has been submitted to the Division of Taxation: ☐
+
+1. Enter the following as shown on the tax credit or credit transfer certificate issued by the New Jersey Division of Taxation.
+
+|  Certificate Number | |
+| --- | --- |
+|  Individual or Entity Name | |
+|  FID Number or SSN | |
+
+### Part II: Calculation of the Allowable Credit Amount and Carryover
+
+1. Enter the amount of the approved Film and Digital Media Tax Credit that is applied to the period covered by the Gross Income Tax return:
+2. [ ] Yes
+3. Film and Digital Media Tax Credit carried forward from the prior year:
+4. [ ] Yes
+5. Total available credit (Add lines 4 and 5):
+6. [ ] Yes
+7. Enter the tax due (line 54 of Form NJ-1040, line 49 of Form NJ-1040NR, or line 33 of Form NJ-1041):
+8. [ ] Yes
+9. Enter total withholdings, credits, and payments (Line 66 of Form NJ-1040, line 57 of Form NJ-1040NR, or line 38 of Form NJ-1041):
+10. [ ] Yes
+11. List any other credit taken for the current tax year but not shown on the NJ-1040, NJ-1040NR, or NJ-1041.
+
+|  (a) |   |
+| --- | --- |
+|  (b) | Total  |
+|  10. Total payments and credits (add lines 8 and 9): | 10.  |
+|  11. Subtract line 10 from line 7. If zero or less, enter zero: | 11.  |
+|  12. Allowable credit for the current tax year. Enter the lesser of line 6 or line 11: | 12.  |
+|  13. Total tax credit carryover (subtract line 12 from line 6): | 13.  |
+# Instructions for Form GIT-327 <br> Film and Digital Media Tax Credit 
+
+Use Form GIT-327 to claim any unused Film and Digital Media Tax Credit and/or credit carryforward against the tax otherwise due under the New Jersey Gross Income Tax Act (N.J.S.A. 54A:4-12b). You may claim this credit for qualified film production expenses and/or any qualified digital media content production expenses incurred between July 1, 2018, and June 30, 2039.
+
+This credit cannot be claimed on the New Jersey Income Tax return (Form NJ-1040, NJ-1040NR, or NJ-1041); however, you must file the return before you can claim the credit. To obtain the credit, submit a completed Form GIT-327 along with the following:
+
+- A cover letter requesting the credit. The letter must include your name, daytime phone number, and current mailing address;
+- A copy of your New Jersey Income Tax return; and
+- A copy of the tax credit or credit transfer certificate.
+
+Mail all documents to:
+New Jersey Division of Taxation
+Grant \& Credit Review Unit
+Attn: Kelly R. Carman, Chief
+PO Box 272
+Trenton, NJ 08695-0272
+
+## Completing the Form
+
+## Part I - Qualifications
+
+To be eligible for the tax credit, the answer to questions 1 and 2 must be yes. If the answer to question 1 or 2 is no, the taxpayer is not entitled to the Film and Digital Media Tax Credit.
+
+Enter the certificate number, individual or entity name, and FID number or Social Security number as shown on the tax credit or credit transfer certificate issued by the New Jersey Division of Taxation.
+
+## Part II - Calculation of the Allowable Credit Amount and Carryover
+
+The amount of this credit cannot exceed an amount that would reduce the total tax liability below zero.
+Line 4 - Enter the amount of the approved Film and Digital Media Tax Credit that is applied to the period covered by the New Jersey Gross Income Tax return. The taxpayer must apply the tax credit to the tax credit vintage year. The tax credit vintage year is the tax year in which the NJEDA approves the application. Do not include on this line any tax credit carried forward from a prior tax year.
+
+Note: If the full amount of the credit claimed for the current tax year is being carried forward from a previous tax year, enter zero on line 4.
+
+Line 9 - List the name and amount of any other tax credits taken for the current tax year but not shown on the NJ-1040, NJ-1040NR, or NJ-1041 (e.g., New Jersey Angel Investor Tax Credit). Additional credits taken can be entered on a separate sheet and attached to this form.
+
+The amount of the tax credit not applied to the current tax year due to the applicable limitations can be carried over to the seven tax years following the original tax year for which the credit was allowed.
