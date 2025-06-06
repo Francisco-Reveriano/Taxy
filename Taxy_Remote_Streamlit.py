@@ -54,6 +54,8 @@ if "messages" not in st.session_state:
     ]
 
 if "context" not in st.session_state:
+    # This will hold exactly the same “(role, content)” pairs as `messages`,
+    # but in a list structure we can easily join when sending to an Agent.
     st.session_state.context = [
         {
             "role": "system",
@@ -119,11 +121,11 @@ if uploaded_file is None and not st.session_state.tax_done:
     # Let the user ask ANY tax question even without a W-2:
     general_prompt = st.chat_input("Ask me any general tax question…")
     if general_prompt:
-        # Display user’s question in the chat window
+        # — Display user’s question in the chat window
         with st.chat_message("user"):
             st.markdown(general_prompt)
 
-        # Append question to conversation
+        # — Append question to both display+context
         st.session_state.messages.append({
             "role": "user",
             "content": general_prompt
@@ -133,14 +135,23 @@ if uploaded_file is None and not st.session_state.tax_done:
             "content": general_prompt
         })
 
-        # Call TaxAgent for general advice
-        TaxAgentGen = call_TaxAgent(st.session_state.model_name)
-        general_response = asyncio.run(Runner.run(TaxAgentGen, general_prompt))
+        # — Build a single string containing the full context so far:
+        full_context_str = "\n".join(
+            f"{m['role']}: {m['content']}"
+            for m in st.session_state.context
+        )
+        # — Add the new user prompt on the end:
+        agent_input = full_context_str + "\nuser: " + general_prompt
 
-        # Display TaxAgent’s answer
+        # — Call TaxAgent for general advice, passing full context:
+        TaxAgentGen = call_TaxAgent(st.session_state.model_name)
+        general_response = asyncio.run(Runner.run(TaxAgentGen, agent_input))
+
+        # — Display TaxAgent’s answer
         with st.chat_message("assistant"):
             st.markdown(general_response.final_output)
 
+        # — Append assistant’s response to both display+context
         st.session_state.messages.append({
             "role": "assistant",
             "content": general_response.final_output
@@ -159,6 +170,10 @@ if uploaded_file is not None and "profile_result" not in st.session_state:
         st.markdown("Thank you for uploading your W-2. We’re processing it now…")
 
     st.session_state.messages.append({
+        "role": "assistant",
+        "content": "Thank you for uploading your W-2. We’re processing it now…"
+    })
+    st.session_state.context.append({
         "role": "assistant",
         "content": "Thank you for uploading your W-2. We’re processing it now…"
     })
@@ -254,8 +269,13 @@ if "profile_result" in st.session_state:
             "role": "assistant",
             "content": w2_table.final_output
         })
+        st.session_state.context.append({
+            "role": "assistant",
+            "content": w2_table.final_output
+        })
 
         # Calculate tax profile
+        # — We still build a concise “tax_input_message” for clarity, but we’ll prepend full_context as well:
         tax_input_message = (
             "# Complete Employee Profile\n"
             f"{st.session_state['Full_User_Profile']}\n\n"
@@ -264,7 +284,15 @@ if "profile_result" in st.session_state:
             "# Employee W-2\n"
             f"{st.session_state['W2_Form']}"
         )
-        tax_result = asyncio.run(Runner.run(TaxAgent, tax_input_message))
+
+        # Create the “full context” string, then tack on our tax_input_message
+        full_context_str = "\n".join(
+            f"{m['role']}: {m['content']}"
+            for m in st.session_state.context
+        )
+        agent_input_for_tax = full_context_str + "\nuser: " + tax_input_message
+
+        tax_result = asyncio.run(Runner.run(TaxAgent, agent_input_for_tax))
 
         st.session_state.total_income        = tax_result.final_output.Income
         st.session_state.total_tax_withheld  = tax_result.final_output.taxWithheld
@@ -341,8 +369,15 @@ if st.session_state.tax_done:
             "content": user_prompt
         })
 
+        # Again, build “full context” before passing to TaxAgentPost
+        full_context_str = "\n".join(
+            f"{m['role']}: {m['content']}"
+            for m in st.session_state.context
+        )
+        agent_input_post = full_context_str + "\nuser: " + user_prompt
+
         TaxAgentPost = call_TaxAgent(st.session_state.model_name)
-        general_response = asyncio.run(Runner.run(TaxAgentPost, user_prompt))
+        general_response = asyncio.run(Runner.run(TaxAgentPost, agent_input_post))
 
         with st.chat_message("assistant"):
             st.markdown(general_response.final_output)
