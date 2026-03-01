@@ -68,7 +68,7 @@ class TodoManager:
         content = f"Current plan: [{completed}]/[{total}] complete."
         if next_item:
             content += f" Next: {next_item.description}"
-        return {"role": "system", "content": content}
+        return {"role": "user", "content": f"[Plan Status] {content}"}
 
     def has_pending(self) -> bool:
         return any(i.status == TodoStatus.PENDING for i in self._items)

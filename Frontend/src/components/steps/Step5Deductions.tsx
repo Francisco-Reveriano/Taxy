@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useWizardStore } from '../../store/useWizardStore'
 
-const STANDARD_DEDUCTION = 14600
+const STANDARD_DEDUCTIONS_2025: Record<string, number> = {
+  'Single': 15750,
+  'Married Filing Jointly': 31500,
+  'Married Filing Separately': 15750,
+  'Head of Household': 23625,
+  'Qualifying Surviving Spouse': 31500,
+}
 
 const AVAILABLE_CREDITS = [
   { id: 'child-tax-credit', label: 'Child Tax Credit ($2,000/child)', amount: 2000 },
@@ -11,14 +17,22 @@ const AVAILABLE_CREDITS = [
 ]
 
 export default function Step5Deductions() {
-  const [itemizedTotal, setItemizedTotal] = useState(0)
-  const [selectedCredits, setSelectedCredits] = useState<string[]>([])
-  const recommended = itemizedTotal > STANDARD_DEDUCTION ? 'itemized' : 'standard'
+  const filingStatus = useWizardStore((s) => s.filingStatus)
+  const itemizedTotal = useWizardStore((s) => s.itemizedTotal)
+  const setItemizedTotal = useWizardStore((s) => s.setItemizedTotal)
+  const selectedCredits = useWizardStore((s) => s.selectedCredits)
+  const setSelectedCredits = useWizardStore((s) => s.setSelectedCredits)
+  const deductionChoice = useWizardStore((s) => s.deductionChoice)
+  const setDeductionChoice = useWizardStore((s) => s.setDeductionChoice)
+
+  const standardDeduction = STANDARD_DEDUCTIONS_2025[filingStatus || 'Single'] || 15750
+  const recommended = itemizedTotal > standardDeduction ? 'itemized' : 'standard'
 
   const toggleCredit = (id: string) => {
-    setSelectedCredits((prev) =>
-      prev.includes(id) ? prev.filter((c) => c !== id) : [...prev, id],
-    )
+    const next = selectedCredits.includes(id)
+      ? selectedCredits.filter((c) => c !== id)
+      : [...selectedCredits, id]
+    setSelectedCredits(next)
   }
 
   return (
@@ -33,28 +47,37 @@ export default function Step5Deductions() {
         }}
       >
         <div
+          onClick={() => setDeductionChoice('standard')}
           style={{
             padding: 16,
-            border: `2px solid ${recommended === 'standard' ? '#27ae60' : '#e2e8f0'}`,
+            border: `2px solid ${deductionChoice === 'standard' || (!deductionChoice && recommended === 'standard') ? '#27ae60' : '#e2e8f0'}`,
             borderRadius: 10,
-            background: recommended === 'standard' ? '#f0fdf4' : 'white',
+            background: deductionChoice === 'standard' || (!deductionChoice && recommended === 'standard') ? '#f0fdf4' : 'white',
+            cursor: 'pointer',
           }}
         >
           <div style={{ fontWeight: 700, marginBottom: 4 }}>Standard Deduction</div>
           <div style={{ fontSize: 22, fontWeight: 800, color: '#1a1a2e' }}>
-            ${STANDARD_DEDUCTION.toLocaleString()}
+            ${standardDeduction.toLocaleString()}
           </div>
-          {recommended === 'standard' && (
-            <div style={{ marginTop: 8, color: '#27ae60', fontSize: 13, fontWeight: 600 }}>✓ Recommended</div>
+          <div style={{ fontSize: 12, color: '#888', marginTop: 4 }}>
+            {filingStatus || 'Single'} — Tax Year 2025
+          </div>
+          {(deductionChoice === 'standard' || (!deductionChoice && recommended === 'standard')) && (
+            <div style={{ marginTop: 8, color: '#27ae60', fontSize: 13, fontWeight: 600 }}>
+              {recommended === 'standard' ? '✓ Recommended' : '✓ Selected'}
+            </div>
           )}
         </div>
 
         <div
+          onClick={() => setDeductionChoice('itemized')}
           style={{
             padding: 16,
-            border: `2px solid ${recommended === 'itemized' ? '#27ae60' : '#e2e8f0'}`,
+            border: `2px solid ${deductionChoice === 'itemized' || (!deductionChoice && recommended === 'itemized') ? '#27ae60' : '#e2e8f0'}`,
             borderRadius: 10,
-            background: recommended === 'itemized' ? '#f0fdf4' : 'white',
+            background: deductionChoice === 'itemized' || (!deductionChoice && recommended === 'itemized') ? '#f0fdf4' : 'white',
+            cursor: 'pointer',
           }}
         >
           <div style={{ fontWeight: 700, marginBottom: 4 }}>Itemized Deductions</div>
@@ -62,6 +85,7 @@ export default function Step5Deductions() {
             type="number"
             value={itemizedTotal}
             onChange={(e) => setItemizedTotal(Number(e.target.value))}
+            onClick={(e) => e.stopPropagation()}
             style={{
               fontSize: 22,
               fontWeight: 800,
@@ -73,8 +97,10 @@ export default function Step5Deductions() {
               outline: 'none',
             }}
           />
-          {recommended === 'itemized' && (
-            <div style={{ marginTop: 8, color: '#27ae60', fontSize: 13, fontWeight: 600 }}>✓ Recommended</div>
+          {(deductionChoice === 'itemized' || (!deductionChoice && recommended === 'itemized')) && (
+            <div style={{ marginTop: 8, color: '#27ae60', fontSize: 13, fontWeight: 600 }}>
+              {recommended === 'itemized' ? '✓ Recommended' : '✓ Selected'}
+            </div>
           )}
         </div>
       </div>

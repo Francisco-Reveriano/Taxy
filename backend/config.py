@@ -64,6 +64,12 @@ class Settings(BaseSettings):
     # Upload limits
     max_upload_size_mb: int = Field(default=20, validation_alias="MAX_UPLOAD_SIZE_MB")
 
+    # Form 1040 template
+    form_1040_template_path: str = Field(
+        default="/Users/Francisco_Reveriano/Downloads/f1040.pdf",
+        validation_alias="FORM_1040_TEMPLATE_PATH",
+    )
+
     model_config = {"env_file": ".env", "extra": "ignore"}
 
 

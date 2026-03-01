@@ -12,6 +12,7 @@ from fastapi.responses import JSONResponse
 from backend.config import get_settings
 from backend.models.tax_document import TaxDocument, TaxDocumentType
 from backend.audit.audit_logger import AuditEvent, AuditEventType, get_audit_logger
+from backend.telemetry.file_exporter import reset_traces_for_session
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -56,6 +57,9 @@ async def upload_document(
     """Upload a tax document. Returns TaxDocument with file_id."""
     if not session_id:
         session_id = str(uuid.uuid4())
+
+    # Traces must reflect only the current active user session.
+    reset_traces_for_session(session_id)
 
     content = await file.read()
 

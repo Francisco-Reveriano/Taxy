@@ -13,6 +13,7 @@ class SSEEventType(str, Enum):
     TODO_UPDATE = "todo_update"
     COMPRESSION = "compression"
     ERROR = "error"
+    ANALYSIS_PROGRESS = "analysis_progress"
 
 
 class SSEEvent(BaseModel):

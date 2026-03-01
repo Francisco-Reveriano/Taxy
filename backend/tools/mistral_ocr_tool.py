@@ -3,6 +3,7 @@ import logging
 import re
 import time
 from collections import defaultdict
+from dataclasses import dataclass, field as dc_field
 from pathlib import Path
 from statistics import mean
 from typing import Dict, List, Optional, Tuple
@@ -17,6 +18,13 @@ RETRY_DELAY_BASE = 1.0  # seconds
 MIN_ASYNC_OCR_RUNS = 10
 PER_RUN_TIMEOUT_SECONDS = 30.0
 BATCH_TIMEOUT_SECONDS = 90.0
+
+
+@dataclass
+class OCRRunResult:
+    """Result from a single OCR pass, including raw markdown for LLM post-processing."""
+    fields: List[OCRField] = dc_field(default_factory=list)
+    raw_markdown: str = ""
 
 # ── Standard Form Field Mappings ──
 
@@ -168,7 +176,7 @@ class MistralOCRTool:
         ]
         results = await asyncio.gather(*tasks, return_exceptions=True)
 
-        successful_runs: List[List[OCRField]] = []
+        successful_runs: List[OCRRunResult] = []
         error_count = 0
         for idx, result in enumerate(results, start=1):
             if isinstance(result, Exception):
@@ -188,7 +196,19 @@ class MistralOCRTool:
         if not successful_runs:
             raise RuntimeError("All async OCR runs failed")
 
-        aggregated = self._aggregate_runs(successful_runs)
+        # Extract field lists for aggregation
+        field_lists = [run.fields for run in successful_runs]
+        aggregated = self._aggregate_runs(field_lists)
+
+        # Combine raw markdown from all runs (use the longest/most complete one)
+        raw_markdowns = [run.raw_markdown for run in successful_runs if run.raw_markdown]
+        combined_markdown = max(raw_markdowns, key=len) if raw_markdowns else ""
+
+        # Enhance with LLM extraction for W-2 documents
+        fname_lower = Path(file_path).name.lower()
+        if combined_markdown and ("w-2" in fname_lower or "w2" in fname_lower):
+            aggregated = await self._enhance_with_llm(aggregated, combined_markdown)
+
         logger.info(
             "OCR aggregation complete for file_id=%s: output_fields=%s",
             file_id,
@@ -196,7 +216,63 @@ class MistralOCRTool:
         )
         return aggregated
 
-    def _process_sync_single_run(self, file_path: str, file_id: str, run_number: int) -> List[OCRField]:
+    async def _enhance_with_llm(
+        self, regex_fields: List[OCRField], raw_markdown: str
+    ) -> List[OCRField]:
+        """Merge LLM-extracted W-2 fields with regex-parsed fields, preferring LLM values."""
+        try:
+            from backend.tools.llm_field_extractor import LLMFieldExtractor
+
+            extractor = LLMFieldExtractor()
+            llm_fields = await extractor.extract_w2_fields(raw_markdown)
+            logger.info("LLM extraction returned %d fields", len(llm_fields))
+
+            if not llm_fields:
+                return regex_fields
+
+            # Build lookup from LLM fields (keyed by field_name)
+            llm_map: Dict[str, OCRField] = {f.field_name: f for f in llm_fields}
+
+            # Build lookup from regex fields
+            regex_map: Dict[str, OCRField] = {f.field_name: f for f in regex_fields}
+
+            # Merge: LLM fields take priority for W-2 box values
+            merged: Dict[str, OCRField] = dict(regex_map)
+            for llm_name, llm_field in llm_map.items():
+                # Map LLM field names (box_1, employer_name) to prefixed names (w2_box_1)
+                prefixed = f"w2_{llm_name}" if not llm_name.startswith("w2_") else llm_name
+
+                if llm_field.field_value and llm_field.field_value.strip():
+                    existing = merged.get(prefixed)
+                    if existing is None or not existing.field_value or existing.confidence < llm_field.confidence:
+                        merged[prefixed] = OCRField(
+                            field_name=prefixed,
+                            field_value=llm_field.field_value,
+                            confidence=llm_field.confidence,
+                            page_number=llm_field.page_number,
+                        )
+
+            # Return in stable order: W-2 box fields first, then others
+            w2_fields = []
+            other_fields = []
+            for field in merged.values():
+                if field.field_name.startswith("w2_"):
+                    w2_fields.append(field)
+                else:
+                    other_fields.append(field)
+
+            # Sort W-2 fields by box number
+            def w2_sort_key(f: OCRField) -> str:
+                return f.field_name.replace("w2_", "")
+
+            w2_fields.sort(key=w2_sort_key)
+            return w2_fields + other_fields
+
+        except Exception as e:
+            logger.error("LLM enhancement failed, using regex-only results: %s", e)
+            return regex_fields
+
+    def _process_sync_single_run(self, file_path: str, file_id: str, run_number: int) -> OCRRunResult:
         """Single synchronous OCR call (run in thread pool)."""
         del file_id  # reserved for future tracing correlation
         client = self._build_client()
@@ -221,10 +297,17 @@ class MistralOCRTool:
         )
         logger.debug("Completed OCR run %s for %s", run_number, path.name)
 
-        fields = self._parse_ocr_response(response)
+        # Capture raw markdown for LLM post-processing
+        raw_markdown = ""
+        if hasattr(response, "pages"):
+            raw_markdown = "\n\n".join(
+                page.markdown for page in response.pages
+                if hasattr(page, "markdown") and page.markdown
+            )
 
-        # Apply standard form field mapping
-        return self._apply_field_mapping(fields, path.name)
+        fields = self._parse_ocr_response(response)
+        fields = self._apply_field_mapping(fields, path.name)
+        return OCRRunResult(fields=fields, raw_markdown=raw_markdown)
 
     def _normalize_value(self, value: str) -> str:
         cleaned = re.sub(r"\s+", " ", value.strip())
@@ -333,6 +416,14 @@ class MistralOCRTool:
 
         for field in fields:
             matched_box = _fuzzy_match_field(field.field_name, mapping)
+            if not matched_box and field.field_name.startswith("line_"):
+                # Try matching the value content against known W-2 labels
+                matched_box = _fuzzy_match_field(field.field_value, mapping)
+                if matched_box:
+                    # Extract numeric portion from the value text
+                    amount_match = re.search(r'[\$]?\s*([\d,]+(?:\.\d{2})?)', field.field_value)
+                    if amount_match:
+                        field.field_value = amount_match.group(1).replace(",", "")
             if matched_box:
                 field.field_name = f"{form_prefix}_{matched_box}"
 
@@ -456,7 +547,38 @@ class MistralOCRTool:
                             confidence=0.90,  # Mistral doesn't always return per-field confidence
                             page_number=page_number,
                         ))
-                elif line and not line.startswith("|"):
+                elif line.startswith("|"):
+                    # Parse markdown table row
+                    cells = [c.strip() for c in line.split("|") if c.strip()]
+                    # Skip separator rows (e.g., |---|---|)
+                    if all(re.match(r'^[-:]+$', c) for c in cells):
+                        continue
+                    if len(cells) >= 2:
+                        # Find the last cell that looks numeric (dollar amount)
+                        value_cell = None
+                        label_parts = []
+                        for i, cell in enumerate(cells):
+                            cleaned = re.sub(r'[$,\s]', '', cell)
+                            if re.match(r'^-?\d+\.?\d*$', cleaned) and i > 0:
+                                value_cell = cell
+                            else:
+                                label_parts.append(cell)
+                        if value_cell is not None and label_parts:
+                            fields.append(OCRField(
+                                field_name=" - ".join(label_parts),
+                                field_value=value_cell.strip(),
+                                confidence=0.90,
+                                page_number=page_number,
+                            ))
+                        else:
+                            # Two-column table without numeric last col
+                            fields.append(OCRField(
+                                field_name=cells[0],
+                                field_value=" ".join(cells[1:]),
+                                confidence=0.90,
+                                page_number=page_number,
+                            ))
+                elif line:
                     # Store raw text line as a field
                     fields.append(OCRField(
                         field_name=f"line_{page_number}_{len(fields)}",

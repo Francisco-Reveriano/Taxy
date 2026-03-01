@@ -22,9 +22,15 @@ class AskUserTool:
     def set_streamgen(self, streamgen: "StreamGen"):
         self._streamgen = streamgen
 
-    async def ask(self, question: str, session_id: str = "") -> str:
+    async def ask(
+        self,
+        question: str,
+        session_id: str = "",
+        options: Optional[list[str]] = None,
+    ) -> str:
         """
         Emit an ask_user SSE event and wait for the user's response.
+        When *options* is provided, the frontend renders radio buttons for each option.
         Returns the user's answer as a string.
         """
         question_id = str(uuid.uuid4())
@@ -41,15 +47,16 @@ class AskUserTool:
             metadata={"question_id": question_id},
         ))
 
+        payload: dict = {
+            "question": question,
+            "question_id": question_id,
+            "session_id": session_id,
+        }
+        if options:
+            payload["options"] = options
+
         if self._streamgen:
-            await self._streamgen.emit(
-                SSEEventType.ASK_USER,
-                {
-                    "question": question,
-                    "question_id": question_id,
-                    "session_id": session_id,
-                },
-            )
+            await self._streamgen.emit(SSEEventType.ASK_USER, payload)
 
         try:
             answer = await asyncio.wait_for(future, timeout=300.0)  # 5 min timeout

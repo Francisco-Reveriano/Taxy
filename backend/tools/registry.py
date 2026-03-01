@@ -6,6 +6,7 @@ from backend.tools.calculator_tool import TaxCalculator
 from backend.tools.mistral_ocr_tool import MistralOCRTool
 from backend.tools.legal_rag_tool import LegalRAGTool
 from backend.tools.ask_user_tool import AskUserTool
+from backend.tools.form1040_tool import Form1040Tool
 
 if TYPE_CHECKING:
     from backend.agent.streamgen import StreamGen
@@ -91,6 +92,28 @@ TOOL_DEFINITIONS = [
         },
     },
     {
+        "name": "form1040_tool",
+        "description": (
+            "Generates and validates a filled IRS Form 1040 PDF. "
+            "Returns success only when required fields are present and written."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "session_id": {"type": "string", "description": "Active user session identifier"},
+                "tax_data": {
+                    "type": "object",
+                    "description": "Normalized taxpayer and tax computation fields for 1040 generation",
+                },
+                "template_path": {
+                    "type": "string",
+                    "description": "Optional absolute path override for the 1040 PDF template",
+                },
+            },
+            "required": ["session_id", "tax_data"],
+        },
+    },
+    {
         "name": "ask_user_tool",
         "description": (
             "Ask the user a clarifying question. Use when critical information is missing or ambiguous "
@@ -101,6 +124,11 @@ TOOL_DEFINITIONS = [
             "properties": {
                 "question": {"type": "string", "description": "The question to ask the user"},
                 "session_id": {"type": "string"},
+                "options": {
+                    "type": "array",
+                    "items": {"type": "string"},
+                    "description": "Optional list of choices for a multiple-choice question. When provided, the user sees radio buttons.",
+                },
             },
             "required": ["question"],
         },
@@ -114,6 +142,7 @@ class ToolRegistry:
         self._ocr = MistralOCRTool()
         self._rag = LegalRAGTool()
         self._ask_user = AskUserTool()
+        self._form1040 = Form1040Tool()
 
     def set_streamgen(self, streamgen: "StreamGen"):
         self._ask_user.set_streamgen(streamgen)
@@ -140,9 +169,18 @@ class ToolRegistry:
                 return result.model_dump()
             elif tool_name == "ask_user_tool":
                 answer = await self._ask_user.ask(
-                    inputs["question"], inputs.get("session_id", session_id)
+                    inputs["question"],
+                    inputs.get("session_id", session_id),
+                    options=inputs.get("options"),
                 )
                 return {"answer": answer}
+            elif tool_name == "form1040_tool":
+                return await asyncio.to_thread(
+                    self._form1040.generate_form,
+                    inputs.get("session_id", session_id),
+                    inputs.get("tax_data", {}),
+                    inputs.get("template_path"),
+                )
             else:
                 raise ValueError(f"Unknown tool: {tool_name}")
         except Exception as e:

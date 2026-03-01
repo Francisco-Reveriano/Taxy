@@ -17,6 +17,7 @@ class AuditEventType(str, Enum):
     OCR_STARTED = "ocr.started"
     OCR_COMPLETED = "ocr.completed"
     OCR_FIELD_CORRECTED = "ocr.field_corrected"
+    OCR_LLM_EXTRACTION = "ocr.llm_extraction"
     ANALYSIS_STARTED = "analysis.started"
     ANALYSIS_COMPLETED = "analysis.completed"
     SCORING_COMPARISON = "scoring.comparison"

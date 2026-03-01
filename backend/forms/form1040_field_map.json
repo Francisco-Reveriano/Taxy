@@ -1,0 +1,20 @@
+{
+  "first_name": "topmostSubform[0].Page1[0].f1_01[0]",
+  "last_name": "topmostSubform[0].Page1[0].f1_02[0]",
+  "ssn": "topmostSubform[0].Page1[0].f1_03[0]",
+  "spouse_first_name": "topmostSubform[0].Page1[0].f1_04[0]",
+  "spouse_last_name": "topmostSubform[0].Page1[0].f1_05[0]",
+  "spouse_ssn": "topmostSubform[0].Page1[0].f1_06[0]",
+  "address": "topmostSubform[0].Page1[0].Address_ReadOrder[0].f1_20[0]",
+  "city": "topmostSubform[0].Page1[0].Address_ReadOrder[0].f1_22[0]",
+  "state": "topmostSubform[0].Page1[0].Address_ReadOrder[0].f1_23[0]",
+  "zip": "topmostSubform[0].Page1[0].Address_ReadOrder[0].f1_24[0]",
+  "filing_status": "topmostSubform[0].Page1[0].c1_1[0]",
+  "total_income": "topmostSubform[0].Page1[0].f1_55[0]",
+  "adjusted_gross_income": "topmostSubform[0].Page1[0].f1_57[0]",
+  "taxable_income": "topmostSubform[0].Page1[0].f1_65[0]",
+  "total_tax": "topmostSubform[0].Page2[0].f2_06[0]",
+  "federal_tax_withheld": "topmostSubform[0].Page2[0].f2_07[0]",
+  "refund_amount": "topmostSubform[0].Page2[0].f2_31[0]",
+  "amount_owed": "topmostSubform[0].Page2[0].f2_35[0]"
+}

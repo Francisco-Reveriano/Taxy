@@ -2,26 +2,32 @@ import React from 'react'
 import { useWizardStore } from '../store/useWizardStore'
 import { useWizard } from '../hooks/useWizard'
 import Step1FilingStatus from './steps/Step1FilingStatus'
+import StepPersonalInfo from './steps/StepPersonalInfo'
 import Step2Upload from './steps/Step2Upload'
 import Step3OCRReview from './steps/Step3OCRReview'
 import Step4Income from './steps/Step4Income'
 import Step5Deductions from './steps/Step5Deductions'
 import Step6Analysis from './steps/Step6Analysis'
 import Step7Results from './steps/Step7Results'
+import Step9Form1040Viewer from './steps/Step9Form1040Viewer'
 
 const STEP_COMPONENTS: Record<number, React.FC> = {
   1: Step1FilingStatus,
-  2: Step2Upload,
-  3: Step3OCRReview,
-  4: Step4Income,
-  5: Step5Deductions,
-  6: Step6Analysis,
-  7: Step7Results,
+  2: StepPersonalInfo,
+  3: Step2Upload,
+  4: Step3OCRReview,
+  5: Step4Income,
+  6: Step5Deductions,
+  7: Step6Analysis,
+  8: Step7Results,
+  9: Step9Form1040Viewer,
 }
 
 export default function WizardShell() {
   const currentStep = useWizardStore((s) => s.currentStep)
   const setCurrentStep = useWizardStore((s) => s.setCurrentStep)
+  const analysisResult = useWizardStore((s) => s.analysisResult)
+  const isAnalyzing = useWizardStore((s) => s.isAnalyzing)
   const { visibleSteps } = useWizard()
 
   // Find current position in visible steps
@@ -50,6 +56,7 @@ export default function WizardShell() {
 
   const isFirst = currentVisibleIndex <= 0
   const isLast = currentVisibleIndex >= visibleSteps.length - 1
+  const isNextDisabled = effectiveStep === 7 && (isAnalyzing || !analysisResult)
 
   return (
     <div style={{ maxWidth: 800, margin: '0 auto' }}>
@@ -121,14 +128,16 @@ export default function WizardShell() {
         {!isLast && (
           <button
             onClick={goNext}
+            disabled={!!isNextDisabled}
             style={{
               padding: '10px 24px',
               borderRadius: 8,
               border: 'none',
-              background: '#4a90d9',
+              background: isNextDisabled ? '#a0c4e8' : '#4a90d9',
               color: 'white',
-              cursor: 'pointer',
+              cursor: isNextDisabled ? 'not-allowed' : 'pointer',
               fontWeight: 600,
+              opacity: isNextDisabled ? 0.7 : 1,
             }}
           >
             Next

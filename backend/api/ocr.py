@@ -2,10 +2,10 @@
 import logging
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from typing import List
+from typing import Dict, List
 
 from backend.models.tax_document import OCRField
-from backend.tools.mistral_ocr_tool import MistralOCRTool
+from backend.tools.mistral_ocr_tool import MistralOCRTool, W2_BOX_MAPPING
 from backend.audit.audit_logger import AuditEvent, AuditEventType, get_audit_logger
 
 logger = logging.getLogger(__name__)
@@ -14,6 +14,36 @@ router = APIRouter()
 # In-memory store for OCR results (keyed by file_id)
 _ocr_results: dict[str, list[OCRField]] = {}
 _file_paths: dict[str, str] = {}  # file_id -> file_path
+
+# Human-readable display labels for OCR fields
+_DISPLAY_LABELS: Dict[str, str] = {
+    "employer_name": "Employer Name",
+    "employer_ein": "Employer EIN",
+    "employee_name": "Employee Name",
+    "employee_ssn_last4": "Employee SSN (last 4)",
+}
+
+# Build W-2 display labels from W2_BOX_MAPPING
+for box_id, info in W2_BOX_MAPPING.items():
+    _DISPLAY_LABELS[f"w2_{box_id}"] = f"{box_id.replace('_', ' ').title()} - {info['label']}"
+
+
+def _get_display_label(field_name: str) -> str:
+    """Map internal field names to human-readable display labels."""
+    if field_name in _DISPLAY_LABELS:
+        return _DISPLAY_LABELS[field_name]
+    # Passthrough fields like line_1_0 get no special label
+    return ""
+
+
+def _fields_with_labels(fields: List[OCRField]) -> List[dict]:
+    """Serialize fields with display_label added."""
+    result = []
+    for f in fields:
+        d = f.model_dump()
+        d["display_label"] = _get_display_label(f.field_name)
+        result.append(d)
+    return result
 
 
 class FieldCorrectionRequest(BaseModel):
@@ -60,7 +90,7 @@ async def run_ocr(file_id: str, session_id: str = ""):
             metadata={"field_count": len(fields)},
         ))
 
-        return {"file_id": file_id, "fields": [f.model_dump() for f in fields]}
+        return {"file_id": file_id, "fields": _fields_with_labels(fields)}
 
     except Exception as e:
         logger.error(f"OCR error for {file_id}: {e}")
@@ -92,7 +122,7 @@ async def update_ocr_fields(file_id: str, body: FieldCorrectionRequest):
             ))
 
     _ocr_results[file_id] = list(current_fields.values())
-    return {"file_id": file_id, "fields": [f.model_dump() for f in _ocr_results[file_id]]}
+    return {"file_id": file_id, "fields": _fields_with_labels(_ocr_results[file_id])}
 
 
 @router.get("/ocr/{file_id}")
@@ -100,4 +130,4 @@ async def get_ocr_results(file_id: str):
     """Get OCR results for a document."""
     if file_id not in _ocr_results:
         raise HTTPException(status_code=404, detail=f"No OCR data for file_id={file_id}")
-    return {"file_id": file_id, "fields": [f.model_dump() for f in _ocr_results[file_id]]}
+    return {"file_id": file_id, "fields": _fields_with_labels(_ocr_results[file_id])}

@@ -1,5 +1,6 @@
 """FastAPI application entry point."""
 import logging
+import os
 import uvicorn
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
@@ -9,7 +10,7 @@ from backend.config import get_settings
 from backend.logging_config import configure_logging
 from backend.telemetry.config import configure_telemetry
 from backend.audit.audit_logger import get_audit_logger
-from backend.api import upload, ocr, analyze, wizard, stream, audit, traces
+from backend.api import upload, ocr, analyze, wizard, stream, audit, traces, forms
 
 configure_logging()
 logger = logging.getLogger(__name__)
@@ -19,6 +20,11 @@ logger = logging.getLogger(__name__)
 async def lifespan(app: FastAPI):
     """Startup and shutdown events."""
     settings = get_settings()
+
+    # Export API keys to os.environ so SDKs that read env vars directly
+    # (e.g. OpenAI Agents SDK) can find them.
+    if settings.openai_api_key:
+        os.environ.setdefault("OPENAI_API_KEY", settings.openai_api_key)
 
     # Initialize telemetry
     configure_telemetry(settings)
@@ -62,6 +68,7 @@ app.include_router(wizard.router, prefix="/api", tags=["wizard"])
 app.include_router(stream.router, prefix="/api", tags=["stream"])
 app.include_router(audit.router, prefix="/api", tags=["audit"])
 app.include_router(traces.router, prefix="/api", tags=["traces"])
+app.include_router(forms.router, prefix="/api", tags=["forms"])
 
 
 @app.get("/api/health")

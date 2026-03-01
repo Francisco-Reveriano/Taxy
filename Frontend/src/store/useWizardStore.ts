@@ -14,6 +14,12 @@ export interface TodoItem {
   priority: number
 }
 
+export interface Form1040Status {
+  success: boolean
+  missing_required_fields?: string[]
+  fields_written_count?: number
+}
+
 export interface AnalysisResult {
   flag_status: string
   consensus_liability: number | null
@@ -21,6 +27,7 @@ export interface AnalysisResult {
   scoring_rationale: string
   claude_result: Record<string, unknown> | null
   openai_result: Record<string, unknown> | null
+  form1040_status?: Form1040Status
 }
 
 export interface OCRFieldData {
@@ -29,15 +36,41 @@ export interface OCRFieldData {
   confidence: number
   page_number: number
   is_corrected: boolean
+  display_label?: string
+}
+
+export interface TaxpayerInfo {
+  firstName: string
+  lastName: string
+  ssn: string
+  address: string
+  city: string
+  state: string
+  zip: string
+  dependents: number
+}
+
+export interface IncomeSummary {
+  wages: number
+  federalWithheld: number
+  ssWages: number
+  medicareWages: number
+  otherIncome: number
+  totalIncome: number
 }
 
 interface WizardStore {
   sessionId: string
   currentStep: number
   filingStatus: string | null
+  taxpayerInfo: TaxpayerInfo
   documents: Array<{ file_id: string; original_filename: string; document_type: string }>
   ocrFields: Record<string, OCRFieldData[]>
   ocrReviewComplete: boolean
+  incomeSummary: IncomeSummary
+  deductionChoice: 'standard' | 'itemized' | null
+  itemizedTotal: number
+  selectedCredits: string[]
   analysisResult: AnalysisResult | null
   sseEvents: SSEEventRecord[]
   todoItems: TodoItem[]
@@ -46,10 +79,15 @@ interface WizardStore {
   setSessionId: (id: string) => void
   setCurrentStep: (step: number) => void
   setFilingStatus: (status: string) => void
+  setTaxpayerInfo: (info: Partial<TaxpayerInfo>) => void
   addDocument: (doc: { file_id: string; original_filename: string; document_type: string }) => void
   removeDocument: (fileId: string) => void
   setOcrFields: (fileId: string, fields: OCRFieldData[]) => void
   setOcrReviewComplete: (v: boolean) => void
+  setIncomeSummary: (summary: IncomeSummary) => void
+  setDeductionChoice: (choice: 'standard' | 'itemized') => void
+  setItemizedTotal: (total: number) => void
+  setSelectedCredits: (credits: string[]) => void
   setAnalysisResult: (result: AnalysisResult) => void
   addSSEEvent: (event: SSEEventRecord) => void
   setTodoItems: (items: TodoItem[]) => void
@@ -67,9 +105,14 @@ export const useWizardStore = create<WizardStore>()(
     sessionId: crypto.randomUUID(),
     currentStep: 1,
     filingStatus: null,
+    taxpayerInfo: { firstName: '', lastName: '', ssn: '', address: '', city: '', state: '', zip: '', dependents: 0 },
     documents: [],
     ocrFields: {},
     ocrReviewComplete: false,
+    incomeSummary: { wages: 0, federalWithheld: 0, ssWages: 0, medicareWages: 0, otherIncome: 0, totalIncome: 0 },
+    deductionChoice: null,
+    itemizedTotal: 0,
+    selectedCredits: [],
     analysisResult: null,
     sseEvents: [],
     todoItems: [],
@@ -78,18 +121,23 @@ export const useWizardStore = create<WizardStore>()(
     setSessionId: (id) => set({ sessionId: id }),
     setCurrentStep: (step) => set({ currentStep: step }),
     setFilingStatus: (status) => set({ filingStatus: status }),
+    setTaxpayerInfo: (info) => set((s) => ({ taxpayerInfo: { ...s.taxpayerInfo, ...info } })),
     addDocument: (doc) => set((s) => ({ documents: [...s.documents, doc] })),
     removeDocument: (fileId) =>
       set((s) => ({ documents: s.documents.filter((d) => d.file_id !== fileId) })),
     setOcrFields: (fileId, fields) =>
       set((s) => ({ ocrFields: { ...s.ocrFields, [fileId]: fields } })),
     setOcrReviewComplete: (v) => set({ ocrReviewComplete: v }),
+    setIncomeSummary: (summary) => set({ incomeSummary: summary }),
+    setDeductionChoice: (choice) => set({ deductionChoice: choice }),
+    setItemizedTotal: (total) => set({ itemizedTotal: total }),
+    setSelectedCredits: (credits) => set({ selectedCredits: credits }),
     setAnalysisResult: (result) => set({ analysisResult: result }),
     addSSEEvent: (event) =>
       set((s) => ({ sseEvents: [event, ...s.sseEvents].slice(0, 100) })),
     setTodoItems: (items) => set({ todoItems: items }),
     setIsAnalyzing: (v) => set({ isAnalyzing: v }),
-    nextStep: () => set((s) => ({ currentStep: Math.min(s.currentStep + 1, 7) })),
+    nextStep: () => set((s) => ({ currentStep: Math.min(s.currentStep + 1, 9) })),
     prevStep: () => set((s) => ({ currentStep: Math.max(s.currentStep - 1, 1) })),
   }),
 )

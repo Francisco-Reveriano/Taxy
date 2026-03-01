@@ -34,6 +34,8 @@ class WizardState(BaseModel):
     credits: List[str] = []
     analysis_triggered: bool = False
     analysis_complete: bool = False
+    form_1040_ready: bool = False
+    form_1040_path: Optional[str] = None
     created_at: str = ""
     updated_at: str = ""
     metadata: Dict[str, Any] = {}

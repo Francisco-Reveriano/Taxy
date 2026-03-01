@@ -10,7 +10,7 @@ import os
 import threading
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Sequence
+from typing import Optional, Sequence
 
 from opentelemetry.sdk.trace import ReadableSpan
 from opentelemetry.sdk.trace.export import SpanExporter, SpanExportResult
@@ -19,6 +19,8 @@ from opentelemetry.trace import StatusCode
 logger = logging.getLogger(__name__)
 
 _TRACES_DIR = Path(__file__).resolve().parent.parent / "traces"
+_ACTIVE_SESSION_FILE = _TRACES_DIR / ".active_session"
+_TRACE_RESET_LOCK = threading.Lock()
 
 
 def _span_to_dict(span: ReadableSpan) -> dict:
@@ -95,4 +97,38 @@ class JSONFileSpanExporter(SpanExporter):
         pass
 
     def force_flush(self, timeout_millis: int = 30000) -> bool:
+        return True
+
+
+def get_active_trace_session() -> Optional[str]:
+    """Return the session_id currently owning trace storage."""
+    if not _ACTIVE_SESSION_FILE.exists():
+        return None
+    value = _ACTIVE_SESSION_FILE.read_text(encoding="utf-8").strip()
+    return value or None
+
+
+def reset_traces_for_session(session_id: str) -> bool:
+    """
+    Hard-reset trace storage when session ownership changes.
+    Returns True if a reset occurred, False if session already active.
+    """
+    if not session_id:
+        return False
+
+    _TRACES_DIR.mkdir(parents=True, exist_ok=True)
+
+    with _TRACE_RESET_LOCK:
+        current = get_active_trace_session()
+        if current == session_id:
+            return False
+
+        for path in _TRACES_DIR.glob("*.jsonl"):
+            try:
+                path.unlink(missing_ok=True)
+            except Exception:
+                logger.exception("Failed deleting trace file %s during reset", path)
+
+        _ACTIVE_SESSION_FILE.write_text(session_id, encoding="utf-8")
+        logger.info("Trace storage reset for session %s", session_id)
         return True

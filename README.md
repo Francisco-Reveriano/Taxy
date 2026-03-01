@@ -395,6 +395,14 @@ All endpoints are mounted under the `/api` prefix.
 | `GET` | `/api/traces` | List recent traces grouped by trace_id. Query param: `limit` (default 50, max 200). |
 | `GET` | `/api/traces/{trace_id}` | Get all spans for a specific trace. |
 
+### Forms (Final 1040)
+
+| Method | Path | Description |
+|--------|------|-------------|
+| `GET` | `/api/forms/1040/template-fields` | List fillable Form 1040 AcroForm field names and semantic mapping readiness. |
+| `GET` | `/api/forms/1040/{session_id}/status` | Get Form 1040 generation status for a session, including missing required fields. |
+| `GET` | `/api/forms/1040/{session_id}` | Download generated filled Form 1040 PDF for a session (when successful). |
+
 ### Health
 
 | Method | Path | Description |

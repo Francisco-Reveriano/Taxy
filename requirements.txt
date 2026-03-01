@@ -35,3 +35,4 @@ claude-code-sdk
 structlog
 reportlab
 mistralai
+pypdf

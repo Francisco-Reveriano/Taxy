@@ -4,6 +4,7 @@ import TraceDashboard from './components/TraceDashboard'
 import { useWizardStore } from './store/useWizardStore'
 import useSSE from './hooks/useSSE'
 import TodoSidebar from './components/agent/TodoSidebar'
+import AskUserModal from './components/agent/AskUserModal'
 
 type Tab = 'wizard' | 'traces'
 
@@ -24,6 +25,7 @@ export default function App() {
             {(['wizard', 'traces'] as const).map((tab) => (
               <button
                 key={tab}
+                data-tab={tab}
                 onClick={() => setActiveTab(tab)}
                 style={{
                   padding: '6px 16px',
@@ -46,6 +48,7 @@ export default function App() {
         {activeTab === 'wizard' ? <WizardShell /> : <TraceDashboard />}
       </main>
       <TodoSidebar />
+      <AskUserModal />
     </div>
   )
 }

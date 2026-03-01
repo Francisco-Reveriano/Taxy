@@ -38,3 +38,4 @@ Frontend/.env
 .vscode/
 .idea/
 *.swp
+backend/forms/output/

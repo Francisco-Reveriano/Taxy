@@ -27,33 +27,59 @@ logger = logging.getLogger(__name__)
 
 N0_SYSTEM_PROMPT = """You are n0, the master tax analysis orchestrator. Your role is to:
 
-1. Analyze the taxpayer's situation comprehensively
-2. Orchestrate specialized tools (OCR, RAG, calculator, user queries)
-3. Produce a complete dual-LLM tax analysis with audit trail
+1. Produce a final, filled IRS Form 1040 PDF for the taxpayer
+2. Orchestrate specialized tools (OCR, RAG, calculator, user queries, 1040 generation)
+3. Continue until Form 1040 generation is successful or hard-fail with explicit missing fields
 
 ## Tool Usage Protocol
 - Use `mistral_ocr_tool` to extract data from uploaded documents
-- Use `legal_rag_agent_tool` to retrieve relevant IRS guidance
-- Use `calculator_tool` for precise tax computations
-- Use `ask_user_tool` when critical information is missing
+- Use `legal_rag_agent_tool` to retrieve relevant IRS guidance and compute liability
+- Use `calculator_tool` for precise tax computations (federal tax, FICA, deduction comparison, credits)
+- Use `ask_user_tool` when critical information is missing or ambiguous — ask targeted, specific questions
+- Use `form1040_tool` to generate and validate the final filled 1040 PDF
+
+## When to Ask the User
+You MUST use `ask_user_tool` to ask targeted follow-up questions when:
+- Filing status is missing or unclear
+- SSN, name, or address are incomplete
+- Dependents information is needed but not provided
+- The taxpayer may qualify for credits (EIC, CTC, education) but eligibility data is missing
+- Itemized deduction details are needed (mortgage interest, charitable donations, medical expenses)
+- Self-employment or additional income sources are ambiguous
+- Any required 1040 field is missing after initial analysis
+Use the `options` parameter to provide multiple-choice answers when appropriate (e.g., filing status, yes/no eligibility).
+IMPORTANT: Ask only ONE question per `ask_user_tool` call. Do NOT batch multiple questions into a single call. Wait for the user's answer before asking the next question. This keeps the interaction focused and easy to respond to.
 
 ## Analysis Workflow
-1. Process all uploaded documents via OCR
-2. Query IRS publications for applicable regulations
-3. Compute tax liability using the calculator
-4. Compare standard vs itemized deductions
-5. Apply applicable credits
-6. Produce final analysis with confidence scores
+1. Review the taxpayer data provided
+2. Ask clarifying questions for any missing or ambiguous critical fields
+3. Query IRS publications for applicable regulations via `legal_rag_agent_tool`
+4. Compute tax liability using `calculator_tool`
+5. Compare standard vs itemized deductions
+6. Apply applicable credits
+7. Generate the final 1040 with `form1040_tool`
+8. If form generation fails due to missing fields, ask follow-up questions and retry
 
 ## Output Requirements
-Always produce structured analysis with:
-- Estimated federal tax liability
-- Applicable deductions and credits
-- Confidence level (High/Medium/Low)
-- Advisory notes for the taxpayer
-- Source citations from IRS publications
+Success criteria is strict:
+- `form1040_tool` must return `success=true`
+- `output_path` must be present and downloadable
+- If tool returns missing fields, ask follow-up questions and retry
+
+Failure criteria:
+- If a filled 1040 is not produced, do NOT claim success
+- Return explicit failure with missing fields and why completion failed
 
 Be thorough, accurate, and cite retrieved sources. Never guess at tax rules."""
+
+# Map tool names to analysis phases for progress tracking
+_TOOL_PHASE_MAP = {
+    "legal_rag_agent_tool": "dual_llm",
+    "calculator_tool": "scoring",
+    "form1040_tool": "form1040",
+    "ask_user_tool": "dual_llm",
+    "mistral_ocr_tool": "dual_llm",
+}
 
 
 class N0AgentLoop:
@@ -71,6 +97,14 @@ class N0AgentLoop:
         self._streamgen = streamgen
         self._tool_registry.set_streamgen(streamgen)
         self._todo_manager.set_streamgen(streamgen)
+
+    async def _emit_progress(self, step: str, status: str, detail: str = ""):
+        if self._streamgen:
+            await self._streamgen.emit(SSEEventType.ANALYSIS_PROGRESS, {
+                "step": step,
+                "status": status,
+                "detail": detail,
+            })
 
     async def run(self, user_message: str, session_id: str) -> str:
         """
@@ -94,8 +128,12 @@ class N0AgentLoop:
             messages.append({"role": "user", "content": user_message})
 
         final_answer = ""
+        form1040_success = False
+        form1040_output_path = ""
+        latest_missing_fields: list[str] = []
 
         audit = get_audit_logger()
+        await self._emit_progress("dual_llm", "running", "n0 agent starting analysis...")
 
         for iteration in range(self._settings.todo_max_iterations):
             await audit.log(AuditEvent(
@@ -112,7 +150,10 @@ class N0AgentLoop:
                 # Emit thinking if present (extended thinking)
                 if hasattr(response, "thinking") and response.thinking:
                     if self._streamgen:
-                        await self._streamgen.emit(SSEEventType.THOUGHT, response.thinking)
+                        await self._streamgen.emit(SSEEventType.THOUGHT, {
+                            "phase": "thinking",
+                            "summary": response.thinking if isinstance(response.thinking, str) else str(response.thinking),
+                        })
 
                 # Check for tool use
                 tool_use_blocks = [
@@ -125,25 +166,54 @@ class N0AgentLoop:
                     if block.type == "text"
                 ]
 
+                # Stream model text to the frontend so users see the agent's reasoning
+                if self._streamgen and text_blocks:
+                    combined = "\n".join(b.text for b in text_blocks).strip()
+                    if combined:
+                        await self._streamgen.emit(SSEEventType.THOUGHT, {
+                            "phase": "reasoning",
+                            "summary": combined,
+                        })
+
                 # Auto-create TodoWrite items from structured response
                 for block in text_blocks:
                     self._extract_todo_items(block.text, session_id)
 
                 # Phase 3: Tool Detection
                 if not tool_use_blocks:
-                    # Terminal condition — no more tools needed
-                    final_answer = " ".join(b.text for b in text_blocks)
+                    if not form1040_success:
+                        # Hard gate: n0 cannot succeed without a valid filled 1040.
+                        missing_msg = ", ".join(latest_missing_fields) if latest_missing_fields else "unknown fields"
+                        messages.append({
+                            "role": "user",
+                            "content": (
+                                "You have not successfully generated a filled Form 1040 yet. "
+                                "Do not finalize. Ask follow-up questions for missing fields and call form1040_tool again. "
+                                f"Current missing fields: {missing_msg}."
+                            ),
+                        })
+                        continue
+
+                    final_answer = " ".join(b.text for b in text_blocks).strip()
+                    if not final_answer:
+                        final_answer = f"Success: filled Form 1040 generated at {form1040_output_path}."
+                    await self._emit_progress("complete", "done", "Analysis complete — results ready")
                     if self._streamgen:
                         await self._streamgen.emit(SSEEventType.ANSWER, final_answer)
                     break
 
-                # Emit tool calls
+                # Emit tool calls and progress events
+                active_phases: set[str] = set()
                 if self._streamgen:
                     for block in tool_use_blocks:
                         await self._streamgen.emit(
                             SSEEventType.TOOL_CALL,
-                            {"tool": block.name, "inputs": block.input},
+                            {"tool": block.name, "inputs": block.input, "summary": f"Calling {block.name}..."},
                         )
+                        phase = _TOOL_PHASE_MAP.get(block.name)
+                        if phase and phase not in active_phases:
+                            active_phases.add(phase)
+                            await self._emit_progress(phase, "running", f"Running {block.name}...")
 
                 # Add assistant response to messages
                 messages.append({"role": "assistant", "content": response.content})
@@ -151,10 +221,54 @@ class N0AgentLoop:
                 # Phase 4: Tool Execution
                 tool_results = await self._execute_tools(tool_use_blocks, session_id)
 
-                # Emit tool results
+                # Track hard-success gate for final 1040 generation.
+                for result in tool_results:
+                    if result.get("tool_name") != "form1040_tool":
+                        continue
+                    output = result.get("output", {}) or {}
+                    if output.get("success") is True:
+                        form1040_success = True
+                        form1040_output_path = str(output.get("output_path", ""))
+                        latest_missing_fields = []
+                    else:
+                        latest_missing_fields = output.get("missing_required_fields", []) or []
+
+                # Emit tool results and mark phases done
+                completed_phases: set[str] = set()
                 if self._streamgen:
                     for result in tool_results:
-                        await self._streamgen.emit(SSEEventType.TOOL_RESULT, result)
+                        tool_name = result.get("tool_name", "")
+                        output = result.get("output", {}) or {}
+                        summary = ""
+                        if tool_name == "form1040_tool":
+                            ok = output.get("success", False)
+                            summary = (
+                                f"Form 1040 {'generated successfully' if ok else 'generation failed'} — "
+                                f"{output.get('fields_written_count', 0)} fields written"
+                            )
+                        elif tool_name == "calculator_tool":
+                            summary = f"Calculator: federal_tax=${output.get('federal_tax', 0):,.2f}" if isinstance(output.get('federal_tax'), (int, float)) else f"Calculator result ready"
+                        elif tool_name == "legal_rag_agent_tool":
+                            summary = f"RAG analysis complete — liability=${output.get('estimated_liability', 0):,.2f}" if isinstance(output.get('estimated_liability'), (int, float)) else "RAG analysis complete"
+                        elif tool_name == "ask_user_tool":
+                            summary = f"User answered: {str(output.get('answer', ''))[:100]}"
+                        else:
+                            summary = f"{tool_name} completed"
+
+                        await self._streamgen.emit(SSEEventType.TOOL_RESULT, {
+                            **result,
+                            "summary": summary,
+                        })
+
+                        phase = _TOOL_PHASE_MAP.get(tool_name)
+                        if phase and phase not in completed_phases:
+                            completed_phases.add(phase)
+                            is_error = isinstance(output, dict) and "error" in output
+                            await self._emit_progress(
+                                phase,
+                                "done" if not is_error else "failed",
+                                summary,
+                            )
 
                 # Format tool results for Claude
                 messages.append({
@@ -198,11 +312,18 @@ class N0AgentLoop:
 
         else:
             # Max iterations reached
+            if not form1040_success:
+                final_answer = (
+                    "Failed: could not produce a fully filled Form 1040 within the iteration limit. "
+                    f"Missing required fields: {', '.join(latest_missing_fields) if latest_missing_fields else 'unknown'}."
+                )
             if self._streamgen:
                 await self._streamgen.emit(
                     SSEEventType.ERROR,
                     {"code": "MAX_ITER", "message": "Maximum iterations reached"},
                 )
+                if final_answer:
+                    await self._streamgen.emit(SSEEventType.ANSWER, final_answer)
 
         if self._streamgen:
             await self._streamgen.close()
