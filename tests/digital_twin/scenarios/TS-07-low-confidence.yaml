@@ -1,0 +1,18 @@
+scenario_id: "TS-07"
+name: "Low Confidence — Claude Returns Low Confidence"
+description: "TS-01 profile where Claude returns accurate liability but Low confidence, triggering AMBER flag"
+taxpayer_profile: "TS-01-single-simple"
+modes:
+  mistral: "perfect"
+  claude: "accurate_low"
+  openai: "accurate"
+expected:
+  flag_status: "AMBER"
+  liability_tolerance_usd: 50
+  min_confidence_score: 0
+  latency_p95_ms: 30000
+steps:
+  - upload_document: true
+  - run_ocr: true
+  - run_analysis: true
+  - check_flag: "AMBER"

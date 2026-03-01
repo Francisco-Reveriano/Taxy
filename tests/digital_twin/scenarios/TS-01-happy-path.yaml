@@ -1,0 +1,19 @@
+scenario_id: "TS-01"
+name: "Happy Path — Single Filer, W-2 Only"
+description: "Simple single filer with W-2 wages, standard deduction, all services in perfect mode"
+taxpayer_profile: "TS-01-single-simple"
+modes:
+  mistral: "perfect"
+  claude: "accurate_high"
+  openai: "accurate"
+expected:
+  flag_status: "GREEN"
+  liability_tolerance_usd: 50
+  min_confidence_score: 90
+  latency_p95_ms: 30000
+steps:
+  - upload_document: true
+  - run_ocr: true
+  - run_analysis: true
+  - check_flag: "GREEN"
+  - generate_audit_report: true

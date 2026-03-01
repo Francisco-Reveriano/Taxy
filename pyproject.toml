@@ -1,0 +1,10 @@
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+markers = [
+    "unit: Pure unit tests (no backend, no network)",
+    "e2e: End-to-end pipeline tests (offline, mocked LLMs)",
+    "integration: Requires a running backend at localhost:8000",
+]
+asyncio_mode = "auto"

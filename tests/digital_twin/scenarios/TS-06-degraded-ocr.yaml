@@ -1,0 +1,18 @@
+scenario_id: "TS-06"
+name: "Degraded OCR — Noisy Document Extraction"
+description: "TS-01 profile with degraded Mistral OCR mode; analysis should still produce a result"
+taxpayer_profile: "TS-01-single-simple"
+modes:
+  mistral: "degraded"
+  claude: "accurate_high"
+  openai: "accurate"
+expected:
+  flag_status: "GREEN"
+  liability_tolerance_usd: 500
+  min_confidence_score: 70
+  latency_p95_ms: 30000
+steps:
+  - upload_document: true
+  - run_ocr: true
+  - run_analysis: true
+  - check_flag: "GREEN"

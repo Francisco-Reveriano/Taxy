@@ -1,0 +1,40 @@
+# Environment
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.venv/
+venv/
+env/
+
+# Project runtime data
+backend/memory/
+backend/audit/*.jsonl
+backend/audit/reports/
+backend/traces/
+backend/logs/
+*.log
+
+# Uploads
+backend/uploads/
+tmp/
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.env
+Frontend/node_modules/
+Frontend/dist/
+Frontend/.env
+
+# IDE
+.vscode/
+.idea/
+*.swp

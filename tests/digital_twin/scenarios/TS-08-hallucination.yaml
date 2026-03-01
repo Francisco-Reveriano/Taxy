@@ -1,0 +1,18 @@
+scenario_id: "TS-08"
+name: "Hallucination — Claude Returns Fabricated Liability"
+description: "TS-01 profile where Claude returns a wildly wrong liability ($999,999), triggering RED flag"
+taxpayer_profile: "TS-01-single-simple"
+modes:
+  mistral: "perfect"
+  claude: "hallucinated"
+  openai: "accurate"
+expected:
+  flag_status: "RED"
+  liability_tolerance_usd: 999999
+  min_confidence_score: 0
+  latency_p95_ms: 30000
+steps:
+  - upload_document: true
+  - run_ocr: true
+  - run_analysis: true
+  - check_flag: "RED"

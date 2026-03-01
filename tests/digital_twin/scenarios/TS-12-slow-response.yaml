@@ -1,0 +1,18 @@
+scenario_id: "TS-12"
+name: "Slow Response — Claude High Latency"
+description: "TS-01 profile where Claude responds correctly but with 5s delay; validates latency tracking"
+taxpayer_profile: "TS-01-single-simple"
+modes:
+  mistral: "perfect"
+  claude: "slow"
+  openai: "accurate"
+expected:
+  flag_status: "GREEN"
+  liability_tolerance_usd: 50
+  min_confidence_score: 90
+  latency_p95_ms: 30000
+steps:
+  - upload_document: true
+  - run_ocr: true
+  - run_analysis: true
+  - check_flag: "GREEN"

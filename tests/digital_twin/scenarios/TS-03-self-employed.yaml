@@ -1,0 +1,19 @@
+scenario_id: "TS-03"
+name: "Self-Employed — Schedule C, EIC"
+description: "Single filer with self-employment income only, standard deduction, Earned Income Credit"
+taxpayer_profile: "TS-03-self-employed"
+modes:
+  mistral: "perfect"
+  claude: "accurate_high"
+  openai: "accurate"
+expected:
+  flag_status: "GREEN"
+  liability_tolerance_usd: 50
+  min_confidence_score: 90
+  latency_p95_ms: 30000
+steps:
+  - upload_document: true
+  - run_ocr: true
+  - run_analysis: true
+  - check_flag: "GREEN"
+  - generate_audit_report: true

@@ -1,0 +1,19 @@
+scenario_id: "TS-04"
+name: "High Income — 35% Bracket, SALT Cap"
+description: "Single high earner with W-2 wages + other income, itemized deductions, through the 35% bracket"
+taxpayer_profile: "TS-04-high-income"
+modes:
+  mistral: "perfect"
+  claude: "accurate_high"
+  openai: "accurate"
+expected:
+  flag_status: "GREEN"
+  liability_tolerance_usd: 100
+  min_confidence_score: 90
+  latency_p95_ms: 30000
+steps:
+  - upload_document: true
+  - run_ocr: true
+  - run_analysis: true
+  - check_flag: "GREEN"
+  - generate_audit_report: true
