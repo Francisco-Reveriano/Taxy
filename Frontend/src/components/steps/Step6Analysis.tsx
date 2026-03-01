@@ -18,7 +18,7 @@ export default function Step6Analysis() {
     try {
       const taxData = {
         filing_status: filingStatus || 'Single',
-        tax_year: 2024,
+        tax_year: 2025,
         total_income: 55000,
         wages: 55000,
         other_income: 0,

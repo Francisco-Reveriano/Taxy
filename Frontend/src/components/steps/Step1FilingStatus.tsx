@@ -16,7 +16,7 @@ export default function Step1FilingStatus() {
   return (
     <div>
       <p style={{ color: '#555', marginBottom: 20 }}>
-        Select your filing status for tax year 2024.
+        Select your filing status for tax year 2025.
       </p>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
         {FILING_STATUSES.map((status) => (

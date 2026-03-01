@@ -17,7 +17,7 @@ from backend.models.analysis_result import (
     LLMAnalysisResult,
 )
 from backend.services.scoring_engine import ScoringEngine
-from backend.tools.calculator_tool import STANDARD_DEDUCTIONS_2024, TaxCalculator
+from backend.tools.calculator_tool import STANDARD_DEDUCTIONS_2025, TaxCalculator
 from tests.digital_twin.factories.taxpayer_factory import TaxpayerFactory
 
 
@@ -102,13 +102,13 @@ def _write_audit_events(
 def _run_calculator_for_profile(calculator, profile_id="TS-01"):
     profile = TaxpayerFactory.create(profile_id)
     total_income = profile.wages + profile.other_income
-    standard_ded = STANDARD_DEDUCTIONS_2024.get(profile.filing_status, 14600)
+    standard_ded = STANDARD_DEDUCTIONS_2025.get(profile.filing_status, 15750)
     use_standard = profile.itemized_deductions <= standard_ded
 
     calc_result = calculator.compute_federal_tax(
         income=total_income,
         filing_status=profile.filing_status,
-        year=2024,
+        year=2025,
         deductions=profile.itemized_deductions,
         use_standard_deduction=use_standard,
     )

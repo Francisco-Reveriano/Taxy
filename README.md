@@ -12,7 +12,7 @@ A locally-hosted, AI-powered tax preparation assistant that mirrors the TurboTax
 - **Mistral OCR 3** — Extracts structured fields (employer EIN, wages, withholding, etc.) from uploaded PDF/JPEG/PNG tax documents.
 - **Dual-LLM analysis** — Claude performs primary tax computation; OpenAI Assistants (with Vector Store RAG) provides independent validation. Both run concurrently.
 - **Confidence scoring & flagging** — GREEN/AMBER/RED/YELLOW flags based on per-model confidence scores and inter-model liability delta.
-- **Deterministic tax calculator** — Exact 2024 federal bracket math, FICA/Medicare, standard-vs-itemized comparison, and credit application with no LLM approximation.
+- **Deterministic tax calculator** — Exact 2025 federal bracket math, FICA/Medicare, standard-vs-itemized comparison, and credit application with no LLM approximation.
 - **Agentic orchestration (n0 loop)** — Single-threaded master loop with TodoWrite planning, h2A async dual-buffer for mid-task user interjections, context compression, and persistent CLAUDE.md memory.
 - **Real-time SSE streaming** — Typed events (thought, tool_call, tool_result, answer, ask_user, error, compression) streamed live to the React frontend.
 - **Audit trail** — Append-only JSONL log of every tax-relevant action with PII masking. Generates PDF and JSON audit reports suitable for CPA review.
@@ -491,7 +491,7 @@ Then set `OTEL_EXPORTER_ENDPOINT="http://localhost:4317"` in `.env` to forward s
 
 - **Single-user** — No authentication or multi-tenancy. Session state is held in-memory.
 - **In-memory stores** — OCR results, analysis cache, and wizard state are stored in Python dicts. A server restart clears them (uploaded files persist on disk).
-- **Federal only** — 2024 federal tax brackets; no state-level forms.
+- **Federal only** — 2025 federal tax brackets; no state-level forms.
 - **Form coverage** — W-2 and 1099-series (NEC, MISC, INT, DIV). Schedule C, K-1, and other complex forms are out of scope.
 - **No e-filing** — Generates summary reports for manual filing or CPA review.
 - **Local deployment** — Runs on localhost via uvicorn; no containerized or cloud deployment config.

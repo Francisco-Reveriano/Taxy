@@ -20,66 +20,66 @@ class TaxpayerProfile:
     metadata: Dict = field(default_factory=dict)
 
 
-# Ground truth computed using 2024 IRS brackets
+# Ground truth computed using 2025 IRS brackets
 PROFILE_LIBRARY = {
     "TS-01-single-simple": TaxpayerProfile(
         profile_id="TS-01",
         name="Alice Simple",
         filing_status="Single",
-        tax_year=2024,
+        tax_year=2025,
         wages=55000.0,
         other_income=0.0,
         itemized_deductions=0.0,
         credits=[],
-        ground_truth_liability=4616.0,  # Standard deduction $14,600; taxable $40,400; 10%+12%
+        ground_truth_liability=4471.5,  # Standard deduction $15,750; taxable $39,250; 10%+12%
         description="Single filer, W-2 wages only, standard deduction",
     ),
     "TS-02-mfj-complex": TaxpayerProfile(
         profile_id="TS-02",
         name="Bob & Carol Complex",
         filing_status="Married Filing Jointly",
-        tax_year=2024,
+        tax_year=2025,
         wages=120000.0,
         other_income=15000.0,
         itemized_deductions=35000.0,
         credits=[{"name": "Child Tax Credit", "amount": 2000, "refundable": False}],
-        ground_truth_liability=12106.0,  # Itemized $35k; taxable $100k; 10%+12%+22%
+        ground_truth_liability=11828.0,  # Itemized $35k; taxable $100k; 10%+12%+22%
         description="MFJ, W-2 + 1099, itemized deductions, CTC",
     ),
     "TS-03-self-employed": TaxpayerProfile(
         profile_id="TS-03",
         name="Dana Freelance",
         filing_status="Single",
-        tax_year=2024,
+        tax_year=2025,
         wages=0.0,
         other_income=80000.0,
         itemized_deductions=12000.0,
         credits=[{"name": "Earned Income Credit", "amount": 500, "refundable": True}],
-        ground_truth_liability=9441.0,  # Standard deduction $14,600; taxable $65,400; 10%+12%+22%
+        ground_truth_liability=9049.0,  # Standard deduction $15,750; taxable $64,250; 10%+12%+22%
         description="Self-employed, Schedule C, SE tax, QBI deduction",
     ),
     "TS-04-high-income": TaxpayerProfile(
         profile_id="TS-04",
         name="Eve Executive",
         filing_status="Single",
-        tax_year=2024,
+        tax_year=2025,
         wages=450000.0,
         other_income=50000.0,
         itemized_deductions=80000.0,
         credits=[],
-        ground_truth_liability=117374.75,  # Itemized $80k; taxable $420k; through 35% bracket
+        ground_truth_liability=116547.25,  # Itemized $80k; taxable $420k; through 35% bracket
         description="High income, 37% bracket, SALT cap applies",
     ),
     "TS-05-retiree": TaxpayerProfile(
         profile_id="TS-05",
         name="Frank Retire",
         filing_status="Married Filing Jointly",
-        tax_year=2024,
+        tax_year=2025,
         wages=0.0,
         other_income=65000.0,  # Social Security + pension
         itemized_deductions=0.0,
         credits=[],
-        ground_truth_liability=3832.0,  # MFJ standard $29,200; taxable $35,800; 10%+12%
+        ground_truth_liability=3543.0,  # MFJ standard $31,500; taxable $33,500; 10%+12%
         description="Retiree, Social Security + pension, standard deduction",
     ),
 }

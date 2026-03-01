@@ -2,61 +2,61 @@
 from typing import Dict, Any, List
 from dataclasses import dataclass
 
-# 2024 Federal Tax Brackets
-BRACKETS_2024 = {
+# 2025 Federal Tax Brackets
+BRACKETS_2025 = {
     "Single": [
-        (11600, 0.10),
-        (47150, 0.12),
-        (100525, 0.22),
-        (191950, 0.24),
-        (243725, 0.32),
-        (609350, 0.35),
+        (11925, 0.10),
+        (48475, 0.12),
+        (103350, 0.22),
+        (197300, 0.24),
+        (250525, 0.32),
+        (626350, 0.35),
         (float("inf"), 0.37),
     ],
     "Married Filing Jointly": [
-        (23200, 0.10),
-        (94300, 0.12),
-        (201050, 0.22),
-        (383900, 0.24),
-        (487450, 0.32),
-        (731200, 0.35),
+        (23850, 0.10),
+        (96950, 0.12),
+        (206700, 0.22),
+        (394600, 0.24),
+        (501050, 0.32),
+        (751600, 0.35),
         (float("inf"), 0.37),
     ],
     "Married Filing Separately": [
-        (11600, 0.10),
-        (47150, 0.12),
-        (100525, 0.22),
-        (191950, 0.24),
-        (243725, 0.32),
-        (365600, 0.35),
+        (11925, 0.10),
+        (48475, 0.12),
+        (103350, 0.22),
+        (197300, 0.24),
+        (250525, 0.32),
+        (375800, 0.35),
         (float("inf"), 0.37),
     ],
     "Head of Household": [
-        (16550, 0.10),
-        (63100, 0.12),
-        (100500, 0.22),
-        (191950, 0.24),
-        (243700, 0.32),
-        (609350, 0.35),
+        (17000, 0.10),
+        (64850, 0.12),
+        (103350, 0.22),
+        (197300, 0.24),
+        (250500, 0.32),
+        (626350, 0.35),
         (float("inf"), 0.37),
     ],
     "Qualifying Surviving Spouse": [
-        (23200, 0.10),
-        (94300, 0.12),
-        (201050, 0.22),
-        (383900, 0.24),
-        (487450, 0.32),
-        (731200, 0.35),
+        (23850, 0.10),
+        (96950, 0.12),
+        (206700, 0.22),
+        (394600, 0.24),
+        (501050, 0.32),
+        (751600, 0.35),
         (float("inf"), 0.37),
     ],
 }
 
-STANDARD_DEDUCTIONS_2024 = {
-    "Single": 14600,
-    "Married Filing Jointly": 29200,
-    "Married Filing Separately": 14600,
-    "Head of Household": 21900,
-    "Qualifying Surviving Spouse": 29200,
+STANDARD_DEDUCTIONS_2025 = {
+    "Single": 15750,
+    "Married Filing Jointly": 31500,
+    "Married Filing Separately": 15750,
+    "Head of Household": 23625,
+    "Qualifying Surviving Spouse": 31500,
 }
 
 FICA_SS_RATE = 0.062
@@ -77,14 +77,14 @@ class TaxCalculator:
         self,
         income: float,
         filing_status: str,
-        year: int = 2024,
+        year: int = 2025,
         deductions: float = 0.0,
         use_standard_deduction: bool = True,
     ) -> Dict[str, Any]:
         """Compute federal income tax with step-by-step breakdown."""
         steps: List[TaxCalculationStep] = []
 
-        standard_ded = STANDARD_DEDUCTIONS_2024.get(filing_status, 14600)
+        standard_ded = STANDARD_DEDUCTIONS_2025.get(filing_status, 15750)
         applied_deduction = standard_ded if use_standard_deduction else max(deductions, standard_ded)
 
         steps.append(TaxCalculationStep("Gross Income", income))
@@ -93,7 +93,7 @@ class TaxCalculator:
         taxable_income = max(0.0, income - applied_deduction)
         steps.append(TaxCalculationStep("Taxable Income", taxable_income))
 
-        brackets = BRACKETS_2024.get(filing_status, BRACKETS_2024["Single"])
+        brackets = BRACKETS_2025.get(filing_status, BRACKETS_2025["Single"])
         tax = 0.0
         prev_limit = 0.0
         bracket_breakdown = []

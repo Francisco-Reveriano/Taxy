@@ -5,10 +5,10 @@ Covers all filing statuses, FICA, deduction comparison, credits, and edge cases.
 import pytest
 
 from backend.tools.calculator_tool import (
-    BRACKETS_2024,
+    BRACKETS_2025,
     FICA_MEDICARE_ADDITIONAL_THRESHOLD,
     FICA_SS_WAGE_BASE,
-    STANDARD_DEDUCTIONS_2024,
+    STANDARD_DEDUCTIONS_2025,
     TaxCalculator,
 )
 from tests.digital_twin.factories.taxpayer_factory import TaxpayerFactory
@@ -33,13 +33,13 @@ class TestFederalTaxByProfile:
     def test_profile_liability(self, calc, profile_id):
         profile = TaxpayerFactory.create(profile_id)
         total_income = profile.wages + profile.other_income
-        standard_ded = STANDARD_DEDUCTIONS_2024.get(profile.filing_status, 14600)
+        standard_ded = STANDARD_DEDUCTIONS_2025.get(profile.filing_status, 15750)
         use_standard = profile.itemized_deductions <= standard_ded
 
         result = calc.compute_federal_tax(
             income=total_income,
             filing_status=profile.filing_status,
-            year=2024,
+            year=2025,
             deductions=profile.itemized_deductions,
             use_standard_deduction=use_standard,
         )
@@ -58,15 +58,15 @@ class TestFederalTaxByProfile:
 class TestFederalTaxFilingStatuses:
     """Test that all 5 filing statuses produce distinct, correct results."""
 
-    STATUSES = list(STANDARD_DEDUCTIONS_2024.keys())
+    STATUSES = list(STANDARD_DEDUCTIONS_2025.keys())
 
     @pytest.mark.parametrize("status", STATUSES)
     def test_standard_deduction_applied(self, calc, status):
         result = calc.compute_federal_tax(
             income=75000.0, filing_status=status, use_standard_deduction=True
         )
-        assert result["applied_deduction"] == STANDARD_DEDUCTIONS_2024[status]
-        assert result["taxable_income"] == max(0.0, 75000.0 - STANDARD_DEDUCTIONS_2024[status])
+        assert result["applied_deduction"] == STANDARD_DEDUCTIONS_2025[status]
+        assert result["taxable_income"] == max(0.0, 75000.0 - STANDARD_DEDUCTIONS_2025[status])
         assert result["federal_tax"] > 0
 
     def test_mfj_lower_tax_than_single(self, calc):
@@ -96,13 +96,13 @@ class TestFederalTaxEdgeCases:
         assert result["federal_tax"] == 0.0
 
     def test_income_exactly_at_standard_deduction(self, calc):
-        std = STANDARD_DEDUCTIONS_2024["Single"]
+        std = STANDARD_DEDUCTIONS_2025["Single"]
         result = calc.compute_federal_tax(std, "Single")
         assert result["taxable_income"] == 0.0
         assert result["federal_tax"] == 0.0
 
     def test_income_one_dollar_above_standard_deduction(self, calc):
-        std = STANDARD_DEDUCTIONS_2024["Single"]
+        std = STANDARD_DEDUCTIONS_2025["Single"]
         result = calc.compute_federal_tax(std + 1.0, "Single")
         assert result["taxable_income"] == 1.0
         assert result["federal_tax"] == pytest.approx(0.10, abs=0.01)
@@ -180,22 +180,22 @@ class TestFICA:
 class TestCompareDeductions:
 
     def test_standard_recommended_when_higher(self, calc):
-        result = calc.compare_deductions(14600.0, 10000.0)
+        result = calc.compare_deductions(15750.0, 10000.0)
         assert result["recommended"] == "standard"
         assert result["tax_benefit_of_itemizing"] == 0.0
 
     def test_itemized_recommended_when_higher(self, calc):
-        result = calc.compare_deductions(14600.0, 25000.0)
+        result = calc.compare_deductions(15750.0, 25000.0)
         assert result["recommended"] == "itemized"
-        assert result["tax_benefit_of_itemizing"] == pytest.approx(10400.0)
-        assert result["difference"] == pytest.approx(10400.0)
+        assert result["tax_benefit_of_itemizing"] == pytest.approx(9250.0)
+        assert result["difference"] == pytest.approx(9250.0)
 
     def test_equal_deductions_prefers_standard(self, calc):
-        result = calc.compare_deductions(14600.0, 14600.0)
+        result = calc.compare_deductions(15750.0, 15750.0)
         assert result["recommended"] == "standard"
 
     def test_zero_itemized(self, calc):
-        result = calc.compare_deductions(14600.0, 0.0)
+        result = calc.compare_deductions(15750.0, 0.0)
         assert result["recommended"] == "standard"
 
 

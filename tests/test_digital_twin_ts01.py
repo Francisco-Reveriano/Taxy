@@ -30,13 +30,13 @@ async def test_calculator_basic():
     result = calc.compute_federal_tax(
         income=55000.0,
         filing_status="Single",
-        year=2024,
+        year=2025,
         use_standard_deduction=True,
     )
 
-    # Taxable income = 55000 - 14600 = 40400
-    # 10% on 11600 = 1160
-    # 12% on 28800 = 3456
-    # Total = 4616
-    assert result["taxable_income"] == 40400.0
-    assert result["federal_tax"] == pytest.approx(4616.0, abs=10.0)
+    # Taxable income = 55000 - 15750 = 39250
+    # 10% on 11925 = 1192.5
+    # 12% on 27325 = 3279
+    # Total = 4471.5
+    assert result["taxable_income"] == 39250.0
+    assert result["federal_tax"] == pytest.approx(4471.5, abs=10.0)

@@ -26,7 +26,7 @@ class WizardState(BaseModel):
     session_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     current_step: WizardStep = WizardStep.FILING_STATUS
     filing_status: Optional[FilingStatus] = None
-    tax_year: int = 2024
+    tax_year: int = 2025
     document_ids: List[str] = []
     income_summary: Dict[str, float] = {}
     deduction_choice: Optional[str] = None  # "standard" or "itemized"

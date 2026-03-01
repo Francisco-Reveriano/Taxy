@@ -20,7 +20,7 @@ from backend.models.analysis_result import (
     LLMAnalysisResult,
 )
 from backend.services.scoring_engine import ScoringEngine
-from backend.tools.calculator_tool import STANDARD_DEDUCTIONS_2024, TaxCalculator
+from backend.tools.calculator_tool import STANDARD_DEDUCTIONS_2025, TaxCalculator
 from tests.digital_twin.factories.taxpayer_factory import TaxpayerFactory, TaxpayerProfile
 from tests.e2e.tax_summary_report import BracketLine, CreditLine, TaxSummaryReport
 
@@ -192,13 +192,13 @@ def test_e2e_tax_scenario(
 
     # ── Step 2: Run calculator ────────────────────────────────────────
     total_income = profile.wages + profile.other_income
-    standard_ded = STANDARD_DEDUCTIONS_2024.get(profile.filing_status, 14600)
+    standard_ded = STANDARD_DEDUCTIONS_2025.get(profile.filing_status, 15750)
     use_standard = profile.itemized_deductions <= standard_ded
 
     calc_result = calculator.compute_federal_tax(
         income=total_income,
         filing_status=profile.filing_status,
-        year=2024,
+        year=2025,
         deductions=profile.itemized_deductions,
         use_standard_deduction=use_standard,
     )
@@ -266,7 +266,7 @@ def test_e2e_tax_scenario(
     report = TaxSummaryReport(
         taxpayer_name=profile.name,
         filing_status=profile.filing_status,
-        tax_year=2024,
+        tax_year=2025,
         profile_id=profile.profile_id,
         # Income
         wages=profile.wages,

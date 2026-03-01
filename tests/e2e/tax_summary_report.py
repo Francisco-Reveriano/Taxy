@@ -28,7 +28,7 @@ class TaxSummaryReport(BaseModel):
     # Header
     taxpayer_name: str
     filing_status: str
-    tax_year: int = 2024
+    tax_year: int = 2025
     profile_id: str = ""
 
     # Income

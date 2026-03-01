@@ -17,7 +17,7 @@ TOOL_DEFINITIONS = [
         "name": "calculator_tool",
         "description": (
             "Deterministic federal tax calculator. Computes tax liability, FICA, "
-            "deduction comparisons, and credit applications using 2024 IRS brackets. "
+            "deduction comparisons, and credit applications using 2025 IRS brackets. "
             "Use when you need precise numeric calculations."
         ),
         "input_schema": {
@@ -35,7 +35,7 @@ TOOL_DEFINITIONS = [
                         "Head of Household", "Qualifying Surviving Spouse"
                     ],
                 },
-                "year": {"type": "integer", "default": 2024},
+                "year": {"type": "integer", "default": 2025},
                 "deductions": {"type": "number", "description": "Total itemized deductions"},
                 "use_standard_deduction": {"type": "boolean", "default": True},
                 "wages": {"type": "number", "description": "Wages for FICA calculation"},
@@ -155,7 +155,7 @@ class ToolRegistry:
             return self._calculator.compute_federal_tax(
                 income=inputs["income"],
                 filing_status=inputs.get("filing_status", "Single"),
-                year=inputs.get("year", 2024),
+                year=inputs.get("year", 2025),
                 deductions=inputs.get("deductions", 0.0),
                 use_standard_deduction=inputs.get("use_standard_deduction", True),
             )
