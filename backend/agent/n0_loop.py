@@ -77,7 +77,6 @@ _TOOL_PHASE_MAP = {
     "legal_rag_agent_tool": "dual_llm",
     "calculator_tool": "scoring",
     "form1040_tool": "form1040",
-    "ask_user_tool": "dual_llm",
     "mistral_ocr_tool": "dual_llm",
 }
 
@@ -134,6 +133,9 @@ class N0AgentLoop:
 
         audit = get_audit_logger()
         await self._emit_progress("dual_llm", "running", "n0 agent starting analysis...")
+
+        activated_phases: set[str] = set()
+        done_phases: set[str] = set()
 
         for iteration in range(self._settings.todo_max_iterations):
             await audit.log(AuditEvent(
@@ -197,13 +199,16 @@ class N0AgentLoop:
                     final_answer = " ".join(b.text for b in text_blocks).strip()
                     if not final_answer:
                         final_answer = f"Success: filled Form 1040 generated at {form1040_output_path}."
+                    for phase in ("dual_llm", "scoring", "form1040"):
+                        if phase in activated_phases and phase not in done_phases:
+                            await self._emit_progress(phase, "done", "Completed")
+                            done_phases.add(phase)
                     await self._emit_progress("complete", "done", "Analysis complete — results ready")
                     if self._streamgen:
                         await self._streamgen.emit(SSEEventType.ANSWER, final_answer)
                     break
 
                 # Emit tool calls and progress events
-                active_phases: set[str] = set()
                 if self._streamgen:
                     for block in tool_use_blocks:
                         await self._streamgen.emit(
@@ -211,8 +216,8 @@ class N0AgentLoop:
                             {"tool": block.name, "inputs": block.input, "summary": f"Calling {block.name}..."},
                         )
                         phase = _TOOL_PHASE_MAP.get(block.name)
-                        if phase and phase not in active_phases:
-                            active_phases.add(phase)
+                        if phase and phase not in done_phases:
+                            activated_phases.add(phase)
                             await self._emit_progress(phase, "running", f"Running {block.name}...")
 
                 # Add assistant response to messages
@@ -234,7 +239,6 @@ class N0AgentLoop:
                         latest_missing_fields = output.get("missing_required_fields", []) or []
 
                 # Emit tool results and mark phases done
-                completed_phases: set[str] = set()
                 if self._streamgen:
                     for result in tool_results:
                         tool_name = result.get("tool_name", "")
@@ -247,7 +251,7 @@ class N0AgentLoop:
                                 f"{output.get('fields_written_count', 0)} fields written"
                             )
                         elif tool_name == "calculator_tool":
-                            summary = f"Calculator: federal_tax=${output.get('federal_tax', 0):,.2f}" if isinstance(output.get('federal_tax'), (int, float)) else f"Calculator result ready"
+                            summary = f"Calculator: federal_tax=${output.get('federal_tax', 0):,.2f}" if isinstance(output.get('federal_tax'), (int, float)) else "Calculator result ready"
                         elif tool_name == "legal_rag_agent_tool":
                             summary = f"RAG analysis complete — liability=${output.get('estimated_liability', 0):,.2f}" if isinstance(output.get('estimated_liability'), (int, float)) else "RAG analysis complete"
                         elif tool_name == "ask_user_tool":
@@ -261,9 +265,10 @@ class N0AgentLoop:
                         })
 
                         phase = _TOOL_PHASE_MAP.get(tool_name)
-                        if phase and phase not in completed_phases:
-                            completed_phases.add(phase)
+                        if phase and phase not in done_phases:
                             is_error = isinstance(output, dict) and "error" in output
+                            if not is_error:
+                                done_phases.add(phase)
                             await self._emit_progress(
                                 phase,
                                 "done" if not is_error else "failed",

@@ -7,6 +7,7 @@ export default function useSSE(sessionId: string) {
   const setTodoItems = useWizardStore((s) => s.setTodoItems)
   const setAnalysisResult = useWizardStore((s) => s.setAnalysisResult)
   const setIsAnalyzing = useWizardStore((s) => s.setIsAnalyzing)
+  const setCurrentStep = useWizardStore((s) => s.setCurrentStep)
   const esRef = useRef<EventSource | null>(null)
 
   useEffect(() => {
@@ -36,19 +37,23 @@ export default function useSSE(sessionId: string) {
             const isSuccess = answerText.toLowerCase().includes('success')
             getForm1040Status(sessionId)
               .then((status) => {
+                const formOk = status?.success ?? false
                 setAnalysisResult({
-                  flag_status: status?.success ? 'GREEN' : 'YELLOW',
+                  flag_status: formOk ? 'GREEN' : 'YELLOW',
                   consensus_liability: null,
                   liability_delta: 0,
                   scoring_rationale: answerText || 'Analysis completed via n0 agent.',
                   claude_result: null,
                   openai_result: null,
                   form1040_status: {
-                    success: status?.success ?? false,
+                    success: formOk,
                     missing_required_fields: status?.missing_required_fields ?? [],
                     fields_written_count: status?.fields_written_count ?? 0,
                   },
                 })
+                if (formOk) {
+                  setTimeout(() => setCurrentStep(9), 1500)
+                }
               })
               .catch(() => {
                 setAnalysisResult({
@@ -59,6 +64,9 @@ export default function useSSE(sessionId: string) {
                   claude_result: null,
                   openai_result: null,
                 })
+                if (isSuccess) {
+                  setTimeout(() => setCurrentStep(9), 1500)
+                }
               })
           }
         } catch {}
