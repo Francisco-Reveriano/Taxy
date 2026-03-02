@@ -7,10 +7,12 @@ A locally-hosted, AI-powered tax preparation assistant that mirrors the TurboTax
 ### Demo
 
 <div align="center">
-  <a href="https://vimeo.com/1169434824?share=copy&fl=sv&fe=ci">
-    <img src="https://vumbnail.com/1169434824.jpg" alt="Tax.AI Demo" width="600" />
-    <br/>
-    <img src="https://img.shields.io/badge/▶_Watch_Full_Demo-Vimeo-blue?style=for-the-badge&logo=vimeo&logoColor=white" alt="Watch Demo on Vimeo" />
+  <a href="https://player.vimeo.com/video/1169434824?badge=0&autopause=0&player_id=0&app_id=58479">
+    <img src="https://vumbnail.com/1169434824.jpg" alt="Tax.AI Demo — Click to Watch" width="640" />
+  </a>
+  <br/>
+  <a href="https://player.vimeo.com/video/1169434824?badge=0&autopause=0&player_id=0&app_id=58479">
+    <img src="https://img.shields.io/badge/▶_Watch_Full_Demo_(3_min)-Vimeo-1ab7ea?style=for-the-badge&logo=vimeo&logoColor=white" alt="Watch Demo on Vimeo" />
   </a>
 </div>
 
