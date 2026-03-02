@@ -4,16 +4,21 @@ A locally-hosted, AI-powered tax preparation assistant that mirrors the TurboTax
 
 > **MVP scope:** Federal W-2 and 1099-series forms only. Single-user, local-only — no e-filing, no cloud deployment, no authentication.
 
+### Demo
+
+[![Tax.AI Demo](https://img.shields.io/badge/Watch_Demo-Vimeo-blue?style=for-the-badge&logo=vimeo)](https://vimeo.com/1169434824?share=copy&fl=sv&fe=ci)
+
 ---
 
 ## Key Features
 
-- **7-step wizard UI** — Filing status, document upload, OCR review, income summary, deductions & credits, analysis, and results.
+- **9-step wizard UI** — Filing status, personal info, document upload, OCR review, income summary, deductions & credits, analysis, results, and Form 1040 viewer with inline PDF display.
 - **Mistral OCR 3** — Extracts structured fields (employer EIN, wages, withholding, etc.) from uploaded PDF/JPEG/PNG tax documents.
 - **Dual-LLM analysis** — Claude performs primary tax computation; OpenAI Assistants (with Vector Store RAG) provides independent validation. Both run concurrently.
 - **Confidence scoring & flagging** — GREEN/AMBER/RED/YELLOW flags based on per-model confidence scores and inter-model liability delta.
+- **IRS Form 1040 generation** — Fills and validates a real IRS AcroForm 1040 PDF with 23 mapped fields (identity, wages, AGI, deductions, tax, refund/owed). Inline viewer with download and full-screen display.
 - **Deterministic tax calculator** — Exact 2025 federal bracket math, FICA/Medicare, standard-vs-itemized comparison, and credit application with no LLM approximation.
-- **Agentic orchestration (n0 loop)** — Single-threaded master loop with TodoWrite planning, h2A async dual-buffer for mid-task user interjections, context compression, and persistent CLAUDE.md memory.
+- **Agentic orchestration (n0 loop)** — Master loop with TodoWrite planning, h2A async dual-buffer for mid-task user interjections, context compression, retry with exponential backoff on transient API errors, and persistent CLAUDE.md memory.
 - **Real-time SSE streaming** — Typed events (thought, tool_call, tool_result, answer, ask_user, error, compression) streamed live to the React frontend.
 - **Audit trail** — Append-only JSONL log of every tax-relevant action with PII masking. Generates PDF and JSON audit reports suitable for CPA review.
 - **OpenTelemetry tracing** — Hierarchical spans (Agent → Cycle → Model Invoke → Tool) saved locally as JSON-lines and viewable via the built-in `/api/traces` endpoint. No Docker or external services required.
@@ -25,7 +30,7 @@ A locally-hosted, AI-powered tax preparation assistant that mirrors the TurboTax
 ```mermaid
 flowchart TB
     subgraph frontend [React + Vite Frontend]
-        Wizard["WizardShell (7 steps)"]
+        Wizard["WizardShell (9 steps)"]
         Store["Zustand Store"]
         SSEHook["useSSE Hook"]
     end
@@ -92,7 +97,9 @@ flowchart TB
 3. **Review & Correct** — User verifies OCR output. Corrections are saved with original values for audit.
 4. **Analysis** — Validated tax data is dispatched concurrently to Claude and OpenAI. Each produces an estimated liability, deductions/credits, advisory notes, and a confidence score.
 5. **Scoring** — The scoring engine compares both results. Flag rules: GREEN (both ≥ 90% confidence, ≤ 10% liability delta), AMBER (one < 90%), RED (> 10% delta), YELLOW (one provider failed).
-6. **Results** — The wizard's final step shows side-by-side LLM results, the consensus liability, flag status, and a downloadable PDF audit report.
+6. **Form 1040 Generation** — The n0 agent calls `form1040_tool` with the computed tax data. A filled IRS AcroForm 1040 PDF is generated with 23 fields (identity, wages, AGI, deductions, tax, withholding, refund/owed).
+7. **Results** — The wizard shows side-by-side LLM results, the consensus liability, flag status, and a downloadable PDF audit report.
+8. **Form 1040 Viewer** — The final step displays the filled 1040 inline via an embedded PDF viewer with download and full-screen options.
 
 ---
 
@@ -109,6 +116,7 @@ Tax.AI/
 │   │   ├── analyze.py         # Dual-LLM analysis
 │   │   ├── wizard.py          # Wizard state CRUD
 │   │   ├── stream.py          # SSE streaming + n0 agent chat
+│   │   ├── forms.py           # Form 1040 download + status
 │   │   ├── audit.py           # Audit trail + report endpoints
 │   │   └── traces.py          # Trace viewer API
 │   ├── agent/                 # Agentic orchestration
@@ -128,7 +136,11 @@ Tax.AI/
 │   │   ├── calculator_tool.py # Deterministic tax math
 │   │   ├── mistral_ocr_tool.py
 │   │   ├── legal_rag_tool.py  # OpenAI RAG agent
-│   │   └── ask_user_tool.py   # Human-in-the-loop via SSE
+│   │   ├── ask_user_tool.py   # Human-in-the-loop via SSE
+│   │   └── form1040_tool.py   # IRS 1040 AcroForm PDF filler
+│   ├── forms/                  # Form 1040 templates and output
+│   │   ├── form1040_field_map.json  # Semantic → PDF field mapping
+│   │   └── output/             # Generated filled 1040 PDFs
 │   ├── models/                # Pydantic models
 │   │   ├── tax_document.py
 │   │   ├── wizard_state.py
@@ -160,7 +172,8 @@ Tax.AI/
 │   │   │   │   ├── Step4Income.tsx
 │   │   │   │   ├── Step5Deductions.tsx
 │   │   │   │   ├── Step6Analysis.tsx
-│   │   │   │   └── Step7Results.tsx
+│   │   │   │   ├── Step7Results.tsx
+│   │   │   │   └── Step9Form1040Viewer.tsx
 │   │   │   └── agent/
 │   │   │       ├── AskUserModal.tsx    # Human-in-the-loop prompt
 │   │   │       └── TodoSidebar.tsx     # Agent task progress
