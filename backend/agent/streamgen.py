@@ -38,7 +38,7 @@ class StreamGen:
             event_counter += 1
             event_id = event.event_id or str(event_counter)
 
-            payload_str = json.dumps(event.payload) if not isinstance(event.payload, str) else event.payload
+            payload_str = json.dumps(event.payload)
 
             yield (
                 f"id: {event_id}\n"

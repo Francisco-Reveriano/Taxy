@@ -177,7 +177,7 @@ class ToolRegistry:
             elif tool_name == "form1040_tool":
                 return await asyncio.to_thread(
                     self._form1040.generate_form,
-                    inputs.get("session_id", session_id),
+                    session_id,
                     inputs.get("tax_data", {}),
                     inputs.get("template_path"),
                 )

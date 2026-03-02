@@ -72,6 +72,7 @@ interface WizardStore {
   itemizedTotal: number
   selectedCredits: string[]
   analysisResult: AnalysisResult | null
+  form1040Ready: boolean
   sseEvents: SSEEventRecord[]
   todoItems: TodoItem[]
   isAnalyzing: boolean
@@ -89,6 +90,7 @@ interface WizardStore {
   setItemizedTotal: (total: number) => void
   setSelectedCredits: (credits: string[]) => void
   setAnalysisResult: (result: AnalysisResult) => void
+  setForm1040Ready: (v: boolean) => void
   addSSEEvent: (event: SSEEventRecord) => void
   setTodoItems: (items: TodoItem[]) => void
   setIsAnalyzing: (v: boolean) => void
@@ -114,6 +116,7 @@ export const useWizardStore = create<WizardStore>()(
     itemizedTotal: 0,
     selectedCredits: [],
     analysisResult: null,
+    form1040Ready: false,
     sseEvents: [],
     todoItems: [],
     isAnalyzing: false,
@@ -133,6 +136,7 @@ export const useWizardStore = create<WizardStore>()(
     setItemizedTotal: (total) => set({ itemizedTotal: total }),
     setSelectedCredits: (credits) => set({ selectedCredits: credits }),
     setAnalysisResult: (result) => set({ analysisResult: result }),
+    setForm1040Ready: (v) => set({ form1040Ready: v }),
     addSSEEvent: (event) =>
       set((s) => ({ sseEvents: [event, ...s.sseEvents].slice(0, 100) })),
     setTodoItems: (items) => set({ todoItems: items }),

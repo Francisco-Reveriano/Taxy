@@ -91,6 +91,7 @@ class N0AgentLoop:
         self._tool_registry = ToolRegistry()
         self._todo_manager = TodoManager()
         self._compressor = Compressor(threshold=self._settings.context_window_threshold)
+        self.is_done: bool = False
 
     def set_streamgen(self, streamgen: StreamGen):
         self._streamgen = streamgen
@@ -137,206 +138,226 @@ class N0AgentLoop:
         activated_phases: set[str] = set()
         done_phases: set[str] = set()
 
-        for iteration in range(self._settings.todo_max_iterations):
-            await audit.log(AuditEvent(
-                session_id=session_id,
-                event_type=AuditEventType.AGENT_CYCLE_STARTED,
-                agent_name="n0",
-                metadata={"iteration": iteration},
-            ))
-
-            with self._tracer.start_cycle_span("inference", iteration):
-                # Phase 2: Inference
-                response = await self._call_claude(messages, session_id)
-
-                # Emit thinking if present (extended thinking)
-                if hasattr(response, "thinking") and response.thinking:
-                    if self._streamgen:
-                        await self._streamgen.emit(SSEEventType.THOUGHT, {
-                            "phase": "thinking",
-                            "summary": response.thinking if isinstance(response.thinking, str) else str(response.thinking),
-                        })
-
-                # Check for tool use
-                tool_use_blocks = [
-                    block for block in response.content
-                    if block.type == "tool_use"
-                ]
-
-                text_blocks = [
-                    block for block in response.content
-                    if block.type == "text"
-                ]
-
-                # Stream model text to the frontend so users see the agent's reasoning
-                if self._streamgen and text_blocks:
-                    combined = "\n".join(b.text for b in text_blocks).strip()
-                    if combined:
-                        await self._streamgen.emit(SSEEventType.THOUGHT, {
-                            "phase": "reasoning",
-                            "summary": combined,
-                        })
-
-                # Auto-create TodoWrite items from structured response
-                for block in text_blocks:
-                    self._extract_todo_items(block.text, session_id)
-
-                # Phase 3: Tool Detection
-                if not tool_use_blocks:
-                    if not form1040_success:
-                        # Hard gate: n0 cannot succeed without a valid filled 1040.
-                        missing_msg = ", ".join(latest_missing_fields) if latest_missing_fields else "unknown fields"
-                        messages.append({
-                            "role": "user",
-                            "content": (
-                                "You have not successfully generated a filled Form 1040 yet. "
-                                "Do not finalize. Ask follow-up questions for missing fields and call form1040_tool again. "
-                                f"Current missing fields: {missing_msg}."
-                            ),
-                        })
-                        continue
-
-                    final_answer = " ".join(b.text for b in text_blocks).strip()
-                    if not final_answer:
-                        final_answer = f"Success: filled Form 1040 generated at {form1040_output_path}."
-                    for phase in ("dual_llm", "scoring", "form1040"):
-                        if phase in activated_phases and phase not in done_phases:
-                            await self._emit_progress(phase, "done", "Completed")
-                            done_phases.add(phase)
-                    await self._emit_progress("complete", "done", "Analysis complete — results ready")
-                    if self._streamgen:
-                        await self._streamgen.emit(SSEEventType.ANSWER, final_answer)
-                    break
-
-                # Emit tool calls and progress events
-                if self._streamgen:
-                    for block in tool_use_blocks:
-                        await self._streamgen.emit(
-                            SSEEventType.TOOL_CALL,
-                            {"tool": block.name, "inputs": block.input, "summary": f"Calling {block.name}..."},
-                        )
-                        phase = _TOOL_PHASE_MAP.get(block.name)
-                        if phase and phase not in done_phases:
-                            activated_phases.add(phase)
-                            await self._emit_progress(phase, "running", f"Running {block.name}...")
-
-                # Add assistant response to messages
-                messages.append({"role": "assistant", "content": response.content})
-
-                # Phase 4: Tool Execution
-                tool_results = await self._execute_tools(tool_use_blocks, session_id)
-
-                # Track hard-success gate for final 1040 generation.
-                for result in tool_results:
-                    if result.get("tool_name") != "form1040_tool":
-                        continue
-                    output = result.get("output", {}) or {}
-                    if output.get("success") is True:
-                        form1040_success = True
-                        form1040_output_path = str(output.get("output_path", ""))
-                        latest_missing_fields = []
-                    else:
-                        latest_missing_fields = output.get("missing_required_fields", []) or []
-
-                # Emit tool results and mark phases done
-                if self._streamgen:
-                    for result in tool_results:
-                        tool_name = result.get("tool_name", "")
-                        output = result.get("output", {}) or {}
-                        summary = ""
-                        if tool_name == "form1040_tool":
-                            ok = output.get("success", False)
-                            summary = (
-                                f"Form 1040 {'generated successfully' if ok else 'generation failed'} — "
-                                f"{output.get('fields_written_count', 0)} fields written"
-                            )
-                        elif tool_name == "calculator_tool":
-                            summary = f"Calculator: federal_tax=${output.get('federal_tax', 0):,.2f}" if isinstance(output.get('federal_tax'), (int, float)) else "Calculator result ready"
-                        elif tool_name == "legal_rag_agent_tool":
-                            summary = f"RAG analysis complete — liability=${output.get('estimated_liability', 0):,.2f}" if isinstance(output.get('estimated_liability'), (int, float)) else "RAG analysis complete"
-                        elif tool_name == "ask_user_tool":
-                            summary = f"User answered: {str(output.get('answer', ''))[:100]}"
-                        else:
-                            summary = f"{tool_name} completed"
-
-                        await self._streamgen.emit(SSEEventType.TOOL_RESULT, {
-                            **result,
-                            "summary": summary,
-                        })
-
-                        phase = _TOOL_PHASE_MAP.get(tool_name)
-                        if phase and phase not in done_phases:
-                            is_error = isinstance(output, dict) and "error" in output
-                            if not is_error:
-                                done_phases.add(phase)
-                            await self._emit_progress(
-                                phase,
-                                "done" if not is_error else "failed",
-                                summary,
-                            )
-
-                # Format tool results for Claude
-                messages.append({
-                    "role": "user",
-                    "content": [
-                        {
-                            "type": "tool_result",
-                            "tool_use_id": r["tool_use_id"],
-                            "content": json.dumps(r["output"]),
-                        }
-                        for r in tool_results
-                    ],
-                })
-
-                # Phase 5: TodoWrite Check
-                await self._todo_manager.evaluate(
-                    [r["output"] for r in tool_results]
-                )
-                if self._todo_manager.has_pending():
-                    messages.append(self._todo_manager.inject_context())
-
-                # Phase 6: Compression Check
-                if self._compressor.check_threshold(messages, self._settings.anthropic_advance_llm_model):
-                    if self._streamgen:
-                        await self._streamgen.emit(
-                            SSEEventType.COMPRESSION,
-                            {"message": "Compressing conversation context..."},
-                        )
-                    session_state = {"session_id": session_id}
-                    messages = await self._compressor.compress(messages, session_state, session_id=session_id)
-
-                # h2A checkpoint merge
-                messages = await self._h2a_queue.checkpoint_merge(messages, session_id=session_id)
-
+        try:
+            for iteration in range(self._settings.todo_max_iterations):
                 await audit.log(AuditEvent(
                     session_id=session_id,
-                    event_type=AuditEventType.AGENT_CYCLE_COMPLETED,
+                    event_type=AuditEventType.AGENT_CYCLE_STARTED,
                     agent_name="n0",
                     metadata={"iteration": iteration},
                 ))
 
-        else:
-            # Max iterations reached
-            if not form1040_success:
-                final_answer = (
-                    "Failed: could not produce a fully filled Form 1040 within the iteration limit. "
-                    f"Missing required fields: {', '.join(latest_missing_fields) if latest_missing_fields else 'unknown'}."
-                )
-            if self._streamgen:
-                await self._streamgen.emit(
-                    SSEEventType.ERROR,
-                    {"code": "MAX_ITER", "message": "Maximum iterations reached"},
-                )
-                if final_answer:
-                    await self._streamgen.emit(SSEEventType.ANSWER, final_answer)
+                with self._tracer.start_cycle_span("inference", iteration):
+                    # Phase 2: Inference
+                    response = await self._call_claude(messages, session_id)
 
-        if self._streamgen:
-            await self._streamgen.close()
+                    # Emit thinking if present (extended thinking)
+                    if hasattr(response, "thinking") and response.thinking:
+                        if self._streamgen:
+                            await self._streamgen.emit(SSEEventType.THOUGHT, {
+                                "phase": "thinking",
+                                "summary": response.thinking if isinstance(response.thinking, str) else str(response.thinking),
+                            })
+
+                    # Check for tool use
+                    tool_use_blocks = [
+                        block for block in response.content
+                        if block.type == "tool_use"
+                    ]
+
+                    text_blocks = [
+                        block for block in response.content
+                        if block.type == "text"
+                    ]
+
+                    # Stream model text to the frontend so users see the agent's reasoning
+                    if self._streamgen and text_blocks:
+                        combined = "\n".join(b.text for b in text_blocks).strip()
+                        if combined:
+                            await self._streamgen.emit(SSEEventType.THOUGHT, {
+                                "phase": "reasoning",
+                                "summary": combined,
+                            })
+
+                    # Auto-create TodoWrite items from structured response
+                    for block in text_blocks:
+                        self._extract_todo_items(block.text, session_id)
+
+                    # Phase 3: Tool Detection
+                    if not tool_use_blocks:
+                        if not form1040_success:
+                            # Hard gate: n0 cannot succeed without a valid filled 1040.
+                            missing_msg = ", ".join(latest_missing_fields) if latest_missing_fields else "unknown fields"
+                            messages.append({
+                                "role": "user",
+                                "content": (
+                                    "You have not successfully generated a filled Form 1040 yet. "
+                                    "Do not finalize. Ask follow-up questions for missing fields and call form1040_tool again. "
+                                    f"Current missing fields: {missing_msg}."
+                                ),
+                            })
+                            continue
+
+                        final_answer = " ".join(b.text for b in text_blocks).strip()
+                        if not final_answer:
+                            final_answer = f"Success: filled Form 1040 generated at {form1040_output_path}."
+                        for phase in ("dual_llm", "scoring", "form1040"):
+                            if phase in activated_phases and phase not in done_phases:
+                                await self._emit_progress(phase, "done", "Completed")
+                                done_phases.add(phase)
+                        await self._emit_progress("complete", "done", "Analysis complete — results ready")
+                        if self._streamgen:
+                            await self._streamgen.emit(SSEEventType.ANSWER, final_answer)
+                        break
+
+                    # Emit tool calls and progress events
+                    if self._streamgen:
+                        for block in tool_use_blocks:
+                            await self._streamgen.emit(
+                                SSEEventType.TOOL_CALL,
+                                {"tool": block.name, "inputs": block.input, "summary": f"Calling {block.name}..."},
+                            )
+                            phase = _TOOL_PHASE_MAP.get(block.name)
+                            if phase and phase not in done_phases:
+                                activated_phases.add(phase)
+                                await self._emit_progress(phase, "running", f"Running {block.name}...")
+
+                    # Add assistant response to messages
+                    messages.append({"role": "assistant", "content": response.content})
+
+                    # Phase 4: Tool Execution
+                    tool_results = await self._execute_tools(tool_use_blocks, session_id)
+
+                    # Track hard-success gate for final 1040 generation.
+                    for result in tool_results:
+                        if result.get("tool_name") != "form1040_tool":
+                            continue
+                        output = result.get("output", {}) or {}
+                        if output.get("success") is True:
+                            form1040_success = True
+                            form1040_output_path = str(output.get("output_path", ""))
+                            latest_missing_fields = []
+                        else:
+                            latest_missing_fields = output.get("missing_required_fields", []) or []
+
+                    # Emit tool results and mark phases done
+                    if self._streamgen:
+                        for result in tool_results:
+                            tool_name = result.get("tool_name", "")
+                            output = result.get("output", {}) or {}
+                            summary = ""
+                            if tool_name == "form1040_tool":
+                                ok = output.get("success", False)
+                                summary = (
+                                    f"Form 1040 {'generated successfully' if ok else 'generation failed'} — "
+                                    f"{output.get('fields_written_count', 0)} fields written"
+                                )
+                            elif tool_name == "calculator_tool":
+                                summary = f"Calculator: federal_tax=${output.get('federal_tax', 0):,.2f}" if isinstance(output.get('federal_tax'), (int, float)) else "Calculator result ready"
+                            elif tool_name == "legal_rag_agent_tool":
+                                summary = f"RAG analysis complete — liability=${output.get('estimated_liability', 0):,.2f}" if isinstance(output.get('estimated_liability'), (int, float)) else "RAG analysis complete"
+                            elif tool_name == "ask_user_tool":
+                                summary = f"User answered: {str(output.get('answer', ''))[:100]}"
+                            else:
+                                summary = f"{tool_name} completed"
+
+                            await self._streamgen.emit(SSEEventType.TOOL_RESULT, {
+                                **result,
+                                "summary": summary,
+                            })
+
+                            phase = _TOOL_PHASE_MAP.get(tool_name)
+                            if phase and phase not in done_phases:
+                                is_error = isinstance(output, dict) and "error" in output
+                                if not is_error:
+                                    done_phases.add(phase)
+                                await self._emit_progress(
+                                    phase,
+                                    "done" if not is_error else "failed",
+                                    summary,
+                                )
+
+                    # Format tool results for Claude
+                    messages.append({
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "tool_result",
+                                "tool_use_id": r["tool_use_id"],
+                                "content": json.dumps(r["output"]),
+                            }
+                            for r in tool_results
+                        ],
+                    })
+
+                    # Phase 5: TodoWrite Check
+                    await self._todo_manager.evaluate(
+                        [r["output"] for r in tool_results]
+                    )
+                    if self._todo_manager.has_pending():
+                        messages.append(self._todo_manager.inject_context())
+
+                    # Phase 6: Compression Check
+                    if self._compressor.check_threshold(messages, self._settings.anthropic_advance_llm_model):
+                        if self._streamgen:
+                            await self._streamgen.emit(
+                                SSEEventType.COMPRESSION,
+                                {"message": "Compressing conversation context..."},
+                            )
+                        session_state = {"session_id": session_id}
+                        messages = await self._compressor.compress(messages, session_state, session_id=session_id)
+
+                    # h2A checkpoint merge
+                    messages = await self._h2a_queue.checkpoint_merge(messages, session_id=session_id)
+
+                    await audit.log(AuditEvent(
+                        session_id=session_id,
+                        event_type=AuditEventType.AGENT_CYCLE_COMPLETED,
+                        agent_name="n0",
+                        metadata={"iteration": iteration},
+                    ))
+
+            else:
+                # Max iterations reached
+                if not form1040_success:
+                    final_answer = (
+                        "Failed: could not produce a fully filled Form 1040 within the iteration limit. "
+                        f"Missing required fields: {', '.join(latest_missing_fields) if latest_missing_fields else 'unknown'}."
+                    )
+                if self._streamgen:
+                    await self._streamgen.emit(
+                        SSEEventType.ERROR,
+                        {"code": "MAX_ITER", "message": "Maximum iterations reached"},
+                    )
+                    if final_answer:
+                        await self._streamgen.emit(SSEEventType.ANSWER, final_answer)
+        except Exception as exc:
+            logger.error("n0 loop failed for session %s: %s", session_id, exc, exc_info=True)
+            final_answer = f"Agent error: {type(exc).__name__} — {exc}"
+            if self._streamgen:
+                try:
+                    await self._streamgen.emit(
+                        SSEEventType.ERROR,
+                        {"code": type(exc).__name__, "message": str(exc)},
+                    )
+                    await self._streamgen.emit(SSEEventType.ANSWER, final_answer)
+                except Exception:
+                    pass  # stream may already be closed
+        finally:
+            if self._streamgen:
+                await self._streamgen.close()
+            self.is_done = True
 
         return final_answer
 
+    _TRANSIENT_API_ERRORS = (
+        anthropic.RateLimitError,
+        anthropic.APIConnectionError,
+        anthropic.APITimeoutError,
+    )
+
     async def _call_claude(self, messages: List[Dict[str, Any]], session_id: str):
-        """Call Claude with the current conversation (PII-masked)."""
+        """Call Claude with the current conversation (PII-masked), with retry on transient errors."""
         # Apply PII masking to user message content before sending
         masked_messages = []
         for m in messages:
@@ -345,23 +366,40 @@ class N0AgentLoop:
             else:
                 masked_messages.append(m)
 
+        max_retries = 3
+        base_delay = 2.0
+
         with self._tracer.start_model_invoke_span(
             "anthropic",
             self._settings.anthropic_advance_llm_model,
         ) as span:
-            response = await asyncio.to_thread(
-                self._client.messages.create,
-                model=self._settings.anthropic_advance_llm_model,
-                max_tokens=8192,
-                system=N0_SYSTEM_PROMPT,
-                tools=TOOL_DEFINITIONS,
-                messages=masked_messages,
-            )
-            # Set token counts on span
-            if hasattr(response, "usage") and response.usage:
-                span.set_attribute("tax.model.input_tokens", response.usage.input_tokens)
-                span.set_attribute("tax.model.output_tokens", response.usage.output_tokens)
-            return response
+            last_exc: Optional[Exception] = None
+            for attempt in range(max_retries):
+                try:
+                    response = await asyncio.to_thread(
+                        self._client.messages.create,
+                        model=self._settings.anthropic_advance_llm_model,
+                        max_tokens=8192,
+                        system=N0_SYSTEM_PROMPT,
+                        tools=TOOL_DEFINITIONS,
+                        messages=masked_messages,
+                    )
+                    # Set token counts on span
+                    if hasattr(response, "usage") and response.usage:
+                        span.set_attribute("tax.model.input_tokens", response.usage.input_tokens)
+                        span.set_attribute("tax.model.output_tokens", response.usage.output_tokens)
+                    return response
+                except self._TRANSIENT_API_ERRORS as exc:
+                    last_exc = exc
+                    delay = base_delay * (2 ** attempt)
+                    logger.warning(
+                        "Transient Anthropic API error (attempt %d/%d): %s — retrying in %.1fs",
+                        attempt + 1, max_retries, exc, delay,
+                    )
+                    if attempt < max_retries - 1:
+                        await asyncio.sleep(delay)
+            # All retries exhausted
+            raise last_exc  # type: ignore[misc]
 
     async def _execute_tools(
         self,

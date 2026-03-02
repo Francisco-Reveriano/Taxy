@@ -7,10 +7,11 @@ from backend.config import get_settings
 
 logger = logging.getLogger(__name__)
 
-FORM_OUTPUT_DIR = Path("backend/forms/output")
+_BACKEND_DIR = Path(__file__).resolve().parent.parent  # .../backend/
+FORM_OUTPUT_DIR = _BACKEND_DIR / "forms" / "output"
 FORM_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-FIELD_MAP_PATH = Path("backend/forms/form1040_field_map.json")
+FIELD_MAP_PATH = _BACKEND_DIR / "forms" / "form1040_field_map.json"
 
 _FORM_1040_STATUS: dict[str, dict[str, Any]] = {}
 
@@ -57,10 +58,15 @@ class Form1040Tool:
         "zip": ["zip", "zipcode", "postalcode"],
         "filing_status": ["filingstatus", "status"],
         "tax_year": ["taxyear", "year"],
+        "wages": ["wages", "w2wages", "salaries", "wagestips"],
         "total_income": ["totalincome", "income"],
+        "adjustments": ["adjustments", "adjustmentstoincome"],
         "adjusted_gross_income": ["agi", "adjustedgrossincome"],
+        "standard_deduction": ["standarddeduction"],
+        "total_deductions": ["totaldeductions"],
         "taxable_income": ["taxableincome"],
-        "total_tax": ["totaltax", "tax", "estimatedliability", "estimatedtaxliability", "federaltax"],
+        "tax": ["taxfromtables", "line16tax"],
+        "total_tax": ["totaltax", "estimatedliability", "estimatedtaxliability", "federaltax"],
         "federal_tax_withheld": ["federaltaxwithheld", "withheld", "withholding"],
         "refund_amount": ["refund", "refundamount"],
         "amount_owed": ["amountowed", "owed", "balanceowed"],
@@ -231,22 +237,37 @@ class Form1040Tool:
                     status_str,
                 )
 
-        writer = PdfWriter()
-        writer.clone_document_from_reader(reader)
-        for page in writer.pages:
-            writer.update_page_form_field_values(page, update_values, auto_regenerate=False)
-
         try:
-            if "/AcroForm" in writer._root_object:
-                writer._root_object["/AcroForm"].update(
-                    {NameObject("/NeedAppearances"): BooleanObject(True)}
-                )
-        except Exception as e:
-            logger.warning("Could not set NeedAppearances: %s", e)
+            writer = PdfWriter()
+            writer.clone_document_from_reader(reader)
+            for page in writer.pages:
+                writer.update_page_form_field_values(page, update_values, auto_regenerate=False)
 
-        output_path = FORM_OUTPUT_DIR / f"form1040_{session_id}.pdf"
-        with output_path.open("wb") as f:
-            writer.write(f)
+            try:
+                if "/AcroForm" in writer._root_object:
+                    writer._root_object["/AcroForm"].update(
+                        {NameObject("/NeedAppearances"): BooleanObject(True)}
+                    )
+            except Exception as e:
+                logger.warning("Could not set NeedAppearances: %s", e)
+
+            output_path = FORM_OUTPUT_DIR / f"form1040_{session_id}.pdf"
+            with output_path.open("wb") as f:
+                writer.write(f)
+        except OSError as exc:
+            return self._record_failure(
+                session_id,
+                f"PDF write failed: {exc}",
+                ["disk_write"],
+                semantic_values=semantic_values,
+            )
+        except Exception as exc:
+            return self._record_failure(
+                session_id,
+                f"PDF generation failed: {type(exc).__name__}: {exc}",
+                ["pdf_generation"],
+                semantic_values=semantic_values,
+            )
 
         result = {
             "success": True,
@@ -282,15 +303,26 @@ class Form1040Tool:
         values["filing_status"] = pick("filing_status")
         values["tax_year"] = pick("tax_year")
 
+        # Income line items
+        values["wages"] = pick("wages", "w2_wages", "salaries", "wages_salaries_tips")
+
         total_income = pick("total_income")
+        adjustments = pick("adjustments", "adjustments_to_income")
         adjusted_gross_income = pick("adjusted_gross_income", "agi")
+        standard_deduction = pick("standard_deduction")
+        total_deductions = pick("total_deductions")
         taxable_income = pick("taxable_income")
+        tax = pick("tax", "tax_from_tables", "line16_tax")
         total_tax = pick("total_tax", "federal_tax", "estimated_tax_liability", "estimated_liability")
         federal_tax_withheld = pick("federal_tax_withheld", "withholding", "tax_withheld")
 
         values["total_income"] = total_income
+        values["adjustments"] = adjustments
         values["adjusted_gross_income"] = adjusted_gross_income if adjusted_gross_income is not None else total_income
+        values["standard_deduction"] = standard_deduction
+        values["total_deductions"] = total_deductions
         values["taxable_income"] = taxable_income if taxable_income is not None else total_income
+        values["tax"] = tax
         values["total_tax"] = total_tax
         values["federal_tax_withheld"] = federal_tax_withheld if federal_tax_withheld is not None else 0.0
 

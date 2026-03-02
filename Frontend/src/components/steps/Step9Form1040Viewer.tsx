@@ -4,17 +4,24 @@ import { downloadFinalForm1040, getForm1040Status } from '../../services/api'
 
 export default function Step9Form1040Viewer() {
   const sessionId = useWizardStore((s) => s.sessionId)
+  const form1040Ready = useWizardStore((s) => s.form1040Ready)
   const iframeRef = useRef<HTMLIFrameElement>(null)
-  const [ready, setReady] = useState<boolean | null>(null)
+  const [ready, setReady] = useState<boolean | null>(form1040Ready ? true : null)
   const [downloading, setDownloading] = useState(false)
 
   const pdfUrl = `/api/forms/1040/${sessionId}`
 
   useEffect(() => {
+    // If store already knows it's ready (from SSE tool_result), skip API call
+    if (form1040Ready) {
+      setReady(true)
+      return
+    }
+    // Fallback: check API (handles page refresh where store is reset)
     getForm1040Status(sessionId)
       .then((status) => setReady(status?.success === true))
       .catch(() => setReady(false))
-  }, [sessionId])
+  }, [sessionId, form1040Ready])
 
   const handleDownload = async () => {
     setDownloading(true)

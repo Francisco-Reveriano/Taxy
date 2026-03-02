@@ -2,7 +2,7 @@
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import FileResponse
 
-from backend.tools.form1040_tool import Form1040Tool, get_form1040_status
+from backend.tools.form1040_tool import Form1040Tool, get_form1040_status, FORM_OUTPUT_DIR
 
 router = APIRouter()
 form1040_tool = Form1040Tool()
@@ -31,6 +31,14 @@ async def download_form_1040(session_id: str):
     """
     status = get_form1040_status(session_id)
     if not status:
+        # Disk fallback: serve the PDF if it exists on disk (e.g., after server restart)
+        candidate = FORM_OUTPUT_DIR / f"form1040_{session_id}.pdf"
+        if candidate.exists():
+            return FileResponse(
+                path=str(candidate),
+                media_type="application/pdf",
+                content_disposition_type="inline",
+            )
         raise HTTPException(status_code=404, detail="No Form 1040 generation record for this session")
     if not status.get("success"):
         raise HTTPException(
@@ -49,7 +57,7 @@ async def download_form_1040(session_id: str):
     return FileResponse(
         path=output_path,
         media_type="application/pdf",
-        filename=f"form1040_{session_id}.pdf",
+        content_disposition_type="inline",
     )
 
 
